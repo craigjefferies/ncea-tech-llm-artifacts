@@ -35,8 +35,10 @@
       "level": "A",
       "weight": 1,
       "detection_hint": "Look for two different data types (e.g., string and integer) assigned to variables. Collections count as a type only if they store a different type from other variables. Highlight phrases showing assignments or violations.",
-      "success_examples": ["termination_value = \"4\"  # string; guesses_count = 3  # integer"],
-      "source_ref": "AS PDF p1 Explanatory Note 2"
+      "success_examples": [
+        "termination_value = \"4\"  # string; guesses_count = 3  # integer"
+      ],
+      "source_ref": "AS PDF p1 Explanatory Note\u202f2"
     },
     {
       "id": "uses_core_structures_collection",
@@ -44,26 +46,47 @@
       "level": "A",
       "weight": 1,
       "detection_hint": "Require at least one if/else (selection), one loop (iteration), and collection access (e.g., append, index, or loop over). Mere initialisation without access does not count. Highlight phrases showing use or lack thereof.",
-      "success_examples": ["Guesses.append(answer)", "for item in items:"],
-      "source_ref": "AS PDF p1 ¶‘The computer program must…’"
+      "success_examples": [
+        "Guesses.append(answer)",
+        "for item in items:"
+      ],
+      "source_ref": "AS PDF p1\u202f\u00b6\u2018The computer program must\u2026\u2019"
     },
+
     {
       "id": "testing_expected_cases",
       "description": "Testing evidence shows the program works with expected inputs.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Need specific inputs, expected/actual outputs, and at least one debugging example (e.g., before/after code or table notes). Screenshots/screencasts required; generic claims insufficient. Highlight phrases with details or omissions.",
-      "success_examples": ["Input: 5 → Expected: 'Correct'; Actual: 'Correct' (debugged loop error)"],
-      "source_ref": "Moderator Guide p1 Criteria 2"
+      "detection_hint": "Need specific test cases with inputs and observed outputs (and ideally expected outputs). Acceptable evidence formats include tables, logs, written notes, screenshots, or screencasts; artifact type is optional. Generic claims (e.g., 'it worked') are insufficient. Highlight concrete test details or omissions.",
+      "success_examples": [
+        "Input: 5 \u2192 Expected: 'Correct'; Actual: 'Correct'"
+      ],
+      "source_ref": "Moderator Guide p1\u202fCriteria\u202f2"
     },
+    {
+      "id": "debugging_evidence_present",
+      "description": "Debugging evidence shows at least one defect was identified and fixed.",
+      "level": "A",
+      "weight": 1,
+      "detection_hint": "Require at least one specific example of a bug/defect and what changed to fix it (e.g., before/after code snippet, notes describing the issue and resolution, or test evidence showing failure then pass). Evidence can be in tables, logs, notes, screenshots, or screencasts; artifact type is optional. Highlight the defect description, fix, and outcome, or note if missing.",
+      "success_examples": [
+        "Bug: loop never terminated when input was 0 \u2192 Fix: changed condition from '>' to '>=' \u2192 Retest: input 0 now exits correctly"
+      ],
+      "source_ref": "Moderator Guide p1\u202fCriteria\u202f2"
+    },
+
     {
       "id": "basic_comments_present",
       "description": "Code contains comments documenting the program.",
       "level": "A",
       "weight": 1,
       "detection_hint": "At least two comments in different sections, describing purpose/behaviour (not single words). Spread through code; line-by-line 'what' insufficient. Highlight comments or inadequate examples.",
-      "success_examples": ["# Ask user to guess the number", "# Display all previous guesses"],
-      "source_ref": "AS PDF p1 Explanatory Note 1"
+      "success_examples": [
+        "# Ask user to guess the number",
+        "# Display all previous guesses"
+      ],
+      "source_ref": "AS PDF p1\u202fExplanatory Note\u202f1"
     },
     {
       "id": "descriptive_variable_names",
@@ -71,8 +94,11 @@
       "level": "M",
       "weight": 1,
       "detection_hint": "Names should reflect content/role (e.g., total_score); avoid obscure like x1 or tmp. Consistent with language conventions ideal but not required. Highlight examples of good/poor names.",
-      "success_examples": ["player_age", "termination_value"],
-      "source_ref": "Moderator Guide p4 Criteria 1"
+      "success_examples": [
+        "player_age",
+        "termination_value"
+      ],
+      "source_ref": "Moderator Guide p4\u202fCriteria\u202f1"
     },
     {
       "id": "comments_clarify_purpose",
@@ -80,49 +106,68 @@
       "level": "M",
       "weight": 1,
       "detection_hint": "Comments must explain WHY sections exist (purpose), consistent across significant blocks; not line-by-line operations or justifications. Highlight clarifying comments or inconsistencies.",
-      "success_examples": ["# Check if the car is valid", "# Update leaderboard after each round"],
-      "source_ref": "Moderator Guide p4 Criteria 2"
+      "success_examples": [
+        "# Check if the car is valid",
+        "# Update leaderboard after each round"
+      ],
+      "source_ref": "Moderator Guide p4\u202fCriteria\u202f2"
     },
+
     {
       "id": "boundary_testing_performed",
-      "description": "Testing evidence includes at least one on‑, below‑, and above‑boundary value for each boundary.",
+      "description": "Testing evidence includes at least one on-, below-, and above-boundary value for an identified boundary (where a boundary exists).",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Require specific numeric tests for each boundary (below/on/above); identify boundaries from task/code. Minimum: two tests (on/outside) for one boundary; vague mentions insufficient. Highlight test values or gaps.",
-      "success_examples": ["Age boundary (12-18): 11 (below), 12 (on), 19 (above)"],
-      "source_ref": "Moderator Guide p5 Boundary testing"
+      "detection_hint": "If the task/program has a clear boundary (e.g., numeric range, minimum/maximum, length limit), require three explicit test values: below, on, and above that boundary, with observed outputs. If no clear boundary is present in the spec or implementation, do not penalise; record as not applicable. Vague mentions of 'boundary testing' without values are insufficient. Highlight boundary definition and test values, or mark N/A if no boundary can be reasonably inferred.",
+      "success_examples": [
+        "Age boundary (12-18): 11 (below), 12 (on), 19 (above)"
+      ],
+      "source_ref": "Moderator Guide p5\u202fBoundary\u202ftesting"
     },
+
     {
       "id": "effective_control_structures",
       "description": "Conditions and control structures are used effectively to reduce repetition and errors.",
       "level": "E",
       "weight": 1,
       "detection_hint": "Look for chained/nested conditions, Boolean operators, ordered ifs, or natural loops to minimise repetition/errors. Duplicated logic or inefficient checks do not count. Highlight effective structures or redundancies.",
-      "success_examples": ["while guess != target and attempts < MAX_TRIES:"],
-      "source_ref": "Moderator Guide p6 Criteria 1"
+      "success_examples": [
+        "while guess != target and attempts < MAX_TRIES:"
+      ],
+      "source_ref": "Moderator Guide p6\u202fCriteria\u202f1"
     },
     {
       "id": "flexible_values_over_literals",
-      "description": "Program uses constants, variables, or derived values instead of hard‑coded literals to enable flexibility.",
+      "description": "Program uses constants, variables, or derived values instead of hard-coded literals to enable flexibility.",
       "level": "E",
       "weight": 1,
       "detection_hint": "Use constants/variables/calculations for easy changes; avoid repeated literals without rationale. Focus on maintainability for programmer. Highlight flexible uses or hardcoded literals.",
-      "success_examples": ["MAX_TRIES = 5  # constant", "discount = price * GST_RATE"],
-      "source_ref": "Moderator Guide p6 Criteria 2"
+      "success_examples": [
+        "MAX_TRIES = 5  # constant",
+        "discount = price * GST_RATE"
+      ],
+      "source_ref": "Moderator Guide p6\u202fCriteria\u202f2"
     },
+
     {
       "id": "invalid_case_testing",
-      "description": "Testing demonstrates program handles invalid inputs gracefully.",
+      "description": "Testing demonstrates program handles at least one invalid input gracefully (where user/input validation is applicable).",
       "level": "E",
       "weight": 1,
-      "detection_hint": "At least one invalid test per most inputs, with handling (e.g., error message, retry). Show robustness; unhandled errors fail. Highlight test cases with inputs/outputs or unhandled cases.",
-      "success_examples": ["Input: 'abc' (invalid) → Output: 'Please enter a number.'"],
-      "source_ref": "Moderator Guide p6 Criteria 3"
+      "detection_hint": "If the program accepts user input (or externally provided input), require at least one clearly invalid test case with the program's handling shown (e.g., error message, retry loop, safe default). If the program has no meaningful invalid-input surface (e.g., no inputs beyond fixed internal values), do not penalise; record as not applicable. Unhandled crashes or tracebacks on invalid input fail this indicator when applicable. Highlight invalid input, handling behaviour, and outcome, or mark N/A if not applicable.",
+      "success_examples": [
+        "Input: 'abc' (invalid) \u2192 Output: 'Please enter a number.'"
+      ],
+      "source_ref": "Moderator Guide p6\u202fCriteria\u202f3"
     }
   ],
   "aggregation_rules": {
     "method": "hierarchical",
-    "gate_sequence": ["A", "M", "E"],
+    "gate_sequence": [
+      "A",
+      "M",
+      "E"
+    ],
     "levels": {
       "A": {
         "required_fraction": 1.0
@@ -140,7 +185,7 @@
           "extra_merit_indicators": 0
         },
         "A4": {
-          "extra_merit_indicators": "≥1"
+          "extra_merit_indicators": "\u22651"
         }
       },
       "Merit": {
@@ -148,7 +193,7 @@
           "extra_excellence_indicators": 0
         },
         "M6": {
-          "extra_excellence_indicators": "≥1"
+          "extra_excellence_indicators": "\u22651"
         }
       },
       "Excellence": {
