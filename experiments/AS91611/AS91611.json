@@ -1,172 +1,314 @@
 {
-"meta": {
-"as_code": "AS91611",
-"title": "Develop a prototype considering fitness for purpose in the broadest sense",
-"version": "3",
-"credits": 6,
-"assessment_type": "Internal",
-"source_pdf": "as91611.pdf",
-"purpose": "This achievement standard involves developing a prototype considering fitness for purpose in the broadest sense."
-},
-"grade_descriptors": {
-"N1": "Evidence does not reach the minimum threshold for Achieved-level indicators.",
-"N2": "Some Achieved-level indicators are met, but not enough to satisfy all required Achieved criteria.",
-"A3": "All Achieved-level indicators are met; no Merit-level indicator meets the Merit threshold.",
-"A4": "All Achieved indicators are met and at least one Merit indicator is met, but overall performance is below the Merit threshold.",
-"M5": "All Achieved indicators are met and the Merit threshold is reached; no Excellence-level indicator meets the Excellence threshold.",
-"M6": "All Achieved indicators are met, all Merit indicators are met, and at least one Excellence indicator is met, but overall performance is below the Excellence threshold.",
-"E7": "All Achieved and Merit indicators are met and the Excellence threshold is reached, but not all Excellence indicators are met.",
-"E8": "All Achieved, Merit, and Excellence indicators are met."
-},
-"key_terms": [],
-"omis": [
-{
-"id": "consider_context_for_suitability",
-"description": "Considers the context when determining the suitability of materials and/or components, and of practical techniques and processes.",
-"level": "A",
-"weight": 1,
-"detection_hint": "Student must explicitly link materials/components and techniques to social or physical conditions of use. Stating a location or user without connecting it to suitability does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"considering the context when determining the suitability of materials and/or components, and of practical techniques and processes",
-"considered the social and physical environment"
-],
-"source_ref": "AS Achieved bullet list; Low Achieved commentary"
-},
-{
-"id": "select_and_apply_materials_tools_processes",
-"description": "Selects suitable materials and/or components; tools and equipment; and applies techniques and processes to make the prototype.",
-"level": "A",
-"weight": 1,
-"detection_hint": "Evidence must show both selection (with suitability) and application during making. Listing tools without use, or showing use without stating suitability, is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"selecting suitable materials and/or components; tools and equipment; and applying techniques and processes to make the prototype",
-"Suitable materials, tools and equipment were selected"
-],
-"source_ref": "AS Achieved bullet list; Low Merit commentary"
-},
-{
-"id": "use_testing_and_stakeholder_feedback",
-"description": "Uses results from testing and stakeholder feedback to inform the making and trialling of the prototype.",
-"level": "A",
-"weight": 1,
-"detection_hint": "Portfolio must connect feedback/testing results to a change or confirmation in making/trialling. Saying feedback was ‘gathered’ without showing influence on decisions does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"using results from testing and stakeholder feedback to inform the making and trialling of the prototype",
-"Stakeholder feedback has informed the making and developing of the prototype"
-],
-"source_ref": "AS Achieved bullet list; Low Merit commentary"
-},
-{
-"id": "prototype_to_gain_specific_evidence",
-"description": "Prototypes to gain specific evidence of fitness for purpose in the intended environment.",
-"level": "A",
-"weight": 1,
-"detection_hint": "Look for trialling that produces concrete evidence (measures, observations, stakeholder acceptance) tied to intended conditions. Demonstrations without explicit evaluation criteria or environment linkage are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"prototyping to gain specific evidence of fitness for purpose",
-"The final prototype is shown in its physical environment"
-],
-"source_ref": "AS Achieved bullet list; Low Achieved commentary"
-},
-{
-"id": "explain_accept_or_modify_against_brief",
-"description": "Explains decisions to accept and/or modify the prototype based on a judgement against the brief.",
-"level": "A",
-"weight": 1,
-"detection_hint": "Explanation must reference the brief/specifications and state why acceptance or modification was warranted. Narrating process steps without judgement against the brief does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"explaining any decisions to accept and/or modify the prototype based on a judgement against the brief",
-"explains their decisions to accept and modify the prototype and how it met the specifications"
-],
-"source_ref": "AS Achieved bullet list; High Not Achieved commentary"
-},
-{
-"id": "evaluate_combination_effectiveness",
-"description": "Evaluates how the combination of selected materials and/or components and practical techniques and processes work together to ensure effectiveness in making the prototype.",
-"level": "M",
-"weight": 1,
-"detection_hint": "Evaluation must discuss interactions (how materials/components and techniques/processes work together). Listing parts or separate pros/cons without addressing the combination is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"evaluating the way the combination of selected materials and/or components and practical techniques and processes work together",
-"described how this combination is effective in making the prototype"
-],
-"source_ref": "Merit definition; Low Merit commentary"
-},
-{
-"id": "evaluate_in_intended_environment",
-"description": "Evaluates the prototype’s effectiveness using evidence gathered in its intended physical and social environment.",
-"level": "M",
-"weight": 1,
-"detection_hint": "Must include evidence from use or trial under intended conditions and evaluative statements. Images alone or generic claims without contextual evidence are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"photographed in its intended physical and social environment",
-"The prototype is worn by the model under lights to gather evidence"
-],
-"source_ref": "Low Merit commentary; High Merit commentary"
-},
-{
-"id": "evaluate_broadest_sense_factors",
-"description": "Evaluates fitness for purpose in the broadest sense by considering factors such as social acceptability, technical feasibility, ethics, sustainability, and life cycle.",
-"level": "M",
-"weight": 1,
-"detection_hint": "Response must explicitly evaluate against multiple broadest-sense factors, not merely list them. Statements without consequences for effectiveness or use are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"considering social acceptability, technical feasibility, life cycle, ethics, sustainability of resources",
-"considered the social and physical environment"
-],
-"source_ref": "High Merit commentary; Low Achieved commentary"
-},
-{
-"id": "synthesise_evidence_testing_and_feedback",
-"description": "Synthesises evidence from ongoing testing (including prototyping) and stakeholder feedback to optimise the prototype and justify its fitness for purpose against the brief.",
-"level": "E",
-"weight": 2,
-"detection_hint": "Requires integration of multiple evidence sources into a combined rationale that informs changes or validation. Sequencing results without integration or optimisation does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"synthesising evidence from ongoing testing (included prototyping) and stakeholder feedback",
-"Evidence from ongoing testing and trials and stakeholder feedback has been synthesised"
-],
-"source_ref": "Low Excellence commentary"
-},
-{
-"id": "justify_fitness_against_brief_broadest_sense",
-"description": "Justifies the prototype’s fitness for purpose against the brief, using synthesised evidence and wider-context considerations.",
-"level": "E",
-"weight": 2,
-"detection_hint": "A justification must state a position on fitness for purpose and provide outcome-based reasoning using gathered evidence and broadest-sense considerations. Assertions without reasons do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
-"success_examples": [
-"justify the prototype’s fitness for purpose against the brief",
-"The synthesised evidence … justifies the prototype’s fitness for purpose"
-],
-"source_ref": "Low Excellence commentary"
-}
-],
-"aggregation_rules": {
-"method": "hierarchical",
-"gate_sequence": ["A", "M", "E"],
-"levels": {
-"A": { "required_fraction": 1.0 },
-"M": { "required_fraction": 0.60 },
-"E": { "required_fraction": 0.50 }
-},
-"sub_band_logic": {
-"Achieved": {
-"A3": { "extra_merit_indicators": 0 },
-"A4": { "extra_merit_indicators": "≥1" }
-},
-"Merit": {
-"M5": { "extra_excellence_indicators": 0 },
-"M6": { "extra_excellence_indicators": "≥1" }
-},
-"Excellence": {
-"E7": { "excellence_fraction": "<1.0" },
-"E8": { "excellence_fraction": "1.0" }
-}
-},
-"fallback_grade": "N1"
-},
-"governance": {
-"last_validated": "2025-06-13",
-"change_log": []
-}
+  "meta": {
+    "as_code": "AS91611",
+    "title": "Develop a prototype considering fitness for purpose in the broadest sense",
+    "version": "3",
+    "credits": 6,
+    "assessment_type": "Internal",
+    "source_pdf": "as91611.pdf",
+    "purpose": "This achievement standard involves developing a prototype considering fitness for purpose in the broadest sense."
+  },
+  "grade_descriptors": {
+    "N1": "Evidence does not reach the minimum threshold for Achieved-level indicators.",
+    "N2": "Some Achieved-level indicators are met, but not enough to satisfy all required Achieved criteria.",
+    "A3": "All Achieved-level indicators are met; no Merit-level indicator meets the Merit threshold.",
+    "A4": "All Achieved indicators are met and at least one Merit indicator is met, but overall performance is below the Merit threshold.",
+    "M5": "All Achieved indicators are met and the Merit threshold is reached; no Excellence-level indicator meets the Excellence threshold.",
+    "M6": "All Achieved indicators are met, all Merit indicators are met, and at least one Excellence indicator is met, but overall performance is below the Excellence threshold.",
+    "E7": "All Achieved and Merit indicators are met and the Excellence threshold is reached, but not all Excellence indicators are met.",
+    "E8": "All Achieved, Merit, and Excellence indicators are met."
+  },
+  "key_terms": [],
+  "omis": [
+    {
+      "id": "consider_context_for_suitability",
+      "description": "Considers the context when determining the suitability of materials and/or components, and of practical techniques and processes.",
+      "level": "A",
+      "weight": 1,
+      "success_examples": [
+        "considering the context when determining the suitability of materials and/or components, and of practical techniques and processes",
+        "considered the social and physical environment"
+      ],
+      "source_ref": "AS Achieved bullet list; Low Achieved commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "Links materials/components to social or physical conditions of use",
+          "Explains suitability based on specific context",
+          "Connects techniques to the environment of use"
+        ],
+        "negative_signals": [
+          "States location or user without linking to suitability",
+          "Lists materials without considering context",
+          "Ignores social or physical factors in suitability"
+        ],
+        "common_confusion": "Suitability must be explicitly tied to the context of use, not just stated in isolation."
+      }
+    },
+    {
+      "id": "select_and_apply_materials_tools_processes",
+      "description": "Selects suitable materials and/or components; tools and equipment; and applies techniques and processes to make the prototype.",
+      "level": "A",
+      "weight": 1,
+      "success_examples": [
+        "selecting suitable materials and/or components; tools and equipment; and applying techniques and processes to make the prototype",
+        "Suitable materials, tools and equipment were selected"
+      ],
+      "source_ref": "AS Achieved bullet list; Low Merit commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "Shows selection with stated suitability reasons",
+          "Demonstrates application during the making process",
+          "Links tools/equipment to specific processes used"
+        ],
+        "negative_signals": [
+          "Lists tools without showing their use",
+          "Shows use without justifying suitability",
+          "Separates selection from application evidence"
+        ],
+        "common_confusion": "Both selection and application must be evidenced together, not separately."
+      }
+    },
+    {
+      "id": "use_testing_and_stakeholder_feedback",
+      "description": "Uses results from testing and stakeholder feedback to inform the making and trialling of the prototype.",
+      "level": "A",
+      "weight": 1,
+      "success_examples": [
+        "using results from testing and stakeholder feedback to inform the making and trialling of the prototype",
+        "Stakeholder feedback has informed the making and developing of the prototype"
+      ],
+      "source_ref": "AS Achieved bullet list; Low Merit commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "Connects feedback/testing results to specific changes in making",
+          "Shows influence on trialling decisions",
+          "References specific feedback or test outcomes"
+        ],
+        "negative_signals": [
+          "Gathers feedback without showing its influence",
+          "Mentions testing without linking to modifications",
+          "Generic statements without specific results"
+        ],
+        "common_confusion": "Feedback and testing must inform decisions, not just be collected or mentioned."
+      }
+    },
+    {
+      "id": "prototype_to_gain_specific_evidence",
+      "description": "Prototypes to gain specific evidence of fitness for purpose in the intended environment.",
+      "level": "A",
+      "weight": 1,
+      "success_examples": [
+        "prototyping to gain specific evidence of fitness for purpose",
+        "The final prototype is shown in its physical environment"
+      ],
+      "source_ref": "AS Achieved bullet list; Low Achieved commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "Produces concrete evidence from trialling (e.g., measures, observations)",
+          "Ties evidence directly to intended environment",
+          "Includes stakeholder acceptance or performance data"
+        ],
+        "negative_signals": [
+          "Demonstrations without explicit evaluation criteria",
+          "No clear linkage to the intended environment",
+          "Vague or anecdotal evidence only"
+        ],
+        "common_confusion": "Evidence must be specific and tied to the intended conditions, not just general demonstrations."
+      }
+    },
+    {
+      "id": "explain_accept_or_modify_against_brief",
+      "description": "Explains decisions to accept and/or modify the prototype based on a judgement against the brief.",
+      "level": "A",
+      "weight": 1,
+      "success_examples": [
+        "explaining any decisions to accept and/or modify the prototype based on a judgement against the brief",
+        "explains their decisions to accept and modify the prototype and how it met the specifications"
+      ],
+      "source_ref": "AS Achieved bullet list; High Not Achieved commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "References the brief or specifications explicitly",
+          "States why acceptance or modification was chosen",
+          "Provides judgement against requirements"
+        ],
+        "negative_signals": [
+          "Narrates process steps without brief reference",
+          "No explanation of the reasoning behind decisions",
+          "Ignores the specifications in the explanation"
+        ],
+        "common_confusion": "Decisions must be judged against the brief, not just described as steps taken."
+      }
+    },
+    {
+      "id": "evaluate_combination_effectiveness",
+      "description": "Evaluates how the combination of selected materials and/or components and practical techniques and processes work together to ensure effectiveness in making the prototype.",
+      "level": "M",
+      "weight": 1,
+      "success_examples": [
+        "evaluating the way the combination of selected materials and/or components and practical techniques and processes work together",
+        "described how this combination is effective in making the prototype"
+      ],
+      "source_ref": "Merit definition; Low Merit commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "Discusses interactions between materials/components and techniques",
+          "Explains how the combination ensures effectiveness",
+          "Evaluates the synergy in the making process"
+        ],
+        "negative_signals": [
+          "Lists parts or techniques separately",
+          "Pros/cons without addressing the combination",
+          "No discussion of how elements interact"
+        ],
+        "common_confusion": "Evaluation must focus on how elements work together, not their individual merits."
+      }
+    },
+    {
+      "id": "evaluate_in_intended_environment",
+      "description": "Evaluates the prototype\u2019s effectiveness using evidence gathered in its intended physical and social environment.",
+      "level": "M",
+      "weight": 1,
+      "success_examples": [
+        "photographed in its intended physical and social environment",
+        "The prototype is worn by the model under lights to gather evidence"
+      ],
+      "source_ref": "Low Merit commentary; High Merit commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "Includes evidence from use or trial in intended conditions",
+          "Provides evaluative statements based on evidence",
+          "Links evaluation to physical and social environment"
+        ],
+        "negative_signals": [
+          "Images or visuals alone without evaluation",
+          "Generic claims without contextual evidence",
+          "No evidence gathered in the intended environment"
+        ],
+        "common_confusion": "Evaluation requires specific evidence from the intended context, not just general descriptions."
+      }
+    },
+    {
+      "id": "evaluate_broadest_sense_factors",
+      "description": "Evaluates fitness for purpose in the broadest sense by considering factors such as social acceptability, technical feasibility, ethics, sustainability, and life cycle.",
+      "level": "M",
+      "weight": 1,
+      "success_examples": [
+        "considering social acceptability, technical feasibility, life cycle, ethics, sustainability of resources",
+        "considered the social and physical environment"
+      ],
+      "source_ref": "High Merit commentary; Low Achieved commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "Evaluates against multiple broadest-sense factors",
+          "Considers consequences for effectiveness or use",
+          "Links factors to overall fitness for purpose"
+        ],
+        "negative_signals": [
+          "Lists factors without evaluative statements",
+          "Statements without consequences for the prototype",
+          "Focuses on only one or two factors"
+        ],
+        "common_confusion": "Factors must be evaluated for their impact on fitness for purpose, not just listed."
+      }
+    },
+    {
+      "id": "synthesise_evidence_testing_and_feedback",
+      "description": "Synthesises evidence from ongoing testing (including prototyping) and stakeholder feedback to optimise the prototype and justify its fitness for purpose against the brief.",
+      "level": "E",
+      "weight": 2,
+      "success_examples": [
+        "synthesising evidence from ongoing testing (included prototyping) and stakeholder feedback",
+        "Evidence from ongoing testing and trials and stakeholder feedback has been synthesised"
+      ],
+      "source_ref": "Low Excellence commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "Integrates multiple evidence sources into a rationale",
+          "Informs optimisation or validation decisions",
+          "Provides combined justification for changes"
+        ],
+        "negative_signals": [
+          "Sequences results without integration",
+          "No evidence of optimisation from synthesis",
+          "Treats sources separately without combining"
+        ],
+        "common_confusion": "Synthesis requires combining sources into a unified rationale, not just listing them."
+      }
+    },
+    {
+      "id": "justify_fitness_against_brief_broadest_sense",
+      "description": "Justifies the prototype\u2019s fitness for purpose against the brief, using synthesised evidence and wider-context considerations.",
+      "level": "E",
+      "weight": 2,
+      "success_examples": [
+        "justify the prototype\u2019s fitness for purpose against the brief",
+        "The synthesised evidence \u2026 justifies the prototype\u2019s fitness for purpose"
+      ],
+      "source_ref": "Low Excellence commentary",
+      "evidence_guide": {
+        "positive_signals": [
+          "States a clear position on fitness for purpose",
+          "Uses synthesised evidence in reasoning",
+          "Incorporates broader context considerations"
+        ],
+        "negative_signals": [
+          "Makes assertions without supporting reasons",
+          "Ignores the brief or evidence in justification",
+          "No outcome-based reasoning provided"
+        ],
+        "common_confusion": "Justification must be supported by evidence and context, not just stated as fact."
+      }
+    }
+  ],
+  "aggregation_rules": {
+    "method": "hierarchical",
+    "gate_sequence": [
+      "A",
+      "M",
+      "E"
+    ],
+    "levels": {
+      "A": {
+        "required_fraction": 1.0
+      },
+      "M": {
+        "required_fraction": 0.6
+      },
+      "E": {
+        "required_fraction": 0.5
+      }
+    },
+    "sub_band_logic": {
+      "Achieved": {
+        "A3": {
+          "extra_merit_indicators": 0
+        },
+        "A4": {
+          "extra_merit_indicators": "\u22651"
+        }
+      },
+      "Merit": {
+        "M5": {
+          "extra_excellence_indicators": 0
+        },
+        "M6": {
+          "extra_excellence_indicators": "\u22651"
+        }
+      },
+      "Excellence": {
+        "E7": {
+          "excellence_fraction": "<1.0"
+        },
+        "E8": {
+          "excellence_fraction": "1.0"
+        }
+      }
+    },
+    "fallback_grade": "N1"
+  },
+  "governance": {
+    "last_validated": "2025-07-18",
+    "change_log": []
+  }
 }

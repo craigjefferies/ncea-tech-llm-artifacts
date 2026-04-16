@@ -46,7 +46,20 @@
       "description": "States or selects a relevant mechanics principle, law, or correct formula for the situation.",
       "level": "A",
       "weight": 2,
-      "detection_hint": "A valid law, concept, or formula must be explicitly named or written. Mentioning 'a law' or giving an unrelated formula is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit naming of a specific physics law (e.g., 'Newton's second law')",
+          "Correct formula written out (e.g., 'F = ma')",
+          "Relevant concept stated (e.g., 'conservation of momentum')",
+          "Formula applied with correct variables"
+        ],
+        "negative_signals": [
+          "Generic mention of 'a law' without specification",
+          "Incorrect or unrelated formula used",
+          "Formula stated but not relevant to the situation"
+        ],
+        "common_confusion": "Note that simply mentioning 'a law' or 'a formula' is insufficient; the specific, correct one must be explicitly named or written."
+      },
       "success_examples": ["F = ma", "The law of conservation of momentum applies."],
       "source_ref": "AS PDF p2 ¶2"
     },
@@ -55,7 +68,20 @@
       "description": "Accurately labels diagrams or graphs with quantities (e.g., forces, velocity, axes).",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Labels must correspond to the relevant physics quantity and be placed correctly. Unlabeled or incorrectly labeled diagrams do not meet this indicator. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Labels matching the physics quantity (e.g., 'F' for force arrows)",
+          "Correct placement of labels on the diagram",
+          "Axes labeled with quantity and units (e.g., 'velocity (m/s)')",
+          "Graph features accurately labeled"
+        ],
+        "negative_signals": [
+          "Unlabeled diagrams or graphs",
+          "Incorrect labels (e.g., wrong symbol or quantity)",
+          "Labels placed in wrong positions"
+        ],
+        "common_confusion": "Note that labels must correspond exactly to the relevant physics quantity and be placed correctly; incorrect or misplaced labels do not meet the criteria."
+      },
       "success_examples": ["Force arrows labeled", "Velocity shown on a graph"],
       "source_ref": "AS PDF p2 ¶3"
     },
@@ -64,7 +90,21 @@
       "description": "Performs a straightforward calculation using a mechanics formula to solve for a single variable.",
       "level": "A",
       "weight": 2,
-      "detection_hint": "A calculation using the correct formula with correct substitution and units. Guessing, estimation, or using an unrelated equation does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Correct formula used (e.g., v = d/t)",
+          "Proper substitution of values",
+          "Units included and correct (e.g., m/s)",
+          "Accurate calculation result"
+        ],
+        "negative_signals": [
+          "Guessing or estimation without formula",
+          "Using an unrelated or incorrect equation",
+          "Incorrect substitution of values",
+          "Missing or wrong units"
+        ],
+        "common_confusion": "Note that the calculation must be straightforward using the correct formula with proper substitution and units; guessing or unrelated equations do not count."
+      },
       "success_examples": ["v = d/t = 10/2 = 5 m/s", "p = mv = 3 × 2 = 6 kg·m/s"],
       "source_ref": "AS PDF p2 ¶2; Moderator para 1"
     },
@@ -73,7 +113,21 @@
       "description": "Links a mechanics principle or formula to the described situation, showing how it applies.",
       "level": "A",
       "weight": 2,
-      "detection_hint": "The response must connect the principle or formula to the specific context, not just recite the rule. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Principle connected to the specific situation (e.g., 'gravity causes acceleration')",
+          "Formula applied with explanation (e.g., 'F = ma applies here')",
+          "Shows how the concept fits the context",
+          "Relevance to the scenario demonstrated"
+        ],
+        "negative_signals": [
+          "Just reciting the principle without connection",
+          "Using an unrelated principle",
+          "No explanation of how it applies",
+          "Generic statement without context"
+        ],
+        "common_confusion": "Note that merely stating the principle or formula is insufficient; it must be linked and shown how it applies to the specific situation."
+      },
       "success_examples": ["Because only gravity acts, the ball accelerates at 9.8 m/s²."],
       "source_ref": "AS PDF p2 ¶2"
     },
@@ -82,7 +136,21 @@
       "description": "Gives a reason why a principle, concept, or law is relevant to the situation.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Stating 'because it is needed' is not sufficient; a clear cause-effect or reasoning must be shown. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Clear cause-effect reasoning (e.g., 'no external forces, so momentum conserved')",
+          "Explanation of relevance to the situation",
+          "Specific reasons provided",
+          "Logical justification with physics basis"
+        ],
+        "negative_signals": [
+          "Vague statements like 'because it is needed'",
+          "No clear reasoning given",
+          "Unrelated or incorrect reasons",
+          "Circular or tautological explanations"
+        ],
+        "common_confusion": "Note that stating 'because it is needed' or similar vagueness is insufficient; a clear cause-effect relationship or specific reasoning must be demonstrated."
+      },
       "success_examples": ["Conservation of momentum applies because there are no external forces."],
       "source_ref": "AS PDF p2 ¶2; Moderator para 2"
     },
@@ -91,7 +159,21 @@
       "description": "Correctly solves a multi-step or non-obvious calculation requiring two or more physics principles.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Each step must be shown and logically follow from the previous, using correct physics. Skipping steps or using the wrong principle does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Each step shown explicitly",
+          "Logical progression from one step to the next",
+          "Correct physics principles applied",
+          "Multi-step calculation completed accurately"
+        ],
+        "negative_signals": [
+          "Steps skipped or omitted",
+          "Using incorrect physics principles",
+          "Illogical sequence of steps",
+          "Errors in calculation or application"
+        ],
+        "common_confusion": "Note that every step must be shown and logically follow using correct physics; skipping steps or using wrong principles invalidates the solution."
+      },
       "success_examples": ["Calculate acceleration, then use it to find final velocity."],
       "source_ref": "Moderator para 2"
     },
@@ -100,7 +182,21 @@
       "description": "Explains the relationship between two or more physical quantities in context.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "A valid explanation links the quantities and describes how one affects the other, not just listing them. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Quantities linked with cause-effect (e.g., 'force causes acceleration')",
+          "Describes how one affects the other",
+          "Relationship explained in context",
+          "Meaningful connection between quantities"
+        ],
+        "negative_signals": [
+          "Just listing quantities without explanation",
+          "No description of how they relate",
+          "Unrelated or incorrect connections",
+          "Vague or superficial descriptions"
+        ],
+        "common_confusion": "Note that merely listing the quantities is insufficient; the explanation must link them and describe how one affects the other in the given context."
+      },
       "success_examples": ["As force increases, acceleration increases."],
       "source_ref": "AS PDF p2 ¶2"
     },
@@ -109,7 +205,21 @@
       "description": "Correctly interprets or explains features of a graph or vector diagram in relation to the physical situation.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Must relate graph or diagram features to the real-world context; just describing the shape is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Graph features interpreted in physics context (e.g., 'slope = acceleration')",
+          "Vector diagram related to situation",
+          "Explanation of what features mean physically",
+          "Connection to real-world quantities"
+        ],
+        "negative_signals": [
+          "Just describing shape without physics context",
+          "Unrelated or incorrect interpretations",
+          "No explanation of physical meaning",
+          "Failing to connect to the situation"
+        ],
+        "common_confusion": "Note that merely describing the shape or features of the graph/diagram is insufficient; it must be interpreted in relation to the physical situation."
+      },
       "success_examples": ["The slope of the velocity-time graph gives acceleration."],
       "source_ref": "AS PDF p2 ¶3"
     },
@@ -118,7 +228,21 @@
       "description": "Shows how two or more mechanics concepts connect or interact across different contexts.",
       "level": "E",
       "weight": 3,
-      "detection_hint": "Must clearly link concepts, not just mention both. A valid connection explains interaction or mutual influence. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Concepts linked with interaction explained",
+          "Shows mutual influence between concepts",
+          "Connection across different contexts demonstrated",
+          "Integration of multiple principles"
+        ],
+        "negative_signals": [
+          "Just mentioning concepts without linking",
+          "No explanation of how they interact",
+          "Unrelated concepts used",
+          "Vague or superficial connections"
+        ],
+        "common_confusion": "Note that merely mentioning two or more concepts is insufficient; they must be clearly linked with explanation of their interaction or mutual influence."
+      },
       "success_examples": ["Momentum conservation and energy loss both explain the car crash outcome."],
       "source_ref": "AS PDF p2 ¶2; Moderator para 3"
     },
@@ -127,7 +251,21 @@
       "description": "Provides a comprehensive, accurate, and concise written explanation of a mechanics principle or process.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Explanation must be both accurate and clear, covering all key points without unnecessary detail or error. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Accurate description of the principle",
+          "Clear and concise language used",
+          "All key points covered",
+          "No errors or unnecessary details"
+        ],
+        "negative_signals": [
+          "Inaccurate or incorrect information",
+          "Unclear or overly verbose explanations",
+          "Missing key points",
+          "Inclusion of errors or irrelevant details"
+        ],
+        "common_confusion": "Note that the explanation must be comprehensive yet concise, accurate, and clear, covering all key points without unnecessary detail or factual errors."
+      },
       "success_examples": ["Work is the product of force and distance moved in the direction of the force."],
       "source_ref": "Moderator para 3"
     },
@@ -136,7 +274,21 @@
       "description": "Applies physics knowledge accurately to an unfamiliar or complex context.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Must transfer understanding, not just repeat memorized facts. The application should address the specifics of the new context. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Physics principles applied to new context",
+          "Addresses specific aspects of the unfamiliar situation",
+          "Accurate transfer of knowledge",
+          "Demonstrates understanding beyond memorization"
+        ],
+        "negative_signals": [
+          "Just repeating memorized facts",
+          "Inaccurate application to the context",
+          "Ignoring unique aspects of the situation",
+          "No evidence of transferred understanding"
+        ],
+        "common_confusion": "Note that merely repeating memorized facts is insufficient; the knowledge must be accurately transferred and applied to address the specifics of the unfamiliar or complex context."
+      },
       "success_examples": ["Explaining projectile motion on a different planet."],
       "source_ref": "Moderator para 3"
     }
@@ -166,7 +318,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

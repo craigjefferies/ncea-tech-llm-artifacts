@@ -25,7 +25,20 @@
       "description": "Describes the purpose of human‑computer interfaces",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must clearly state what the interface helps the user achieve. Vague phrases like “it is useful” are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit statement of user achievement (e.g., 'helps students book library laptops')",
+          "Specific purpose description (e.g., 'lets users order food for delivery')",
+          "Clear interface function (e.g., 'enables account creation')",
+          "Direct benefit to user (e.g., 'facilitates online shopping')"
+        ],
+        "negative_signals": [
+          "Vague phrases like 'it is useful' without specifics",
+          "No mention of what the interface achieves",
+          "Ambiguous descriptions (e.g., 'makes life easier')"
+        ],
+        "common_confusion": "Purpose must be clearly stated in terms of user actions or goals, not just general usefulness."
+      },
       "success_examples": [
         "The website helps students book library laptops.",
         "The app lets users order food for delivery."
@@ -37,7 +50,20 @@
       "description": "Identifies and describes usability principles used in an interface",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must name at least one usability principle and describe its use. Naming alone is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Names a principle and describes its use (e.g., 'uses consistency in menu layout')",
+          "Links principle to specific interface feature",
+          "Provides example of principle application (e.g., 'feedback with loading spinner')",
+          "Explains how principle is implemented"
+        ],
+        "negative_signals": [
+          "Names principle without description (e.g., 'uses consistency')",
+          "Describes feature without naming principle",
+          "Vague references to 'good design' or 'user-friendly'"
+        ],
+        "common_confusion": "Simply naming a usability principle is insufficient; must describe how it is used in the interface."
+      },
       "success_examples": [
         "It uses consistency so all pages have the same menu layout.",
         "The system uses feedback by showing a loading spinner when pages are loading."
@@ -49,7 +75,20 @@
       "description": "Explains how usability principles have been applied in the interface",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Must link a named principle to a specific feature or behaviour. Restating definitions is not enough. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Links named principle to specific feature (e.g., 'help popup explains login')",
+          "Describes how principle prevents issues (e.g., 'disables submit until fields filled')",
+          "Connects principle to user behavior or outcome",
+          "Explains application with examples"
+        ],
+        "negative_signals": [
+          "Restates principle definition without application",
+          "Mentions feature without linking to principle",
+          "General statements without specific connections"
+        ],
+        "common_confusion": "Explaining the definition of a usability principle is not the same as showing how it has been applied in the interface."
+      },
       "success_examples": [
         "Help and documentation is provided through a 'Need Help?' popup that explains how to log in.",
         "Error prevention is used by disabling the 'Submit' button until all fields are filled."
@@ -61,7 +100,20 @@
       "description": "Explains how the interface’s usability aids the user experience",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Must describe how the usability features support the user (e.g. clarity, speed, confidence). Saying 'it helps' without detail is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Describes how features support user experience (e.g., 'clean layout finds form quickly')",
+          "Links usability to benefits like clarity, speed, confidence",
+          "Explains impact on user (e.g., 'feedback confirms booking success')",
+          "Connects principle application to user outcomes"
+        ],
+        "negative_signals": [
+          "Says 'it helps' without specific details",
+          "Vague benefits (e.g., 'makes it better for users')",
+          "No connection to user experience or specific aids"
+        ],
+        "common_confusion": "Must specify how usability features aid the user experience, not just that they do."
+      },
       "success_examples": [
         "The clean layout means users can find the reservation form quickly.",
         "Feedback messages make it clear when a booking was successful."
@@ -73,7 +125,20 @@
       "description": "Compares the usability of human‑computer interfaces",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Must contrast two interfaces using specific principles. Listing differences without linking to usability is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Contrasts interfaces using principles (e.g., 'larger fonts improve readability')",
+          "Compares specific features linked to usability",
+          "Highlights differences in principle application",
+          "Uses usability terms in comparison"
+        ],
+        "negative_signals": [
+          "Lists differences without linking to usability",
+          "Compares interfaces without naming principles",
+          "Opinions without evidence from principles"
+        ],
+        "common_confusion": "Comparison must tie specific differences to usability principles, not just any observed differences."
+      },
       "success_examples": [
         "Interface A used larger fonts and was easier to read than Interface B.",
         "Both had search bars, but only Interface B used auto-complete to help users."
@@ -85,7 +150,20 @@
       "description": "Judges which interface used usability principles more effectively and explains why",
       "level": "E",
       "weight": 3,
-      "detection_hint": "Must state which interface is better and give a reason using a principle. Opinions with no justification are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "States which interface is better and reasons with principle (e.g., 'consistent layout builds confidence')",
+          "Judges effectiveness using usability principles",
+          "Explains superiority with specific examples",
+          "Links judgment to user benefits via principles"
+        ],
+        "negative_signals": [
+          "Opinions without justification using principles",
+          "No principle mentioned in reasoning",
+          "Vague reasons (e.g., 'looks better' or 'feels nicer')"
+        ],
+        "common_confusion": "Judgment must be supported by how usability principles are applied, not personal preference."
+      },
       "success_examples": [
         "Interface B was better because its consistent layout helped users feel confident.",
         "Interface A used clearer feedback messages, so users knew their form was submitted."
@@ -97,7 +175,20 @@
       "description": "Suggests multiple usability‑based improvements for the interface",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Must propose at least two concrete improvements and link each to a usability principle. One unlinked suggestion is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Proposes concrete improvements linked to principles (e.g., 'progress bar for feedback')",
+          "Multiple suggestions with usability ties",
+          "Specific changes (e.g., 'larger icons for accessibility')",
+          "Explains how improvement enhances usability"
+        ],
+        "negative_signals": [
+          "One unlinked suggestion (e.g., 'make it faster')",
+          "Vague ideas without principle connection",
+          "No specific improvements proposed"
+        ],
+        "common_confusion": "Each suggested improvement must be linked to a usability principle to be counted."
+      },
       "success_examples": [
         "Add a progress bar to improve feedback.",
         "Use larger icons to help users with visual impairments."
@@ -130,7 +221,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

@@ -34,131 +34,279 @@
       "description": "Program stores at least two distinct data types in variables.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Look for two different data types (e.g., string and integer) assigned to variables. Collections count as a type only if they store a different type from other variables. Highlight phrases showing assignments or violations.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit assignment of integer values to variables",
+          "Explicit assignment of string values to variables",
+          "Explicit assignment of boolean or float values to variables",
+          "Clear use of at least two different variable data types"
+        ],
+        "negative_signals": [
+          "Numbers stored as strings without reason",
+          "Variables declared but never assigned or used",
+          "Only one data type used despite multiple variables"
+        ],
+        "common_confusion": "Collections like lists do not count as a second data type unless the student also uses another distinct variable data type."
+      },
       "success_examples": [
         "termination_value = \"4\"  # string; guesses_count = 3  # integer"
       ],
-      "source_ref": "AS PDF p1 Explanatory Note\u202f2"
+      "source_ref": "AS PDF p1 Explanatory Note 2"
     },
     {
       "id": "uses_core_structures_collection",
       "description": "Program uses sequence, selection, iteration, and accesses data in a collection.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Require at least one if/else (selection), one loop (iteration), and collection access (e.g., append, index, or loop over). Mere initialisation without access does not count. Highlight phrases showing use or lack thereof.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Use of if/else or another conditional structure",
+          "Use of a loop for repeated processing",
+          "Collection access such as append, index access, or iteration over stored items",
+          "Logical sequence of statements showing program flow"
+        ],
+        "negative_signals": [
+          "Collection created but never meaningfully accessed",
+          "Missing selection logic",
+          "Missing iteration",
+          "Only sequence is visible with no collection processing"
+        ],
+        "common_confusion": "Sequence alone is not enough; the program must also show selection, iteration, and actual collection access."
+      },
       "success_examples": [
         "Guesses.append(answer)",
         "for item in items:"
       ],
-      "source_ref": "AS PDF p1\u202f\u00b6\u2018The computer program must\u2026\u2019"
+      "source_ref": "AS PDF p1 ‘The computer program must…’"
     },
-
     {
       "id": "testing_expected_cases",
       "description": "Testing evidence shows the program works with expected inputs.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Need specific test cases with inputs and observed outputs (and ideally expected outputs). Acceptable evidence formats include tables, logs, written notes, screenshots, or screencasts; artifact type is optional. Generic claims (e.g., 'it worked') are insufficient. Highlight concrete test details or omissions.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Specific test cases with clear inputs and observed outputs",
+          "Expected outputs are shown or implied clearly enough to compare",
+          "Testing evidence appears in tables, logs, notes, screenshots, or screencasts",
+          "Results show the program working for normal expected cases"
+        ],
+        "negative_signals": [
+          "Generic claims such as 'it worked' without evidence",
+          "Inputs listed without any outputs",
+          "Expected and actual behaviour cannot be compared",
+          "No concrete test details are shown"
+        ],
+        "common_confusion": "Testing requires concrete evidence of what was tried and what happened, not just a statement that the program was tested."
+      },
       "success_examples": [
-        "Input: 5 \u2192 Expected: 'Correct'; Actual: 'Correct'"
+        "Input: 5 → Expected: 'Correct'; Actual: 'Correct'"
       ],
-      "source_ref": "Moderator Guide p1\u202fCriteria\u202f2"
+      "source_ref": "Moderator Guide p1 Criteria 2"
     },
     {
       "id": "debugging_evidence_present",
       "description": "Debugging evidence shows at least one defect was identified and fixed.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Require at least one specific example of a bug/defect and what changed to fix it (e.g., before/after code snippet, notes describing the issue and resolution, or test evidence showing failure then pass). Evidence can be in tables, logs, notes, screenshots, or screencasts; artifact type is optional. Highlight the defect description, fix, and outcome, or note if missing.",
+      "evidence_guide": {
+        "positive_signals": [
+          "A specific bug or defect is described clearly",
+          "A code or logic change is shown or explained as the fix",
+          "Retesting shows the defect was resolved",
+          "Evidence appears in notes, before/after code, logs, screenshots, or screencasts"
+        ],
+        "negative_signals": [
+          "Claims that debugging happened without naming the issue",
+          "A fix is mentioned but the original problem is unclear",
+          "A bug is identified but no fix is shown",
+          "No evidence that the program was retested after the fix"
+        ],
+        "common_confusion": "Debugging evidence must show both the problem and the change made to fix it; a corrected final program on its own is not enough."
+      },
       "success_examples": [
-        "Bug: loop never terminated when input was 0 \u2192 Fix: changed condition from '>' to '>=' \u2192 Retest: input 0 now exits correctly"
+        "Bug: loop never terminated when input was 0 → Fix: changed condition from '>' to '>=' → Retest: input 0 now exits correctly"
       ],
-      "source_ref": "Moderator Guide p1\u202fCriteria\u202f2"
+      "source_ref": "Moderator Guide p1 Criteria 2"
     },
-
     {
       "id": "basic_comments_present",
       "description": "Code contains comments documenting the program.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "At least two comments in different sections, describing purpose/behaviour (not single words). Spread through code; line-by-line 'what' insufficient. Highlight comments or inadequate examples.",
+      "evidence_guide": {
+        "positive_signals": [
+          "At least two comments appear in different parts of the code",
+          "Comments describe purpose or behaviour of code sections",
+          "Comments are more than single-word labels",
+          "Comments help a reader understand what the program is doing"
+        ],
+        "negative_signals": [
+          "Single-word comments such as '# loop'",
+          "Comments only on trivial lines",
+          "Comments clustered in one place only",
+          "Line-by-line comments that simply restate code"
+        ],
+        "common_confusion": "Comments should help document the program for a reader, not just translate each line into plain English."
+      },
       "success_examples": [
         "# Ask user to guess the number",
         "# Display all previous guesses"
       ],
-      "source_ref": "AS PDF p1\u202fExplanatory Note\u202f1"
+      "source_ref": "AS PDF p1 Explanatory Note 1"
     },
     {
       "id": "descriptive_variable_names",
       "description": "Variable names are succinct and descriptive.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Names should reflect content/role (e.g., total_score); avoid obscure like x1 or tmp. Consistent with language conventions ideal but not required. Highlight examples of good/poor names.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Variable names reflect their content or role",
+          "Names are short enough to stay readable",
+          "Names follow sensible language conventions",
+          "Names avoid vague placeholders like x1 or tmp"
+        ],
+        "negative_signals": [
+          "Non-descriptive names such as x, tmp, or a1",
+          "Names that do not match the variable purpose",
+          "Inconsistent naming style",
+          "Names that are confusing or unnecessarily long"
+        ],
+        "common_confusion": "A few conventional short names may be acceptable, but the main program variables should still communicate their purpose clearly."
+      },
       "success_examples": [
         "player_age",
         "termination_value"
       ],
-      "source_ref": "Moderator Guide p4\u202fCriteria\u202f1"
+      "source_ref": "Moderator Guide p4 Criteria 1"
     },
     {
       "id": "comments_clarify_purpose",
       "description": "Comments consistently explain the purpose of each code section.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Comments must explain WHY sections exist (purpose), consistent across significant blocks; not line-by-line operations or justifications. Highlight clarifying comments or inconsistencies.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Comments explain why a code section exists",
+          "Important sections are commented consistently",
+          "Comments clarify the intent of the code",
+          "Purpose-level comments appear across the program"
+        ],
+        "negative_signals": [
+          "Comments only describe what each line does",
+          "Major sections have no explanatory comments",
+          "Comments justify choices without clarifying purpose",
+          "Commenting is inconsistent across the program"
+        ],
+        "common_confusion": "For Merit, comments should explain the purpose of sections, not just narrate the operations line by line."
+      },
       "success_examples": [
         "# Check if the car is valid",
         "# Update leaderboard after each round"
       ],
-      "source_ref": "Moderator Guide p4\u202fCriteria\u202f2"
+      "source_ref": "Moderator Guide p4 Criteria 2"
     },
-
     {
       "id": "boundary_testing_performed",
       "description": "Testing evidence includes at least one on-, below-, and above-boundary value for an identified boundary (where a boundary exists).",
       "level": "M",
       "weight": 1,
-      "detection_hint": "If the task/program has a clear boundary (e.g., numeric range, minimum/maximum, length limit), require three explicit test values: below, on, and above that boundary, with observed outputs. If no clear boundary is present in the spec or implementation, do not penalise; record as not applicable. Vague mentions of 'boundary testing' without values are insufficient. Highlight boundary definition and test values, or mark N/A if no boundary can be reasonably inferred.",
+      "evidence_guide": {
+        "positive_signals": [
+          "A clear boundary is identified from the task or program logic",
+          "Specific below, on, and above values are tested",
+          "Observed outputs are shown for the boundary tests",
+          "Boundary testing is documented as part of the testing evidence"
+        ],
+        "negative_signals": [
+          "Vague mention of boundary testing with no values",
+          "Only one side of the boundary is tested",
+          "The boundary itself is not identified",
+          "Boundary testing is claimed where no meaningful boundary exists"
+        ],
+        "common_confusion": "Boundary testing applies only when the task or program has a real identifiable boundary; if no such boundary exists, this should be treated as not applicable rather than invented."
+      },
       "success_examples": [
         "Age boundary (12-18): 11 (below), 12 (on), 19 (above)"
       ],
-      "source_ref": "Moderator Guide p5\u202fBoundary\u202ftesting"
+      "source_ref": "Moderator Guide p5 Boundary testing"
     },
-
     {
       "id": "effective_control_structures",
       "description": "Conditions and control structures are used effectively to reduce repetition and errors.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Look for chained/nested conditions, Boolean operators, ordered ifs, or natural loops to minimise repetition/errors. Duplicated logic or inefficient checks do not count. Highlight effective structures or redundancies.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Chained or nested conditions reduce repeated code",
+          "Boolean operators are used meaningfully in conditions",
+          "Condition order supports clear and reliable behaviour",
+          "Loop structures naturally reduce repetition and mistakes"
+        ],
+        "negative_signals": [
+          "Duplicated logic across the program",
+          "Redundant or inefficient checks",
+          "Simple repetitive conditions where cleaner logic was possible",
+          "Control structures are present but do not improve reliability or efficiency"
+        ],
+        "common_confusion": "Excellence is not about having more control structures; it is about using them in ways that reduce repetition and potential error."
+      },
       "success_examples": [
         "while guess != target and attempts < MAX_TRIES:"
       ],
-      "source_ref": "Moderator Guide p6\u202fCriteria\u202f1"
+      "source_ref": "Moderator Guide p6 Criteria 1"
     },
     {
       "id": "flexible_values_over_literals",
       "description": "Program uses constants, variables, or derived values instead of hard-coded literals to enable flexibility.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Use constants/variables/calculations for easy changes; avoid repeated literals without rationale. Focus on maintainability for programmer. Highlight flexible uses or hardcoded literals.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Constants are used for values likely to change",
+          "Derived calculations replace repeated literals",
+          "Values are easy to change without rewriting many lines",
+          "The code is structured for maintainability"
+        ],
+        "negative_signals": [
+          "Repeated hard-coded literals appear without reason",
+          "Magic numbers are embedded directly in logic",
+          "Literal values make the program harder to update",
+          "No use of constants or derived values where clearly helpful"
+        ],
+        "common_confusion": "Not every literal is a problem, but values that may need to change or are repeated should usually be lifted into constants or derived expressions."
+      },
       "success_examples": [
         "MAX_TRIES = 5  # constant",
         "discount = price * GST_RATE"
       ],
-      "source_ref": "Moderator Guide p6\u202fCriteria\u202f2"
+      "source_ref": "Moderator Guide p6 Criteria 2"
     },
-
     {
       "id": "invalid_case_testing",
       "description": "Testing demonstrates program handles at least one invalid input gracefully (where user/input validation is applicable).",
       "level": "E",
       "weight": 1,
-      "detection_hint": "If the program accepts user input (or externally provided input), require at least one clearly invalid test case with the program's handling shown (e.g., error message, retry loop, safe default). If the program has no meaningful invalid-input surface (e.g., no inputs beyond fixed internal values), do not penalise; record as not applicable. Unhandled crashes or tracebacks on invalid input fail this indicator when applicable. Highlight invalid input, handling behaviour, and outcome, or mark N/A if not applicable.",
+      "evidence_guide": {
+        "positive_signals": [
+          "At least one clearly invalid input is tested",
+          "The program responds with an error message, retry, or safe handling path",
+          "Testing shows the program does not crash on invalid input",
+          "Invalid-input evidence is documented with outcome"
+        ],
+        "negative_signals": [
+          "Only valid inputs are tested",
+          "Invalid input causes a crash or traceback",
+          "Invalid cases are mentioned but not demonstrated",
+          "Invalid-input testing is claimed where there is no meaningful input surface"
+        ],
+        "common_confusion": "Invalid-input testing is only applicable when the program actually accepts user or external input; if there is no meaningful invalid-input surface, this should be treated as not applicable rather than fabricated."
+      },
       "success_examples": [
-        "Input: 'abc' (invalid) \u2192 Output: 'Please enter a number.'"
+        "Input: 'abc' (invalid) → Output: 'Please enter a number.'"
       ],
-      "source_ref": "Moderator Guide p6\u202fCriteria\u202f3"
+      "source_ref": "Moderator Guide p6 Criteria 3"
     }
   ],
   "aggregation_rules": {
@@ -185,7 +333,7 @@
           "extra_merit_indicators": 0
         },
         "A4": {
-          "extra_merit_indicators": "\u22651"
+          "extra_merit_indicators": "≥1"
         }
       },
       "Merit": {
@@ -193,7 +341,7 @@
           "extra_excellence_indicators": 0
         },
         "M6": {
-          "extra_excellence_indicators": "\u22651"
+          "extra_excellence_indicators": "≥1"
         }
       },
       "Excellence": {

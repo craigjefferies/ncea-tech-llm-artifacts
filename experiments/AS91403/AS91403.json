@@ -38,7 +38,19 @@
       "description": "Defines macro-economic influences including both internal and external factors",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Definitions must mention both internal and external macro factors (e.g., consumption, exchange rates). Listing only one side is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Names at least one internal macro-economic factor",
+          "Names at least one external macro-economic factor",
+          "Uses examples such as consumption, investment, exchange rates, or the world economy"
+        ],
+        "negative_signals": [
+          "Lists only internal factors or only external factors",
+          "Uses vague terms without identifying macro-economic influences",
+          "Provides a one-sided definition with no contrast between internal and external"
+        ],
+        "common_confusion": "Students often define macro-economic influences with only one side of the economy, but Achieved requires both internal and external factors."
+      },
       "success_examples": [
         "Changes in government policy or international trade conditions can affect economic outcomes."
       ],
@@ -49,7 +61,19 @@
       "description": "Uses economic model(s) to illustrate concepts relating to macro-economic influences",
       "level": "A",
       "weight": 2,
-      "detection_hint": "Must include a labelled model and link it to a macro concept. Unlabelled graphs or irrelevant models do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Includes a labelled macro-economic model or graph",
+          "Links the model to a relevant macro-economic concept",
+          "Explains what the model shows about the influence being discussed"
+        ],
+        "negative_signals": [
+          "Uses an unlabelled graph or model",
+          "Includes a model with no link to the macro concept",
+          "Uses an irrelevant diagram unrelated to the explanation"
+        ],
+        "common_confusion": "A diagram on its own is not enough; the model must be labelled and used to explain the macro-economic idea."
+      },
       "success_examples": [
         "An increase in government spending shifts the AD curve rightward, raising output and employment."
       ],
@@ -60,7 +84,19 @@
       "description": "Describes current state of the NZ economy using valid indicators",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must include at least one macro indicator (e.g., unemployment rate) and interpret it in context. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Uses a valid macro-economic indicator such as unemployment, inflation, or GDP growth",
+          "Interprets the indicator in a New Zealand context",
+          "Explains what the indicator suggests about current economic conditions"
+        ],
+        "negative_signals": [
+          "Lists an indicator with no interpretation",
+          "Describes the economy without any valid indicator",
+          "Uses a statistic with no contextual explanation"
+        ],
+        "common_confusion": "Naming an indicator is insufficient unless the student also interprets what it means for the New Zealand economy."
+      },
       "success_examples": [
         "The current unemployment rate is 4.3%, showing near full employment."
       ],
@@ -71,7 +107,19 @@
       "description": "Correctly calculates or interprets macro-economic values",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must show correct workings or explanation of a rate (e.g., inflation, GDP growth). Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Shows the correct working for a macro-economic calculation",
+          "Explains how a rate or value has been interpreted",
+          "Uses correct macro-economic terminology when discussing the value"
+        ],
+        "negative_signals": [
+          "States a final value without showing working or explanation",
+          "Uses incorrect working or misinterprets the result",
+          "Gives a macro-economic value with no explanation of what it represents"
+        ],
+        "common_confusion": "A correct-looking answer is not enough if the working or interpretation is missing."
+      },
       "success_examples": [
         "Multiplier = 1 / (1 - MPC) = 2.5"
       ],
@@ -82,7 +130,19 @@
       "description": "Explains how a macro-economic influence affects the NZ economy",
       "level": "M",
       "weight": 2,
-      "detection_hint": "The influence (e.g., exchange rate) must be linked to an economic effect (e.g., export volume). Generic statements without cause-effect links are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Links a specific macro-economic influence to an economic effect",
+          "Uses cause-and-effect language such as 'because', 'therefore', or 'leads to'",
+          "Explains how the influence changes an outcome such as exports, inflation, or employment"
+        ],
+        "negative_signals": [
+          "Describes an influence without explaining the resulting effect",
+          "Uses generic statements such as 'it affects the economy' with no mechanism",
+          "Mentions an effect without connecting it back to the macro-economic influence"
+        ],
+        "common_confusion": "Students often describe the influence and the outcome separately, but Merit requires an explicit causal link between them."
+      },
       "success_examples": [
         "A stronger NZ dollar makes exports more expensive, reducing demand."
       ],
@@ -93,7 +153,19 @@
       "description": "Links multiple graphs or models to support explanation",
       "level": "M",
       "weight": 1,
-      "detection_hint": "There must be explicit references to more than one model or diagram. Referring to only one visual aid or failing to relate them to the narrative does not meet this. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Refers to more than one graph or model",
+          "Explains how the models work together in the explanation",
+          "Connects the diagrams to the written macro-economic narrative"
+        ],
+        "negative_signals": [
+          "Refers to only one graph or model",
+          "Mentions multiple diagrams without linking them to the explanation",
+          "Uses models as decoration rather than explanatory support"
+        ],
+        "common_confusion": "Simply including two diagrams is insufficient unless the student explicitly links them to the explanation."
+      },
       "success_examples": [
         "The circular flow shows income increase, which shifts the AD curve rightward in the AD/AS model."
       ],
@@ -104,7 +176,19 @@
       "description": "Refers to and integrates relevant resource material in explanations",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Must directly quote or clearly use information from provided stimulus. Generic answers with no reference to material do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Quotes or paraphrases information from the provided resource material",
+          "Uses stimulus data or statements to support the explanation",
+          "Integrates the resource material into the macro-economic argument"
+        ],
+        "negative_signals": [
+          "Gives a generic response with no reference to the supplied material",
+          "Mentions the resource without using its information",
+          "Uses unrelated evidence instead of the provided stimulus"
+        ],
+        "common_confusion": "Students often know the content generally, but this indicator requires them to use the supplied resource material directly."
+      },
       "success_examples": [
         "The article notes investment rose by 3.2%, which contributed to GDP growth."
       ],
@@ -115,7 +199,19 @@
       "description": "Compares effectiveness of different government policies on one macro-economic goal",
       "level": "E",
       "weight": 3,
-      "detection_hint": "Must evaluate at least two policies and how well each achieves a goal (e.g., price stability). Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Evaluates at least two government policies",
+          "Compares how well each policy meets the same macro-economic goal",
+          "Uses criteria or reasoning to judge relative effectiveness"
+        ],
+        "negative_signals": [
+          "Describes only one policy",
+          "Lists policies without evaluating how well they achieve the goal",
+          "Compares policies without tying them to a macro-economic goal"
+        ],
+        "common_confusion": "Excellence requires judgment about effectiveness, not just description of multiple policies."
+      },
       "success_examples": [
         "Fiscal policy has a delayed effect on inflation, while monetary policy can act more swiftly."
       ],
@@ -126,7 +222,19 @@
       "description": "Contrasts the impact of macro-economic influences on different goals",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Must clearly show different impacts (e.g., rising exports improves growth but may worsen current account). Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Shows contrasting impacts on different macro-economic goals",
+          "Uses trade-off language such as 'but', 'however', or 'while'",
+          "Explains how one influence can help one goal while harming another"
+        ],
+        "negative_signals": [
+          "Describes only one impact or one goal",
+          "Lists multiple impacts without contrasting them",
+          "Mentions trade-offs without explaining the different macro-economic goals involved"
+        ],
+        "common_confusion": "Students often mention several effects, but this indicator requires them to contrast how the influence affects different goals."
+      },
       "success_examples": [
         "Increased exports support GDP growth but may raise inflationary pressure."
       ],
@@ -137,7 +245,19 @@
       "description": "Integrates economic models into comparisons of macro-economic impacts",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Model(s) must be referenced as part of the compare/contrast narrative, not just as diagrams. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Uses economic models inside the compare-or-contrast explanation",
+          "Explains how the models support the contrast in impacts",
+          "Treats the models as part of the argument rather than stand-alone visuals"
+        ],
+        "negative_signals": [
+          "Adds models as separate diagrams without integrating them into the comparison",
+          "Mentions models with no narrative explanation",
+          "Compares impacts without any model-based support"
+        ],
+        "common_confusion": "Referring to a model is not enough unless it is embedded in the compare-and-contrast reasoning."
+      },
       "success_examples": [
         "The AD/AS model shows how both tax cuts and subsidies shift the AD curve rightward."
       ],
@@ -169,7 +289,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

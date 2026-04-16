@@ -25,7 +25,20 @@
       "description": "Undertakes a methodical examination and interpretation of selected ideas and values in a classical literary text.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Look for a structured explanation that interprets an idea/value within its textual context. Mere plot summary is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Structured explanation interpreting an idea/value within textual context",
+          "Analysis of how the idea/value is conveyed through language or events",
+          "Connection of the idea/value to broader themes in the text",
+          "Use of specific textual references to illustrate interpretation"
+        ],
+        "negative_signals": [
+          "Mere plot summary without interpretive analysis",
+          "Listing ideas/values without explaining their significance",
+          "Vague generalizations about the text's content"
+        ],
+        "common_confusion": "Interpretation involves explaining the meaning or implications of ideas/values, not just describing the storyline."
+      },
       "success_examples": [
         "provided a simple response to the question",
         "treated the characters in fictional texts as though they were real"
@@ -37,7 +50,20 @@
       "description": "Includes relevant primary‐source evidence (quoted or referenced) to support analysis.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Student must cite or quote a classical source directly and relate it to their point. Vague references or secondary summaries do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Direct quotation from the classical text",
+          "Specific reference to a passage in the primary source",
+          "Citation linked directly to the analytical point",
+          "Explanation of how the evidence supports the argument"
+        ],
+        "negative_signals": [
+          "Vague references without specific quotes",
+          "Use of secondary sources or summaries instead of primary",
+          "Quoting without relating back to the analysis"
+        ],
+        "common_confusion": "Primary-source evidence must be from the original text itself, not from external summaries or commentaries."
+      },
       "success_examples": [
         "provided narrow examples from the text",
         "occasionally generalising aspects of the plot"
@@ -49,7 +75,20 @@
       "description": "Discusses the identified ideas and values in relation to the text.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The response must explain how each idea/value operates in the text. Listing the idea without commentary is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explanation of how an idea/value functions in the text",
+          "Discussion of the role of ideas/values in character development or plot",
+          "Analysis of textual elements illustrating the idea/value",
+          "Connection between the idea/value and specific scenes or dialogues"
+        ],
+        "negative_signals": [
+          "Simply listing ideas/values without discussion",
+          "Describing plot events without linking to ideas/values",
+          "Generic statements not tied to the text"
+        ],
+        "common_confusion": "Discussion requires explaining the relationship between ideas/values and the text, not just identifying them."
+      },
       "success_examples": [
         "partially referenced ideas and / or values of the classical world"
       ],
@@ -60,7 +99,20 @@
       "description": "Draws basic conclusions about the ideas and values analysed.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Look for an explicit statement summarising what the analysis shows. Restatements of facts are not conclusions. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit statement summarizing the analysis",
+          "Inference drawn from the evidence presented",
+          "Clear takeaway about the ideas/values in the text",
+          "Link between analysis and overall conclusion"
+        ],
+        "negative_signals": [
+          "Restating facts without drawing conclusions",
+          "Vague or incomplete summaries",
+          "Conclusions not supported by the preceding analysis"
+        ],
+        "common_confusion": "Conclusions must synthesize the analysis into a new insight, not just repeat the evidence."
+      },
       "success_examples": [
         "provided a simple argument"
       ],
@@ -71,7 +123,20 @@
       "description": "Responds directly to the chosen examination question and its stated focus.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Answer must connect analysis to the specific prompt (e.g., leadership, identity). Generic essays that ignore the focus fail. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Direct reference to the question's focus (e.g., leadership, identity)",
+          "Analysis tailored to the specific prompt",
+          "Consistent connection between response and question requirements",
+          "Addressing all aspects of the chosen question"
+        ],
+        "negative_signals": [
+          "Generic essay ignoring the specific focus",
+          "Tangential discussion not related to the question",
+          "Choosing a question but not addressing its core elements"
+        ],
+        "common_confusion": "The response must align with the exact focus of the selected question, not a general discussion of the text."
+      },
       "success_examples": [
         "responded to the question selected, though it may not have been the most suitable",
         "Candidates are encouraged to choose the appropriate question for their text"
@@ -83,7 +148,20 @@
       "description": "Explores more than one viewpoint or interpretation of the ideas and values.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Identify at least two distinct perspectives contrasted within the discussion. Presenting a single stance is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Presentation of at least two contrasting perspectives",
+          "Discussion of alternative interpretations of the same idea/value",
+          "Comparison of different viewpoints within the text",
+          "Acknowledgment of interpretive possibilities"
+        ],
+        "negative_signals": [
+          "Presenting only a single viewpoint",
+          "Listing multiple ideas without contrasting them",
+          "Superficial mention of alternatives without exploration"
+        ],
+        "common_confusion": "Exploration requires discussing and comparing viewpoints, not just mentioning them in passing."
+      },
       "success_examples": [
         "answered all aspects of the question, though their responses may have been unbalanced"
       ],
@@ -94,7 +172,20 @@
       "description": "Makes explicit comparisons (e.g., between characters, themes, or cultural contexts).",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Comparison must use contrastive language such as “whereas” or “more than.” Listing facts side-by-side is not a comparison. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Use of contrastive language like 'whereas' or 'in contrast'",
+          "Direct comparison between two or more elements",
+          "Analysis of similarities and differences",
+          "Explicit linkage between compared elements"
+        ],
+        "negative_signals": [
+          "Listing elements side-by-side without comparison",
+          "Describing elements separately without contrast",
+          "Implied comparisons without explicit language"
+        ],
+        "common_confusion": "Comparison requires explicit contrast or similarity statements, not just juxtaposition."
+      },
       "success_examples": [
         "included a range of examples which were described and analysed with depth"
       ],
@@ -105,7 +196,20 @@
       "description": "Analyses a range of specific, relevant examples from across the text.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Evidence must span multiple sections or episodes and be analysed, not just quoted. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Examples from multiple sections or episodes of the text",
+          "Detailed analysis of each example's relevance",
+          "Coverage of different parts of the text",
+          "Integration of examples into the overall argument"
+        ],
+        "negative_signals": [
+          "Examples clustered in one part of the text",
+          "Quoting without analysis",
+          "Irrelevant or superficial examples"
+        ],
+        "common_confusion": "Examples must be analyzed for their significance, not just listed or quoted."
+      },
       "success_examples": [
         "showed in-depth knowledge of the text and / or awareness of section(s) of the text",
         "included a range of examples"
@@ -117,7 +221,20 @@
       "description": "Draws developed conclusions that are explicitly supported by primary-source evidence.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Conclusion must cite evidence and explain the link. Unsupported claims fail. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Conclusions citing specific primary evidence",
+          "Explanation of how evidence supports the conclusion",
+          "Developed inferences beyond basic summaries",
+          "Clear linkage between evidence and conclusion"
+        ],
+        "negative_signals": [
+          "Unsupported claims or generalizations",
+          "Conclusions without reference to evidence",
+          "Weak or indirect connections to evidence"
+        ],
+        "common_confusion": "Conclusions must be explicitly tied to primary-source evidence, not assumed or implied."
+      },
       "success_examples": [
         "drew conclusions with understanding",
         "provided specific examples and quotations"
@@ -129,7 +246,20 @@
       "description": "Integrates socio-historical context to explain how it influenced the text’s creation and ideas.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Context must be woven into the analysis of examples, not tacked on. Generic historical background without linkage is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Context woven into analysis of specific examples",
+          "Explanation of how historical factors shaped the text",
+          "Linkage between socio-historical elements and ideas/values",
+          "Integration throughout the response, not isolated"
+        ],
+        "negative_signals": [
+          "Generic historical background without analysis",
+          "Context mentioned but not connected to the text",
+          "Tacked-on information at the end"
+        ],
+        "common_confusion": "Context must be integrated into the analysis, explaining its influence on the text's creation and content."
+      },
       "success_examples": [
         "linked well to the wider historical / political / social context",
         "clear understanding of both the ideas and values seen in the Ancient Greek world of Aristophanes"
@@ -141,7 +271,20 @@
       "description": "Provides critical evaluation, establishing textual connections and discussing wider implications of the analysis.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Look for evaluative language showing insight (e.g., significance, impact) and explicit connections between parts of the text. Summaries without insight do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Evaluative language showing insight (e.g., significance, impact)",
+          "Explicit connections between different parts of the text",
+          "Discussion of broader implications beyond the text",
+          "Critical assessment of ideas/values"
+        ],
+        "negative_signals": [
+          "Summarizing without evaluative insight",
+          "Isolated analysis without connections",
+          "Lack of discussion on wider implications"
+        ],
+        "common_confusion": "Critical evaluation requires insightful judgment and connections, not just description."
+      },
       "success_examples": [
         "the question is frequently referred to, and the keywords ‘enhance’ or ‘diminish’ are used throughout",
         "fluent understanding of The Wasps"
@@ -174,7 +317,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

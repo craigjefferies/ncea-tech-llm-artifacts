@@ -34,7 +34,18 @@
       "description": "Clearly states the chosen encryption concept by name (e.g., symmetric encryption, hashing, VPN encryption, WPA3).",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The concept must be explicitly named. Terms like ‘security’ or ‘technology’ are insufficient unless directly tied to an encryption concept. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit naming of a specific encryption concept (e.g., 'symmetric encryption')",
+          "Use of terms like 'WPA3', 'hashing', 'VPN encryption'",
+          "Direct reference to an encryption-related concept"
+        ],
+        "negative_signals": [
+          "Vague terms like ‘security’ or ‘technology’ without specifying encryption",
+          "Not directly tied to an encryption concept"
+        ],
+        "common_confusion": "Terms like ‘security’ or ‘technology’ are insufficient unless directly tied to an encryption concept."
+      },
       "success_examples": ["symmetric encryption", "WPA3-Enterprise Wi-Fi", "hashing for password storage"],
       "source_ref": "AS PDF Achievement criteria"
     },
@@ -43,7 +54,18 @@
       "description": "Describes how the encryption concept is used, implemented, or occurs in a specific context.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The explanation must link mechanism + task + context in a single statement (e.g., ‘AES encrypts school Wi-Fi traffic’). Listing items separately is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Single statement linking mechanism, task, and context (e.g., ‘AES encrypts school Wi-Fi traffic’)",
+          "Clear description of usage in a specific scenario",
+          "Integration of how, what, and where the concept is applied"
+        ],
+        "negative_signals": [
+          "Listing items separately without linking them",
+          "No specific context provided"
+        ],
+        "common_confusion": "Listing items separately is insufficient."
+      },
       "success_examples": ["AES encrypts school Wi-Fi traffic.", "VPN encrypts teacher connections from home."],
       "source_ref": "Moderator commentary Achievement section"
     },
@@ -52,7 +74,18 @@
       "description": "Explains how the encryption concept is applied to address a specific problem or opportunity.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must identify a problem/opportunity and state how encryption addresses it. Generic statements such as ‘it makes things safer’ are insufficient without linking cause to effect. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Identifies a specific problem or opportunity and how encryption addresses it",
+          "Links cause (problem) to effect (encryption solution)",
+          "Specific examples like 'WPA3 prevents outsiders intercepting student data'"
+        ],
+        "negative_signals": [
+          "Generic statements like ‘it makes things safer’ without linking cause to effect",
+          "No identification of a specific problem or opportunity"
+        ],
+        "common_confusion": "Generic statements such as ‘it makes things safer’ are insufficient without linking cause to effect."
+      },
       "success_examples": ["WPA3 prevents outsiders intercepting student data.", "BitLocker protects data on lost teacher laptops."],
       "source_ref": "AS PDF p2 bullet 3"
     },
@@ -61,7 +94,18 @@
       "description": "Explains a relevant encryption mechanism such as a protocol, algorithm, or process, describing what it does in context.",
       "level": "A",
       "weight": 2,
-      "detection_hint": "Name the mechanism and explain its role (e.g., AES uses one key; RSA uses key pairs; hashing is one-way). Mentioning a mechanism without describing what it does is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Names the mechanism and explains its role (e.g., 'AES uses one key')",
+          "Describes what the mechanism does in context",
+          "Examples like 'RSA uses key pairs for encryption and decryption'"
+        ],
+        "negative_signals": [
+          "Mentioning a mechanism without describing what it does",
+          "No explanation of its role or function"
+        ],
+        "common_confusion": "Mentioning a mechanism without describing what it does is insufficient."
+      },
       "success_examples": ["AES uses one shared key to scramble data.", "RSA encrypts with a public key and decrypts with a private key."],
       "source_ref": "AS PDF mechanisms bullet"
     },
@@ -70,7 +114,18 @@
       "description": "States a clear, context-linked advantage or limitation of the chosen encryption concept.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The advantage or limitation must be specific to the concept and context (e.g., ‘shared passwords in WPA2-Personal are easily leaked’). Generic benefits or drawbacks are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Specific advantage or limitation linked to concept and context",
+          "Examples like ‘shared passwords in WPA2-Personal are easily leaked’",
+          "Clear statement of benefit or drawback in use"
+        ],
+        "negative_signals": [
+          "Generic benefits or drawbacks without specificity",
+          "Not linked to the concept and context"
+        ],
+        "common_confusion": "Generic benefits or drawbacks are insufficient."
+      },
       "success_examples": ["Shared Wi-Fi passwords leak easily.", "Asymmetric encryption is slower but more secure for key exchange."],
       "source_ref": "Moderator commentary Achievement section"
     },
@@ -79,7 +134,18 @@
       "description": "Explains a significant impact of the encryption concept by linking cause to effect.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Must include explicit causal language (‘because’, ‘results in’, ‘leads to’) connecting the encryption mechanism to an ethical, social, human-factor, or future-proofing impact. Listing impacts without explanation is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit causal language (‘because’, ‘results in’, ‘leads to’) connecting mechanism to impact",
+          "Links to ethical, social, human-factor, or future-proofing impact",
+          "Examples like 'Weak Wi-Fi passwords lead to privacy breaches'"
+        ],
+        "negative_signals": [
+          "Listing impacts without explanation or causal links",
+          "No use of causal language"
+        ],
+        "common_confusion": "Listing impacts without explanation is insufficient."
+      },
       "success_examples": ["Weak Wi-Fi passwords lead to privacy breaches.", "Encrypted tunnels reduce data theft because outsiders cannot intercept traffic."],
       "source_ref": "AS PDF impacts bullet"
     },
@@ -88,7 +154,18 @@
       "description": "Compares two or more impacts or consequences of using the encryption concept.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Must use contrastive language (‘while’, ‘in contrast’, ‘more than’, ‘whereas’). Listing impacts without comparison is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Use of contrastive language (‘while’, ‘in contrast’, ‘more than’, ‘whereas’)",
+          "Comparison of two or more impacts or consequences",
+          "Examples like 'WPA3 is more resistant to guessing attacks than WPA2'"
+        ],
+        "negative_signals": [
+          "Listing impacts without comparison",
+          "No contrastive language used"
+        ],
+        "common_confusion": "Listing impacts without comparison is insufficient."
+      },
       "success_examples": ["WPA3 is more resistant to guessing attacks than WPA2.", "BitLocker protects lost devices, whereas unencrypted devices expose all data."],
       "source_ref": "AS PDF impacts bullet"
     },
@@ -97,7 +174,18 @@
       "description": "Explains a key problem or issue related to the encryption concept and why it matters.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Student must identify a specific issue (e.g., weak passwords, outdated encryption, key theft) and explain its consequence. Simply naming an issue is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Identifies a specific issue (e.g., weak passwords, key theft) and explains its consequence",
+          "Discusses why the issue matters",
+          "Examples like 'Shared Wi-Fi passwords allow unauthorised access'"
+        ],
+        "negative_signals": [
+          "Simply naming an issue without explanation",
+          "No mention of consequences or significance"
+        ],
+        "common_confusion": "Simply naming an issue is insufficient."
+      },
       "success_examples": ["Shared Wi-Fi passwords allow unauthorised access.", "Stolen private keys can forge digital signatures."],
       "source_ref": "AS PDF comprehensive criterion"
     },
@@ -106,7 +194,18 @@
       "description": "Evaluates the severity or significance of an identified encryption issue using reasoning or criteria.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Look for a judgement backed by reasoning using stakes, frequency, or consequences. Opinions without justification do not count as evaluation. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Judgement backed by reasoning using stakes, frequency, or consequences",
+          "Evaluation of severity or significance",
+          "Examples like 'A stolen private key is severe because it compromises all encrypted communication'"
+        ],
+        "negative_signals": [
+          "Opinions without justification or reasoning",
+          "No backing with criteria like stakes or consequences"
+        ],
+        "common_confusion": "Opinions without justification do not count as evaluation."
+      },
       "success_examples": ["A stolen private key is severe because it compromises all encrypted communication.", "Using WPA2 is high-risk because attackers can crack outdated protocols."],
       "source_ref": "AS PDF comprehensive criterion"
     },
@@ -115,7 +214,18 @@
       "description": "Proposes a relevant mitigation or future-proofing strategy directly addressing the encryption issue.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "The strategy must logically address the issue (e.g., migrate to WPA3, enforce strong passwords, use TPM-protected keys). Generic solutions like ‘improve security’ are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Strategy that logically addresses the issue (e.g., migrate to WPA3)",
+          "Relevant mitigation or future-proofing proposal",
+          "Examples like 'Upgrade school Wi-Fi to WPA3' or 'Use TPM-protected keys'"
+        ],
+        "negative_signals": [
+          "Generic solutions like ‘improve security’ without specifics",
+          "Not directly addressing the identified issue"
+        ],
+        "common_confusion": "Generic solutions like ‘improve security’ are insufficient."
+      },
       "success_examples": ["Upgrade school Wi-Fi to WPA3.", "Store private keys in TPM hardware."],
       "source_ref": "AS PDF impacts bullet (future-proofing)"
     }
@@ -145,7 +255,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

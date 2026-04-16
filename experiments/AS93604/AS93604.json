@@ -31,7 +31,19 @@
       "description": "Explicitly identifies inputs, outputs, constraints (ranges, limits), and stopping conditions before algorithm design or modification.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Look for formal variable names, domain/range specs, output description, termination condition. A mere restatement of the problem without these is insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Formal variable names for inputs and outputs (e.g., N, result)",
+          "Specified ranges or limits (e.g., 1 ≤ N ≤ 10⁶)",
+          "Description of output format (e.g., minimal number)",
+          "Termination conditions (e.g., when left > right)"
+        ],
+        "negative_signals": [
+          "Mere restatement of the problem without specifics",
+          "Vague or missing constraints"
+        ],
+        "common_confusion": "Restating the problem is not sufficient; explicit specifications are required."
+      },
       "success_examples": [
         "“Input: N (1 ≤ N ≤ 10⁶). Output: minimal number of moves.”",
         "“Terminate when left > right; no built-in reverse allowed.”"
@@ -43,7 +55,19 @@
       "description": "Breaks the logic into explicit control structures (sequence, selection, iteration, recursion) with clear hierarchy.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must include IF / FOR / WHILE (or recursion) with proper indentation or end markers. A bullet outline without flow is weak.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Use of IF statements with proper conditions",
+          "FOR or WHILE loops with clear bounds",
+          "Recursion with base case",
+          "Proper indentation or end markers"
+        ],
+        "negative_signals": [
+          "Bullet outline without flow control",
+          "Missing end markers or indentation"
+        ],
+        "common_confusion": "Bullet points alone are weak; explicit control structures are needed."
+      },
       "success_examples": [
         "“FOR i FROM 0 TO n-1 DO … ENDFOR”",
         "“IF a[i] ≠ a[n-i-1] THEN return false ENDIF”"
@@ -55,7 +79,18 @@
       "description": "Explains how subcomponents (loops, functions, variables) interact to meet the overall goal.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Look for phrases like “first compute prefix sums, then slide window, then compare results.” Not just listing parts.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Phrases explaining how parts interact (e.g., 'first compute, then slide')",
+          "Description of data flow between components",
+          "Explanation of how loops/functions contribute to goal"
+        ],
+        "negative_signals": [
+          "Just listing parts without interaction",
+          "Orphan code not connected"
+        ],
+        "common_confusion": "Listing components is not enough; interaction must be explained."
+      },
       "success_examples": [
         "“Outer loop moves window; inner loop updates counts; then test against threshold.”"
       ]
@@ -66,7 +101,18 @@
       "description": "Design choices (algorithms, data structures) are explicitly justified with reference to requirements, constraints or limits.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Look for reasoning like “I use BFS because we need minimal moves” or “using sorting because N is large” rather than “this solves it.”",
+      "evidence_guide": {
+        "positive_signals": [
+          "Justification like 'BFS for minimal moves'",
+          "Reference to constraints (e.g., 'because N is large, use sort')",
+          "Explicit reasoning for choices"
+        ],
+        "negative_signals": [
+          "Vague 'this solves it' without reasoning",
+          "No link to requirements"
+        ],
+        "common_confusion": "General statements without reference to specs are weak."
+      },
       "success_examples": [
         "“Because N can be up to 10⁵, I choose O(n log n) sort rather than O(n²).”"
       ]
@@ -77,7 +123,18 @@
       "description": "Core algorithmic logic (loops, conditions, data updates) is implemented correctly, with proper returns and consistency.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Check loops and branches correspond to design. Missing or wrong returns, mis-updates, or broken logic result in failure.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Loops correspond to design",
+          "Proper returns and updates",
+          "Consistent logic"
+        ],
+        "negative_signals": [
+          "Missing or wrong returns",
+          "Broken logic or mis-updates"
+        ],
+        "common_confusion": "Implementation must match the design exactly."
+      },
       "success_examples": [
         "“While left ≤ right do … adjust pointers … return final result.”"
       ]
@@ -88,7 +145,18 @@
       "description": "Explicitly handles boundary / edge cases (empty input, minimal size, duplicates) with guard logic or special cases.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Look for a separate block or comment checking extreme or degenerate inputs. Mere mention “tested edge cases” is not enough.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Separate blocks for empty input",
+          "Guard logic for minimal size",
+          "Handling duplicates or extremes"
+        ],
+        "negative_signals": [
+          "Mere mention 'tested edge cases'",
+          "No explicit handling"
+        ],
+        "common_confusion": "Mentioning testing is not sufficient; code must show handling."
+      },
       "success_examples": [
         "“If n = 0, return 0 immediately.”",
         "“When left > right break loop or return default.”"
@@ -100,7 +168,17 @@
       "description": "Does not use disallowed built-in shortcuts (e.g. reverse, sort) in improvement tasks; logic is shown explicitly.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Check for absence of banned calls. If such are present in tasks where they are forbidden, this indicator fails.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Manual implementation instead of banned calls",
+          "Explicit logic shown"
+        ],
+        "negative_signals": [
+          "Use of disallowed built-ins",
+          "Shortcuts where forbidden"
+        ],
+        "common_confusion": "In improvement tasks, built-ins are banned; show logic explicitly."
+      },
       "success_examples": [
         "“I manually compare s[i] and s[n-1-i] instead of using s.reverse().”"
       ]
@@ -111,7 +189,18 @@
       "description": "Subcomponents and optimisations are integrated into a coherent whole; all parts feed into the final solution.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Look for flow across modules, no orphan code, consistent naming, and minimal redundancy. Disconnected subroutines reduce this score.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Flow across modules",
+          "Consistent naming",
+          "No orphan code"
+        ],
+        "negative_signals": [
+          "Disconnected subroutines",
+          "Redundant code"
+        ],
+        "common_confusion": "All parts must integrate into the solution."
+      },
       "success_examples": [
         "“Helper function called in main loop; no redundant code; all pathways return a result.”"
       ]
@@ -122,7 +211,18 @@
       "description": "Evaluates both correctness and computational efficiency, with justified reasoning, using Big-O or metrics and comparisons.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Look for statements like “This runs in O(n log n)” with reasoning or comparisons to other algorithms. Vague claims of “faster” without support are weak.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Statements like 'runs in O(n log n)'",
+          "Comparisons to other algorithms",
+          "Justified reasoning"
+        ],
+        "negative_signals": [
+          "Vague 'faster' without support",
+          "No metrics"
+        ],
+        "common_confusion": "Claims must be supported with Big-O or comparisons."
+      },
       "success_examples": [
         "“Original was O(n²); my version is O(n log n) by replacing nested loops with sorting + two pointers.”"
       ]
@@ -133,7 +233,18 @@
       "description": "Discusses trade-offs (time vs space, simplicity vs performance), limitations, and implications, comparing at least two methods.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Look for explicit pros/cons and justification for chosen approach under constraints.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit pros/cons",
+          "Comparison of methods",
+          "Justification under constraints"
+        ],
+        "negative_signals": [
+          "No discussion of trade-offs",
+          "Vague implications"
+        ],
+        "common_confusion": "Must compare at least two methods."
+      },
       "success_examples": [
         "“Hash map is fast but more memory; tree uses less memory but slower operations.”"
       ]
@@ -144,7 +255,18 @@
       "description": "Explicitly reasons about how the algorithm scales with large input (e.g. doubling N) using Big-O or asymptotic thinking.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Look for phrases like “if n doubles, runtime ~ quadruples”, or explicit Big-O derivations in context of constraints.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Phrases like 'if n doubles, runtime quadruples'",
+          "Big-O derivations",
+          "Context of constraints"
+        ],
+        "negative_signals": [
+          "No asymptotic thinking",
+          "Vague scalability"
+        ],
+        "common_confusion": "Must use Big-O or asymptotic reasoning."
+      },
       "success_examples": [
         "“At n = 10⁶, O(n²) is 10¹² operations — infeasible; my O(n log n) handles large N.”"
       ]
@@ -155,7 +277,18 @@
       "description": "Adapts algorithmic reasoning to novel or variant scenarios, showing abstraction and insight beyond the base problem.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Look for adjustments when constraints change (e.g. negative weights, different limits) and reasoning for why method still holds or must change.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Adjustments for changed constraints",
+          "Reasoning for method changes",
+          "Abstraction beyond base problem"
+        ],
+        "negative_signals": [
+          "No adaptation shown",
+          "Stuck to base problem"
+        ],
+        "common_confusion": "Must show insight in novel scenarios."
+      },
       "success_examples": [
         "“If weights could be negative, I would use Bellman-Ford instead of Dijkstra.”"
       ]
@@ -166,7 +299,18 @@
       "description": "Design steps, rationale, and reasoning are communicated clearly and convincingly, linked tightly to problem details.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Look for arguments anchored in the scenario — not just abstract bullet points. Explanations should be coherent, precise, and contextual.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Arguments anchored in scenario",
+          "Coherent and precise explanations",
+          "Linked to problem details"
+        ],
+        "negative_signals": [
+          "Abstract bullet points",
+          "Incoherent or vague"
+        ],
+        "common_confusion": "Explanations must be contextual, not abstract."
+      },
       "success_examples": [
         "“I chose merge sort because in worst-case it’s O(n log n), ensuring performance on large data unlike quicksort’s possible O(n²).”"
       ]

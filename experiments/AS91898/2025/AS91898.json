@@ -31,7 +31,19 @@
       "description": "Clearly states the chosen computer science concept by name.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The concept must be clearly named (e.g., ‘artificial intelligence’, ‘neural networks’, ‘recommender systems’). Vague terms like ‘technology’ or ‘software’ are insufficient unless tied to the specific concept.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit naming of the chosen computer science concept",
+          "Use of a specific term such as 'artificial intelligence', 'neural network', or 'recommender system'",
+          "Direct reference to the concept being analysed"
+        ],
+        "negative_signals": [
+          "Uses vague terms such as 'technology' or 'software' without naming the concept",
+          "Refers to the field generally without identifying a specific concept",
+          "Implied concept choice with no explicit naming"
+        ],
+        "common_confusion": "Students often assume the topic is obvious from context, but this indicator requires the concept to be clearly named."
+      },
       "success_examples": ["artificial intelligence", "neural network (NN)", "collaborative recommender system"],
       "source_ref": "AS PDF p1 Achievement Criteria"
     },
@@ -40,7 +52,19 @@
       "description": "Describes how the concept is used, implemented, or occurs by linking a named mechanism to a real-world context in one explanation.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Link mechanism + task + context in the same explanation (e.g., ‘A vision model scans camera frames to detect pedestrians’). Listing items separately is insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Links a named mechanism to a task and a real-world context in one explanation",
+          "Explains what the concept does in practice rather than listing parts separately",
+          "Shows how the concept is used or implemented in context"
+        ],
+        "negative_signals": [
+          "Lists the mechanism, task, and context separately with no linkage",
+          "Names an application without explaining how the concept operates there",
+          "Provides context with no mechanism or task connection"
+        ],
+        "common_confusion": "Students often mention the mechanism and the context separately, but Achieved requires them to be linked in one explanation."
+      },
       "success_examples": ["A vision model scans dash‑cam images to detect pedestrians.", "A supervised classifier detects hate speech on social media.", "An LLM summarises doctor notes into plain‑English discharge summaries."],
       "source_ref": "Moderator commentary bullets"
     },
@@ -49,7 +73,19 @@
       "description": "Explains how the concept is applied to address a specific opportunity or problem.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "State the problem/opportunity and how the concept helps (benefit or outcome). Vague claims like ‘it helps’ are insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "States a specific problem or opportunity",
+          "Explains how the concept addresses that problem or opportunity",
+          "Names the resulting benefit or outcome"
+        ],
+        "negative_signals": [
+          "Says only that the concept 'helps' with no stated problem or outcome",
+          "Describes the concept without identifying what it is solving",
+          "Names a problem but gives no explanation of how the concept addresses it"
+        ],
+        "common_confusion": "Students often describe the concept generally, but this indicator requires a specific problem or opportunity and the resulting benefit."
+      },
       "success_examples": ["Reduces road deaths by braking faster than humans.", "Filters hate speech to protect users.", "Removes jargon to improve patient understanding."],
       "source_ref": "AS PDF p2 §2 bullet 3"
     },
@@ -58,7 +94,21 @@
       "description": "Describes a relevant mechanism by explaining what it does in context (role‑level).",
       "level": "A",
       "weight": 2,
-      "detection_hint": "Name the mechanism and explain, in plain language, how it is trained (e.g., on labelled examples), what patterns it learns, and how it uses them to make predictions in the chosen context. No inner algorithm detail required.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Names a relevant mechanism such as an algorithm, model, or process",
+          "Explains how the mechanism is trained or configured for the task",
+          "Explains what patterns or inputs the mechanism works with",
+          "Describes how it uses those patterns to make a prediction or decision in context"
+        ],
+        "negative_signals": [
+          "Names a mechanism with no explanation of what it does",
+          "Describes prediction or output but omits how the mechanism was trained or set up",
+          "Gives highly technical detail without explaining the role-level mechanism",
+          "Describes training or prediction separately without connecting them to the chosen context"
+        ],
+        "common_confusion": "This indicator is about explaining the mechanism in plain language, including how it is trained or set up for the task, not just naming it or giving low-level algorithm detail."
+      },
       "success_examples": [
         "Car safety: trained on labelled images, learns visual patterns, then predicts pedestrians so AEB can brake.",
         "Social media: trained on labelled posts, learns language patterns, then predicts hate‑speech labels for moderation.",
@@ -71,7 +121,19 @@
       "description": "States a clear, context‑linked advantage or limitation of using the concept.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Give a specific pro or con tied to the context (e.g., ‘camera glare can trigger phantom braking’). Generic praise/criticism is insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "States a clear advantage or limitation",
+          "Links the advantage or limitation to the chosen context",
+          "Uses a concrete example rather than general praise or criticism"
+        ],
+        "negative_signals": [
+          "Gives generic praise such as 'it is useful' or 'it is bad'",
+          "States a pro or con with no context link",
+          "Lists strengths and weaknesses without explaining a specific consequence"
+        ],
+        "common_confusion": "Students often name a general benefit or drawback, but this indicator requires a context-linked advantage or limitation."
+      },
       "success_examples": ["Camera glare can cause phantom braking.", "LLMs may hallucinate incorrect medical dosages.", "Slang may be wrongly flagged as offensive."],
       "source_ref": "Moderator commentary & 2023 paper (a)(iii)"
     },
@@ -80,7 +142,19 @@
       "description": "Explains at least one significant impact of the concept by linking cause to effect.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Use causal language (‘because’, ‘leads to’, ‘results in’) to connect the concept to an ethical/social/human‑factor/sustainability impact.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Uses causal language such as 'because', 'leads to', or 'results in'",
+          "Connects the concept to an ethical, social, human-factor, or sustainability impact",
+          "Explains why the impact happens rather than just naming it"
+        ],
+        "negative_signals": [
+          "Lists impacts without cause-and-effect explanation",
+          "Names an impact with no link back to the concept",
+          "Uses vague concern language without describing the consequence"
+        ],
+        "common_confusion": "Students often identify an impact, but Merit requires them to explain the causal link between the concept and that impact."
+      },
       "success_examples": ["Because training data lacked dialect diversity, the model flagged Māori slang as hate speech.", "Storing dash‑cam footage online raises privacy risks because it reveals locations.", "Hallucinations can cause harm because errors are hard to trace."],
       "source_ref": "AS PDF p2 §5"
     },
@@ -89,7 +163,19 @@
       "description": "Compares or contrasts two or more impacts to show depth of understanding.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Use contrast language (‘while’, ‘in contrast’, ‘more than’) to weigh impacts. Listing without comparison is insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Uses contrastive language such as 'while', 'whereas', or 'in contrast'",
+          "Compares two or more impacts or consequences",
+          "Shows how one impact differs from or outweighs another"
+        ],
+        "negative_signals": [
+          "Lists multiple impacts without comparing them",
+          "Names contrasting ideas with no explicit contrast language",
+          "Describes only one impact in detail"
+        ],
+        "common_confusion": "Students often mention several impacts, but this indicator requires them to compare or contrast those impacts explicitly."
+      },
       "success_examples": ["While AI speeds triage, it also increases over‑trust in automated decisions.", "CNNs improve pedestrian safety but are less explainable than rule‑based systems.", "Chatbots reduce workload but risk leaking private health info."],
       "source_ref": "AS PDF p2 §5"
     },
@@ -98,7 +184,19 @@
       "description": "Explains a key problem or issue related to the concept and why it matters.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Name a concrete issue (e.g., bias, hallucinations, misuse) and explain its consequence in context.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Names a concrete issue such as bias, hallucinations, misuse, or security risk",
+          "Explains the consequence of that issue in the chosen context",
+          "Shows why the issue matters rather than merely naming it"
+        ],
+        "negative_signals": [
+          "Names an issue with no consequence or contextual explanation",
+          "Uses a vague concern such as 'there are risks' with no concrete issue",
+          "Describes a general disadvantage rather than a key issue"
+        ],
+        "common_confusion": "Students often name an issue and stop there, but Excellence requires the consequence in context."
+      },
       "success_examples": ["Algorithmic bias in facial recognition has led to wrongful arrests.", "LLM hallucinations in healthcare can produce fake dosages.", "Deepfakes and voice clones can be misused for scams."],
       "source_ref": "AS PDF comprehensive criterion"
     },
@@ -107,7 +205,19 @@
       "description": "Judges the significance or severity of the issue with reasoning or criteria.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Make a justified judgement using evidence, comparison, or criteria (stakes, frequency, reversibility).",
+      "evidence_guide": {
+        "positive_signals": [
+          "Makes a judgment about the issue's significance or severity",
+          "Supports the judgment with evidence, comparison, or criteria",
+          "Uses reasoning based on stakes, frequency, reversibility, or similar criteria"
+        ],
+        "negative_signals": [
+          "Gives an opinion with no justification",
+          "States that an issue is serious without any criteria or evidence",
+          "Repeats the issue description instead of evaluating significance"
+        ],
+        "common_confusion": "Students often restate why the issue exists, but this indicator requires a reasoned judgment about how significant it is."
+      },
       "success_examples": ["Bias in healthcare AI is more severe than in shopping apps because misdiagnoses harm patients.", "Hallucinated dosage information creates high‑stakes risk.", "Voice‑cloning scams can seriously erode public trust."],
       "source_ref": "AS PDF comprehensive criterion"
     },
@@ -116,7 +226,19 @@
       "description": "Proposes a specific mitigation or future‑proofing strategy that addresses the issue.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "The strategy must logically match the issue. Generic ‘test more’ answers are insufficient without linkage.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Proposes a mitigation or future-proofing strategy that directly addresses the identified issue",
+          "Explains how the strategy reduces the issue or its impact",
+          "Uses a specific action rather than a generic improvement statement"
+        ],
+        "negative_signals": [
+          "Gives a generic response such as 'test more' or 'improve it'",
+          "Proposes a strategy with no link to the issue being addressed",
+          "Names a mitigation with no explanation of why it fits"
+        ],
+        "common_confusion": "A mitigation only counts if it logically matches the identified issue and is explained as a response to that issue."
+      },
       "success_examples": ["Require human review for LLM outputs.", "Diversify training data to reduce cultural bias."],
       "source_ref": "AS PDF p2 §5 future‑proofing"
     }
@@ -146,7 +268,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-08-11",
+    "last_validated": "2025-07-18",
     "change_log": [
       "2025-07-10 – Tweaked detection hints for clarity, merged mechanism linkage, added advantage/limitation OMI, updated weights, added key terms.",
       "2025-07-13 – Updated detection hints and success examples to align with social media, car safety, and healthcare domains.",

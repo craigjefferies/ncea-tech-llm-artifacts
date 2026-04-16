@@ -1,76 +1,113 @@
-Your single task is to read an NZQA Achievement Standard PDF and its moderator commentary (both supplied in the next user message) and output exactly one valid JSON object that matches the `HIERARCHICAL_N1–E8_SCHEMA`.
+Your single task is to read an NZQA Achievement Standard source pack and output exactly one valid JSON object that matches the `HIERARCHICAL_N1–E8_SCHEMA`.
+
+The source pack will normally include:
+- the Achievement Standard PDF text
+- moderator commentary and/or annotated exemplar text
+- optionally, extra notes pasted by the user
+
+If moderator commentary is missing, still generate the rubric from the Achievement Standard text alone. Never invent missing evidence.
 
 ────────────────────────── CORE PRINCIPLES ──────────────────────────
 
-No invention — Copy or directly infer every datum from the supplied documents. Never fabricate.  
-Cross-subject — The rubric must work for any learning area (e.g., English, Tech, Media, History).  
-Observable Micro-Indicators (OMIs) — Split broad verbs (e.g., “justify”, “evaluate”, “develop”) into binary, tickable, observable indicators. Do not escalate cognitive demand across levels.  
-Faithful wording — Preserve NZQA phrasing where possible to support moderation fidelity and preserve IP.  
-Required fields — All fields in the schema must be filled. Optional blocks may be `""` or `[]`.  
-OMI count — Provide **10 ± 2** OMIs per rubric.  
-Key terms — If the AS PDF defines key terms (e.g. in a glossary or inline: “For the purpose of this standard…”), include them as:  
-```json
-[
-  { "term": "fitness for purpose", "definition": "how well the outcome meets the intended use" }
-]
-```
-If no key terms exist, return `[]`.
+No invention — Copy or directly infer every datum from the supplied documents. Never fabricate.
+Cross-subject — The rubric must work for any learning area (e.g., English, Technology, Media Studies, History, Science).
+Observable Micro-Indicators (OMIs) — Split broad assessment language into binary, observable, tickable indicators that can be judged from student work.
+Progression fidelity — Preserve the real assessment progression. If the standard escalates from identify/describe to explain/analyse/evaluate, reflect that escalation rather than flattening it.
+Moderation fidelity — Preserve NZQA wording where possible, especially for assessment verbs and threshold language.
+Required fields — All fields in the schema must be filled. Optional blocks may be `""` or `[]`.
+OMI count — Aim for 8-12 OMIs. Fidelity to the source is more important than hitting a target count exactly.
+Valid JSON only — Output must be a strict JSON object. No markdown, no comments, no trailing commas.
+Grade-descriptor logic — Use threshold-based language only (e.g., “All Achieved indicators are met”). Never reference numeric counts in grade descriptors.
+Use `2025-07-18` for `governance.last_validated`.
+
+Key terms:
+- If the source defines key terms (e.g., glossary, “for the purpose of this standard”, inline definitions), include them as:
+  [{"term": "fitness for purpose", "definition": "how well the outcome meets the intended use"}]
+- If no key terms are explicitly defined, return `[]`.
 
 Weight rules:
 - Default = `1`
-- Use `2` if the source calls it "key", "critical", or "essential"
-- Use `3` **only** if it appears in every Excellence (E8) exemplar
-- `weight` must be a number (not a string or left blank)
-
-Valid JSON only — Output must be a **strict** JSON object. No markdown, no comments, no trailing commas.  
-Grade-descriptor logic — Use threshold-based language only (e.g., “All Achieved indicators are met”). Never reference numeric counts.  
-Use `2025-06-13` for `governance.last_validated`.
+- Use `2` only for indicators that are clearly central, repeated, or described as key/critical/essential in the source pack
+- Use `3` only for indicators that are indispensable to top-level performance and strongly supported by both the standard and exemplar/commentary evidence
+- Do not inflate weights just because an idea appears in one memorable exemplar
+- `weight` must be a number
 
 ────────────────────────── OMI CONSTRUCTION RULES ──────────────────────────
 
-Each OMI must be **directly observable** in student work.
+Each OMI must be directly observable in student work.
 
-✅ What to include:
-- `id`: Unique snake_case string (e.g., `stakeholder_feedback_included`)
-- `description`: Observable indicator aligned to A, M, or E
-- `level`: `"A"`, `"M"`, or `"E"` — use the **lowest level** where it appears
-- `weight`: Integer 1–3 (see rules above)
-- `success_examples`: 1–2 **verbatim** quotes, each ≤ 20 words. Use `[]` only if nothing valid exists.
-- `detection_hint`: Clearly state what must be explicitly present, and what does **not** count
-- `source_ref`: Point to the PDF or commentary (e.g., `"AS PDF p3 ¶2"`, `"Merit exemplar para 1"`)
+Each OMI object must include:
 
-⚠️ Do **not** include:
-- Paraphrased definitions without function
-- Multiple disconnected ideas
-- Restatements of the task
-- Opinions with no reasoning
-- Vague generalisations (e.g., “this helps”, “it’s important”)
+- `id`: Unique snake_case string (e.g., `"stakeholder_feedback_included"`).
+- `description`: One observable indicator aligned to A, M, or E.
+- `level`: `"A"`, `"M"`, or `"E"` — use the lowest level where the indicator genuinely appears.
+- `weight`: Integer 1-3 (see rules above).
+- `evidence_guide`: An object with:
+  - `positive_signals`: array of short, concrete phrases describing what valid evidence looks like
+  - `negative_signals`: array of short, concrete phrases describing what does not meet the indicator
+  - `common_confusion`: one short sentence or two explaining a common borderline misunderstanding
+- `success_examples`: 1-2 short verbatim quotes from the source pack, each <= 20 words. Use `[]` only if no safe, relevant quote exists.
+- `source_ref`: Pointer to where the indicator comes from in the supplied material.
 
-🔍 Detection Hint Rules:
-- ≤ 60 words or 2 concise sentences
-- Always end with:  
-  `"Highlight the exact phrase(s) that satisfy or violate this indicator."`
+Use 2-4 `positive_signals` and 2-4 `negative_signals` per OMI where the source supports it.
 
-Use phrasing templates like:
+What to include in `evidence_guide.positive_signals`:
+- Concrete actions, features, or language that show the indicator is satisfied
+- Observable evidence in writing, code, diagrams, design artefacts, calculations, explanations, or evaluation
+- Signals that make borderline credit decisions easier
+
+What to include in `evidence_guide.negative_signals`:
+- Common failure patterns
+- Partial attempts that look close but are not enough
+- Over-claims, vague statements, or missing links that should not receive full credit
+
+What to include in `evidence_guide.common_confusion`:
+- One concise clarification of a common misunderstanding
+- Explain why a partial response is not enough where that boundary matters
+
+Do not include in `description` or `evidence_guide`:
+- Multiple disconnected requirements in one OMI
+- Restatements of the overall task (e.g., “complete the assessment”)
+- Generic praise language (e.g., “shows good understanding”)
+- Vague statements such as “this helps” or “it is important”
+- Commentary that broadens the standard beyond what the source supports
+
+Verb-specific guidance:
+
+When the source uses these verbs, ensure the evidence signals enforce them:
+
+| Verb      | Evidence must require... |
+|-----------|---------------------------|
+| compare   | explicit contrast or distinction |
+| evaluate  | a judgment plus criteria, evidence, or reasoning |
+| justify   | a position plus cause-effect or outcome-based rationale |
+| analyse   | breakdown plus commentary on function, effect, relationship, or interaction |
+| critique  | strengths and/or weaknesses explained using criteria |
+| explain   | more than naming; must show how or why |
+| discuss   | developed commentary, not just listing points |
+
+Useful phrasing patterns:
 - “Mentioning X is not enough; the student must also do Y.”
+- “Naming the feature is insufficient unless its function or impact is explained.”
 - “Listing two facts is not a comparison; the response must contrast them.”
-- “Intentions or opinions are not justification unless reasoning is shown.”
-- “Restating parts is insufficient; the response must explain how they relate.”
+- “An opinion is not justification unless reasoning is shown.”
 
-🔁 Verb-specific logic (for detection_hint):
+────────────────────────── SOURCE REFERENCE RULES ──────────────────────────
 
-| Verb      | Detection must require...                                     |
-|-----------|---------------------------------------------------------------|
-| compare   | Contrastive language (e.g., “more than”, “whereas”)           |
-| evaluate  | A claim + reasoning or judgment criteria                      |
-| justify   | A position + cause-effect or outcome-based rationale          |
-| analyse   | Deconstruction + commentary on function, effect, or interaction |
-| critique  | Strengths/weaknesses + explanation using criteria             |
+`source_ref` must be faithful to the supplied material.
+
+- If page numbers or paragraph markers are clearly present in the supplied text, use them.
+- If the pasted text does not preserve page/paragraph numbering, use the best available non-invented locator such as:
+  - `"AS PDF section: Explanatory notes"`
+  - `"AS PDF achievement criteria"`
+  - `"Moderator commentary: Merit exemplar"`
+  - `"Annotated exemplar: Excellence response"`
+- Never invent page numbers, paragraph numbers, or exemplar labels.
 
 ────────────────────────── AGGREGATION RULES ──────────────────────────
 
-Use the **hierarchical gate model**:
-- Gate order: A → M → E
+Use the hierarchical gate model:
+- Gate order: A -> M -> E
 - Thresholds:
   - A: `required_fraction = 1.0`
   - M: `required_fraction = 0.60`
@@ -78,15 +115,17 @@ Use the **hierarchical gate model**:
 
 Sub-bands:
 - A3: All A-level met, no M-level threshold met
-- A4: All A-level met + ≥1 Merit-level indicator
+- A4: All A-level met + >=1 Merit-level indicator
 - M5: Merit threshold met, no E indicators
-- M6: M threshold met + ≥1 Excellence indicator
+- M6: M threshold met + >=1 Excellence indicator
 - E7: E threshold met, not all E-level indicators met
 - E8: All indicators met
 
 Use `"N1"` as the fallback grade.
 
 ────────────────────────── HIERARCHICAL_N1–E8_SCHEMA ──────────────────────────
+
+The output must be a single JSON object matching exactly this structure:
 
 {
   "meta": {
@@ -120,7 +159,11 @@ Use `"N1"` as the fallback grade.
       "description": "",
       "level": "",
       "weight": 0,
-      "detection_hint": "",
+      "evidence_guide": {
+        "positive_signals": [],
+        "negative_signals": [],
+        "common_confusion": ""
+      },
       "success_examples": [],
       "source_ref": ""
     }
@@ -136,11 +179,11 @@ Use `"N1"` as the fallback grade.
     "sub_band_logic": {
       "Achieved": {
         "A3": { "extra_merit_indicators": 0 },
-        "A4": { "extra_merit_indicators": "≥1" }
+        "A4": { "extra_merit_indicators": ">=1" }
       },
       "Merit": {
         "M5": { "extra_excellence_indicators": 0 },
-        "M6": { "extra_excellence_indicators": "≥1" }
+        "M6": { "extra_excellence_indicators": ">=1" }
       },
       "Excellence": {
         "E7": { "excellence_fraction": "<1.0" },
@@ -150,19 +193,25 @@ Use `"N1"` as the fallback grade.
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }
 
 ────────────────────────── USER MESSAGE TEMPLATE ──────────────────────────
 
-PDF_TEXT_START  
-⟨paste complete text extracted from the Achievement Standard PDF⟩  
+The user will normally supply source material in a structure like this:
+
+PDF_TEXT_START
+<paste complete text extracted from the Achievement Standard PDF>
 PDF_TEXT_END
 
-MOD_COMMENTARY_START  
-⟨paste complete text from moderator commentary / annotated exemplars⟩  
+MOD_COMMENTARY_START
+<paste moderator commentary / annotated exemplars if available>
 MOD_COMMENTARY_END
 
-Using the documents above and the HIERARCHICAL_N1–E8_SCHEMA, generate the JSON rubric exactly as specified.
+OPTIONAL_NOTES_START
+<paste any extra constraints or context>
+OPTIONAL_NOTES_END
+
+Using the supplied source pack and the `HIERARCHICAL_N1–E8_SCHEMA`, generate the JSON rubric exactly as specified.

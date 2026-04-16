@@ -25,7 +25,19 @@
 "description": "Shows a working electronics outcome developed using appropriate resources and techniques.",
 "level": "A",
 "weight": 1,
-"detection_hint": "There must be explicit evidence that the outcome functions as intended (e.g., demonstration logs or written descriptions). Stating intentions or plans without showing operation is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Demonstration logs showing the outcome functioning as intended",
+"Written descriptions of the outcome operating correctly",
+"Evidence that the outcome meets specified requirements"
+],
+"negative_signals": [
+"Stating intentions without providing demonstration evidence",
+"Plans described without showing actual operation",
+"Generic claims of functionality without specifics"
+],
+"common_confusion": "Evidence must be explicit and show operation; vague statements or plans alone are insufficient."
+},
 "success_examples": [
 "develop a functional electronics outcome",
 "The electronics outcome meets specifications"
@@ -37,7 +49,20 @@
 "description": "Provides evidence of testing and debugging using devices or strategies to ensure performance to specifications.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Evidence must include explicit testing activity (e.g., testing expected, boundary, and invalid inputs) and debugging actions linked to outcome specifications. Generic assertions that 'it works' are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Testing expected inputs and verifying outputs",
+"Testing boundary conditions for inputs",
+"Testing invalid inputs and handling errors",
+"Debugging actions that address specification failures"
+],
+"negative_signals": [
+"Generic assertions that 'it works' without details",
+"Testing not linked to outcome specifications",
+"Lack of evidence for debugging activities"
+],
+"common_confusion": "Testing must include explicit activities like expected, boundary, and invalid inputs, with debugging tied to specifications; vague claims are insufficient."
+},
 "success_examples": [
 "testing and debugging to ensure that the electronics outcome performs to specifications",
 "tested the input interface on expected analogue/digital inputs"
@@ -49,7 +74,20 @@
 "description": "Explains the interfaces and functions of components and systems used in the outcome.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Explanation must describe what each interface/component does and how it functions within the system. Listing names or parts without functional description is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Description of what each interface does in the system",
+"Explanation of how components function together",
+"Functional roles of systems clearly stated",
+"Detailed descriptions beyond just naming parts"
+],
+"negative_signals": [
+"Listing component names without functional descriptions",
+"Parts mentioned without explaining their roles",
+"Vague or incomplete explanations of interfaces"
+],
+"common_confusion": "Explanation must describe what each interface/component does and how it functions within the system; mere listing of names or parts is insufficient."
+},
 "success_examples": [
 "explaining the interfaces and functions of components and systems",
 "functions of at least three interfaces/components"
@@ -61,7 +99,20 @@
 "description": "Explains relevant implications for the electronics outcome (e.g., end-user, functionality, usability, safety).",
 "level": "A",
 "weight": 1,
-"detection_hint": "Must name each implication, explain why it is relevant, and describe how it is or could be addressed in the outcome. Vague or generic mentions are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Naming specific implications like end-user or safety",
+"Explaining why each implication is relevant",
+"Describing how implications are or could be addressed",
+"Detailed connections between implications and outcome"
+],
+"negative_signals": [
+"Vague or generic mentions of implications",
+"Listing implications without explanations",
+"Not describing how they are addressed"
+],
+"common_confusion": "Each implication must be named, its relevance explained, and how it is addressed described; vague or generic mentions are insufficient."
+},
 "success_examples": [
 "explaining relevant implications",
 "explained at least two identified relevant implications"
@@ -73,7 +124,21 @@
 "description": "Uses at least two advanced techniques appropriate to the outcome such as embedded software, subsystem design, or PCB development.",
 "level": "A",
 "weight": 2,
-"detection_hint": "Explicitly show evidence of at least two advanced techniques implemented (e.g., embedded software, subsystem level design, remote control, advanced PCB development, EEPROM storage, ADC). Listing possibilities without implementation evidence is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Evidence of embedded software implementation",
+"Subsystem design details shown",
+"Advanced PCB development described",
+"EEPROM storage used in the outcome",
+"ADC functionality implemented"
+],
+"negative_signals": [
+"Listing possible techniques without implementation evidence",
+"Mentioning techniques without showing how they were used",
+"Evidence of fewer than two techniques"
+],
+"common_confusion": "Must provide explicit evidence of at least two advanced techniques being implemented; listing possibilities or names alone is insufficient."
+},
 "success_examples": [
 "They have used at least two advanced techniques",
 "Examples of advanced techniques may include: using embedded software, subsystem design, or ADC"
@@ -85,7 +150,20 @@
 "description": "Identifies what the electronics outcome does and how components work together to achieve this behaviour.",
 "level": "M",
 "weight": 1,
-"detection_hint": "Must include both behaviour (what the system does) and function (how the components interact). Describing parts in isolation is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Clear identification of the system's overall behaviour",
+"Explanation of how components interact to achieve behaviour",
+"Description of component functions in context",
+"Integration of behaviour and function explanations"
+],
+"negative_signals": [
+"Describing components in isolation without interaction",
+"Only stating what the system does without how",
+"Only explaining functions without linking to behaviour"
+],
+"common_confusion": "Must include both what the system does (behaviour) and how components interact (function); isolated descriptions are insufficient."
+},
 "success_examples": [
 "identifying the behaviour and function of the electronics outcome",
 "explained what the system will do and how the components work together"
@@ -97,7 +175,20 @@
 "description": "Shows testing and modifying actions that enhance the reliability of the electronics outcome.",
 "level": "M",
 "weight": 2,
-"detection_hint": "Evidence must link testing with modification activities that improve reliability (e.g., using testing devices/strategies, changing board layout, improving component selection). Correcting small code errors alone is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Testing linked to specific modifications for reliability",
+"Changing board layout to improve reliability",
+"Improving component selection based on testing",
+"Using testing devices or strategies to guide changes"
+],
+"negative_signals": [
+"Correcting only small code errors without broader impact",
+"Testing performed without resulting modifications",
+"Modifications not connected to enhancing reliability"
+],
+"common_confusion": "Testing and modifying must be linked and aimed at enhancing reliability; minor code fixes alone are insufficient."
+},
 "success_examples": [
 "testing and modifying to ensure reliability",
 "made significant improvements by changing components and reorganising the circuit layout"
@@ -109,7 +200,20 @@
 "description": "Evaluates the choice of components and systems used by comparing alternatives and providing reasons for choices.",
 "level": "M",
 "weight": 1,
-"detection_hint": "Include evaluative comparison and reasoning about why selected components or systems were preferred. Simple description without evaluation is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Comparison of alternative components or systems",
+"Reasoning provided for why choices were made",
+"Evaluative statements on advantages and disadvantages",
+"Links between evaluation and selected options"
+],
+"negative_signals": [
+"Simple description of components without comparison",
+"No reasoning given for choices",
+"Listing options without evaluative analysis"
+],
+"common_confusion": "Must include comparison of alternatives and reasoning for choices; mere description is insufficient."
+},
 "success_examples": [
 "evaluating the choice of components and systems used",
 "comparing these with other options and providing reasons"
@@ -121,7 +225,20 @@
 "description": "Shows how at least two relevant implications have been addressed in the outcome through design or development decisions.",
 "level": "M",
 "weight": 1,
-"detection_hint": "Must connect specific implications to implemented changes or design choices. Listing implications without evidence of how they were addressed is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Connecting specific implications to design changes",
+"Evidence of addressing implications through decisions",
+"At least two implications shown with connections",
+"Links between implications and outcome modifications"
+],
+"negative_signals": [
+"Listing implications without showing how addressed",
+"No evidence of design or development decisions",
+"Fewer than two implications connected"
+],
+"common_confusion": "Must connect implications to implemented changes or decisions; mere listing is insufficient."
+},
 "success_examples": [
 "addressing relevant implications",
 "shown how their electronics outcome addresses at least two relevant implications"
@@ -133,7 +250,20 @@
 "description": "Undertakes iterative improvement throughout design, development, and testing to produce a high-quality outcome.",
 "level": "E",
 "weight": 2,
-"detection_hint": "Evidence must show multiple deliberate cycles of testing and refinement throughout the design and development stages. A single improvement or linear process is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Multiple cycles of testing and refinement shown",
+"Improvements throughout design and development stages",
+"Deliberate iterations with evidence of changes",
+"Ongoing cycles rather than single fixes"
+],
+"negative_signals": [
+"Evidence of only a single improvement",
+"Linear process without repeated cycles",
+"No demonstration of iterative refinement"
+],
+"common_confusion": "Must show multiple deliberate cycles of testing and refinement; a single improvement or linear process is insufficient."
+},
 "success_examples": [
 "undertaking iterative improvement throughout the design, development and testing process",
 "multiple instances of ongoing design, development and testing"
@@ -145,7 +275,20 @@
 "description": "Justifies the choice of components and systems used with reference to investigations, comparisons, or outcomes achieved.",
 "level": "E",
 "weight": 1,
-"detection_hint": "Provide a reasoned justification supported by evidence or comparison criteria. Listing advantages without linking to the chosen design decision is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Reasoned justification for component choices",
+"Reference to investigations or comparisons",
+"Outcomes achieved supporting the choices",
+"Evidence-based reasoning for selections"
+],
+"negative_signals": [
+"Listing advantages without linking to decisions",
+"No reference to investigations or comparisons",
+"Vague justifications without support"
+],
+"common_confusion": "Justification must be reasoned and supported by evidence, investigations, or comparisons; mere listing of advantages is insufficient."
+},
 "success_examples": [
 "justifying the choice of components and systems used",
 "investigating and comparing alternative components and interfaces"
@@ -178,7 +321,7 @@
 "fallback_grade": "N1"
 },
 "governance": {
-"last_validated": "2025-06-13",
+"last_validated": "2025-07-18",
 "change_log": [
 "Integrated EN3 and EN4 examples from AS91894 to refine detection hints for advanced techniques and testing/modifying/debugging.",
 "Updated weightings for reliability and advanced technique OMIs to 2 due to critical presence across Merit and Achieved commentary.",

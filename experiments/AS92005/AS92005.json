@@ -46,12 +46,22 @@
       "description": "Describes the purpose of the outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Look for a clear statement, in the learner’s own words, explaining what the outcome is for and why it matters in its context. A brief title or text copied from the task is insufficient; it should indicate intended function and value.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Clear statement in learner's own words explaining what the outcome is for and its value",
+          "Description of intended function and context",
+          "Explanation of why the outcome matters beyond a title"
+        ],
+        "negative_signals": [
+          "Brief title or text copied directly from the task",
+          "Generic descriptions without specific purpose or value"
+        ],
+        "common_confusion": "The purpose must be articulated in the learner's own words, not copied from task instructions or limited to a simple title."
+      },
       "success_examples": [
         "The purpose of the outcome is to create an online dashboard to monitor soil moisture for houseplants.",
         "This site helps Year 9 students quickly find after-school club details and sign up on their phones."
       ],
-      "typical_evidence": "Intro paragraph in the brief; narrated demo stating purpose; teacher attestation that the learner articulated purpose.",
       "source_ref": "Moderator commentary – Achieved exemplar"
     },
     {
@@ -59,13 +69,23 @@
       "description": "Identifies the potential users of the outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Identify who will realistically use or benefit from the outcome. Generic audiences (e.g., “everyone”) are insufficient. A single authentic user is acceptable if well described; multiple users preferred.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Named specific roles or personas as users",
+          "Description of device targets or user contexts",
+          "Rationale linking users to the outcome's purpose"
+        ],
+        "negative_signals": [
+          "Generic audiences like 'everyone' or 'people'",
+          "No specific identification of who will use or benefit"
+        ],
+        "common_confusion": "Users must be realistically described and specific; a single authentic user is acceptable if well detailed."
+      },
       "success_examples": [
         "The users are game developers.",
         "The users are plant owners who want to monitor soil moisture remotely.",
         "Target users are student leaders who collect lunchtime sign-ups on shared tablets."
       ],
-      "typical_evidence": "Named roles/personas; device targets; rationale linking user to purpose.",
       "source_ref": "Moderator commentary – Achieved exemplar"
     },
     {
@@ -73,13 +93,23 @@
       "description": "Describes the requirements and measurable specifications of the outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Expect several broad requirements (what it must do/contain) AND measurable specifications (how success will be verified). These should be personalised to this outcome, not copied from the task. Specifications should include quantifiable or checkable criteria.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Broad requirements describing what the outcome must do or contain",
+          "Measurable specifications with quantifiable criteria",
+          "Personalized requirements not copied from the task"
+        ],
+        "negative_signals": [
+          "Requirements copied directly from the task",
+          "No measurable or checkable specifications"
+        ],
+        "common_confusion": "Requirements must include both broad 'what' aspects and measurable 'how' specifications for verification."
+      },
       "success_examples": [
         "Requirement: soil moisture reading must update every 10 seconds; Specification: reading resolution ±1%; webpage must fetch new data within 0.5 s.",
         "Requirement: the website should include at least two linked pages and an image gallery; Specification: passes HTML/CSS validation with zero errors and displays correctly in Chrome and Safari.",
         "Requirement: printable poster must include the school logo and key event info; Specification: print test shows correct colour and text readability at A4 size."
       ],
-      "typical_evidence": "Bulleted list in planning doc; testable acceptance criteria table; rubric-aligned spec sheet.",
       "source_ref": "Moderator commentary – Achieved exemplar"
     },
     {
@@ -87,13 +117,23 @@
       "description": "Uses appropriate tools or techniques of a digital technologies domain to produce the outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Evidence should show purposeful application of domain tools or techniques beyond following a tutorial. Name the tool AND describe what was done with it (actions, features used, settings). For games: custom assets/layouts or mechanics; for web: semantic HTML/CSS/JS.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Named tools with description of actions and features used",
+          "Purposeful application beyond following tutorials",
+          "Custom assets, layouts, or mechanics in games/websites"
+        ],
+        "negative_signals": [
+          "Only following a tutorial without additional application",
+          "No description of what was done with the tools"
+        ],
+        "common_confusion": "Tools must be applied purposefully with evidence of specific actions or features used, not just mentioned."
+      },
       "success_examples": [
         "On the Arduino, I used analogRead() on the moisture sensor and converted it to a percentage. I set up an HTTP server returning JSON. On the webpage, I used JavaScript fetch() every 10 seconds to pull data and update the display.",
         "In Godot I created a tilemap for level layout, added a KinematicBody2D with movement and jump physics, and scripted collision checks for hazards.",
         "In Canva I used grid layout and alignment tools to create consistent spacing, ensuring readable typography and balanced composition."
       ],
-      "typical_evidence": "Code snippets; annotated screenshots of tool settings; asset pipeline notes; commit messages.",
       "source_ref": "Moderator commentary – Achieved exemplar"
     },
     {
@@ -101,13 +141,23 @@
       "description": "Shows that the produced outcome addresses the stated requirements and specifications.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Look for explicit mapping from outcome features to requirements/specs using linking language (e.g., “so that…”, “therefore it meets…”). It is acceptable to note any unmet specifications; commentary should acknowledge gaps.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit mapping from features to requirements/specifications",
+          "Use of linking language like 'so that' or 'therefore'",
+          "Acknowledgment of any unmet specifications"
+        ],
+        "negative_signals": [
+          "No explicit links between outcome and requirements",
+          "Features listed without connecting to specs"
+        ],
+        "common_confusion": "The outcome must show how it addresses each requirement/specification, including noting any gaps."
+      },
       "success_examples": [
         "The webpage navigation uses internal links and displays the gallery correctly (requirement met).",
         "Text and images align within margins on both print and screen versions, addressing design requirements.",
         "Testing shows all links work and images scale correctly across browsers as specified."
       ],
-      "typical_evidence": "Traceability table (Req/Spec → Evidence); screenshots with validation; brief note of any unmet specs.",
       "source_ref": "Moderator commentary – Achieved exemplar"
     },
     {
@@ -115,13 +165,23 @@
       "description": "Tests the outcome to ensure basic functionality.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must show the outcome operating in a context close to intended use (e.g., browser/device types, sensor interaction, 3D print/render). Statements of intent are insufficient. Teacher attestation is acceptable if it describes what was observed working.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Demonstration of outcome operating in intended context",
+          "Screenshots or videos of functionality on target devices/browsers",
+          "Teacher attestation describing observed working features"
+        ],
+        "negative_signals": [
+          "Statements of intent without actual testing",
+          "Testing in non-intended contexts"
+        ],
+        "common_confusion": "Testing must show the outcome working in a realistic context, not just claims of functionality."
+      },
       "success_examples": [
         "I loaded the webpage in two browsers and confirmed that navigation links and images displayed correctly.",
         "I printed the poster and checked for correct layout and readable text.",
         "I ran the Arduino program and verified that the LED indicator changed when the sensor was covered."
       ],
-      "typical_evidence": "Short video demo; screenshots of multi-browser checks; 3D print photo; teacher attestation of observed function.",
       "source_ref": "AS PDF p1 Explanatory Note 1 • Achieved"
     },
     {
@@ -129,13 +189,23 @@
       "description": "Follows conventions relevant to the tools or techniques of the chosen digital technologies domain.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Locate concrete evidence of conventions: e.g., semantic HTML, indentation and comments, external CSS, lower-case no-space filenames, organised /images /css /js folders, wiring colour norms, sensible variable naming. Claims without evidence are insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Semantic HTML, proper indentation, and comments",
+          "Organized folder structures like /css /js /images",
+          "Consistent naming conventions and validation passes"
+        ],
+        "negative_signals": [
+          "Claims of following conventions without concrete evidence",
+          "Inconsistent or missing conventions in artifacts"
+        ],
+        "common_confusion": "Conventions must be evidenced in the actual artifacts, not just stated in documentation."
+      },
       "success_examples": [
         "Used index.html, styles.css, script.js in organized folders; Arduino sketch named PlantMonitor.ino; consistent indentation in HTML, CSS, JS.",
         "HTML validated; heading hierarchy applied; CSS uses multiple selectors and shorthand where appropriate.",
         "Database queries follow SQL naming conventions and use consistent casing for fields."
       ],
-      "typical_evidence": "Repository tree; validator screenshots; code excerpts; photos of wiring; naming/structure checklist.",
       "source_ref": "AS PDF p1 Explanatory Note 1 • Merit"
     },
     {
@@ -143,13 +213,23 @@
       "description": "Uses information from testing to make improvements to the outcome’s fitness for purpose.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Expect at least two specific improvements directly linked to the learner’s own functional testing (cause → change → improved result). Proof-reading or fixing validator warnings alone is not sufficient unless the fitness-for-purpose gain is explained.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Specific improvements linked to testing results",
+          "Cause → change → improved result documented",
+          "At least two improvements based on functional testing"
+        ],
+        "negative_signals": [
+          "Improvements limited to proof-reading or validation warnings",
+          "No link to actual testing information"
+        ],
+        "common_confusion": "Improvements must be directly tied to the learner's own functional testing, not just general fixes."
+      },
       "success_examples": [
         "Image alignment was inconsistent; I adjusted the CSS grid and confirmed layout consistency on re-test.",
         "In testing, a button overlapped text on smaller screens; I modified the layout to maintain readability.",
         "Print preview cut off the footer; I resized margins and confirmed full visibility on A4 print."
       ],
-      "typical_evidence": "Before/after screenshots; test table (Issue → Change → Result); commit notes referencing tests.",
       "source_ref": "AS PDF p1 Explanatory Note 1 • Merit"
     },
     {
@@ -157,13 +237,23 @@
       "description": "Demonstrates conventions in process artifacts or code/layout (e.g. structure, tags, grouping).",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Find conventions visible within the artefacts themselves (folder layout, code formatting, naming patterns, grouped functions). Documentation claims are not enough without artefact proof.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Visible folder layouts and code formatting in artifacts",
+          "Consistent naming patterns and grouped functions",
+          "Indented code and correct tags in HTML"
+        ],
+        "negative_signals": [
+          "Documentation claims without artifact proof",
+          "Inconsistent or poorly structured artifacts"
+        ],
+        "common_confusion": "Conventions must be demonstrated within the process artifacts or code, not just described."
+      },
       "success_examples": [
         "HTML conventions have been followed, with indented code and correct tags.",
         "Project folder has /css, /js, /assets; JS functions grouped logically; Arduino code uses consistent variable naming and comments.",
         "Database queries use consistent casing and aliases; tables structured with appropriate datatypes."
       ],
-      "typical_evidence": "Repo/file tree capture; code excerpts; SQL screenshots; linter/formatter outputs.",
       "source_ref": "Moderator commentary – Merit exemplar"
     },
     {
@@ -171,13 +261,23 @@
       "description": "Applies tools or techniques optimally to produce a fit-for-purpose outcome.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Show skilled, efficient, and context-aware application (e.g., semantic HTML + external CSS + shorthand; efficient datatypes and queries; constants and formulae in sketches; power/network efficiency in embedded). If nothing is clearly non-optimal for Level 1, an optimal judgement may be appropriate.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Efficient use of tools like semantic HTML and external CSS",
+          "Context-aware application reducing duplication or improving performance",
+          "Skilled choices in datatypes, queries, or power efficiency"
+        ],
+        "negative_signals": [
+          "Inefficient or non-optimal tool application",
+          "Lack of context-awareness in technique selection"
+        ],
+        "common_confusion": "Optimal application means skilled and efficient use tailored to the task, such as minimizing redundancy or improving performance."
+      },
       "success_examples": [
         "I used WebSockets instead of polling to reduce network load; on the Arduino I used sleep modes between readings to save power.",
         "CSS extracted to external file; multiple selectors and cascade used to reduce duplication; images sized appropriately before upload.",
         "In database design, tables were normalised and datatypes selected to minimise redundancy and ensure accurate queries."
       ],
-      "typical_evidence": "Code diffs; performance logs; schematic choices with rationale; validator passes tied to design choices.",
       "source_ref": "AS PDF p1 Explanatory Note 1 • Excellence"
     },
     {
@@ -185,13 +285,23 @@
       "description": "Trials the outcome with others, including end users.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Evidence must show other people actually used the outcome (hands-on). End-user involvement is recommended but not mandatory. Opinions alone without use are insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Evidence of other people actually using the outcome hands-on",
+          "Involvement of end users in trialling",
+          "Logs or photos of users interacting with the outcome"
+        ],
+        "negative_signals": [
+          "Opinions or feedback without actual use",
+          "No evidence of others testing the outcome"
+        ],
+        "common_confusion": "Trialling requires actual hands-on use by others, not just collecting opinions without interaction."
+      },
       "success_examples": [
         "I asked classmates and a plant hobbyist to load the webpage on their devices and monitor plant moisture over a day.",
         "Two students used the website to join clubs during interval; they reported the icons were unclear on smaller screens.",
         "Family members printed and read the brochure, giving feedback about colour contrast and clarity."
       ],
-      "typical_evidence": "Short trial log (who, device, what they did, issues); photos/screens of users interacting; quick survey linked to use session.",
       "source_ref": "AS PDF p2 Explanatory Notes 3"
     },
     {
@@ -199,13 +309,23 @@
       "description": "Uses information from trialling with others to improve the outcome’s fitness for purpose.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Improvements must clearly trace to user or end-user feedback and strengthen alignment to purpose, users, requirements, or specifications. Document the feedback → change → improved result link.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Improvements directly traceable to user or end-user feedback",
+          "Feedback → change → improved result documented",
+          "Strengthened alignment to purpose, users, or specifications"
+        ],
+        "negative_signals": [
+          "Improvements not linked to trialling feedback",
+          "No documentation of feedback-to-change connection"
+        ],
+        "common_confusion": "Improvements must clearly trace back to trialling information and enhance fitness for purpose."
+      },
       "success_examples": [
         "User feedback said the gauge color was confusing, so I changed from red/green to a gradient and re-trialled; users said it was clearer.",
         "End users couldn’t find ‘Join’ on mobile; I moved it to the first screen and increased contrast; re-trial showed zero misses.",
         "Trial users noted small font on printed brochure; I increased font size and spacing, improving readability."
       ],
-      "typical_evidence": "Trial notes with quotes; before/after screenshots; brief re-trial confirmation; checklist showing improved spec compliance.",
       "source_ref": "AS PDF p1 Explanatory Note 1 • Excellence"
     }
   ],
@@ -234,7 +354,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-10-06",
+    "last_validated": "2025-07-18",
     "change_log": [
       "Removed web page-load references; aligned success examples with official Moderator Guide exemplars (v3, Oct 2025)."
     ]

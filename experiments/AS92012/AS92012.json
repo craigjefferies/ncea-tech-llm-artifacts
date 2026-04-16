@@ -46,7 +46,20 @@
       "description": "Creates a tangible outcome for a person, whānau, or community that addresses a brief with specifications.",
       "level": "A",
       "weight": 1.5,
-      "detection_hint": "Outcome must be present and clearly linked to a stated brief with specifications. Drawings or intentions without a finished product do not satisfy this indicator. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Tangible outcome described (e.g., 'shoe rack', 'pastry')",
+          "Linked to brief (e.g., 'for whānau member')",
+          "Addresses specifications (e.g., 'holds 12 pairs')",
+          "Finished product, not just drawings"
+        ],
+        "negative_signals": [
+          "Only drawings or plans mentioned",
+          "No physical outcome created",
+          "Not linked to brief or specifications"
+        ],
+        "common_confusion": "Drawings, intentions, or unfinished products do not count as a tangible outcome; a completed physical item is required."
+      },
       "success_examples": [
         "“fit-for-purpose outcome for a whānau member”",
         "“shoe rack used by the family in the hallway”"
@@ -58,7 +71,20 @@
       "description": "Brief explicitly states purpose, end user, and actual or modelled intended environment.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "All three elements must be explicit. A generic context or missing environment detail is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Purpose explicitly stated (e.g., 'organise shoes')",
+          "End user identified (e.g., 'whānau')",
+          "Environment specified (e.g., 'hallway entrance (modelled)')",
+          "All three elements present and clear"
+        ],
+        "negative_signals": [
+          "Missing purpose, end user, or environment",
+          "Generic context without specific environment details",
+          "Vague or implicit statements"
+        ],
+        "common_confusion": "All three elements (purpose, end user, environment) must be explicitly stated; a generic context is insufficient for the environment."
+      },
       "success_examples": [
         "“purpose: organise shoes; end-user: whānau; environment: hallway entrance (modelled)”"
       ],
@@ -69,7 +95,20 @@
       "description": "Physical and functional specifications are precise, measurable, and evaluated as met/not met.",
       "level": "A",
       "weight": 1.5,
-      "detection_hint": "Must include measurable terms (e.g., dimensions, temperature). Simply stating 'good quality' or 'looks nice' is not measurable. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Measurable terms used (e.g., 'thickness ≤ 3 mm')",
+          "Evaluated as met/not met (e.g., 'holds 12 pairs – met')",
+          "Precise dimensions or functional requirements",
+          "Physical and functional specs included"
+        ],
+        "negative_signals": [
+          "Vague terms like 'good quality' or 'looks nice'",
+          "No evaluation of whether specs are met",
+          "Non-measurable or subjective descriptions"
+        ],
+        "common_confusion": "Specifications must be precise and measurable with evaluation; subjective or vague terms like 'good quality' are insufficient."
+      },
       "success_examples": [
         "“Pastry thickness ≤ 3 mm – met”",
         "“holds 12 pairs – not met”"
@@ -81,7 +120,20 @@
       "description": "Outcome is developed and demonstrated within a real-life, familiar situation for the student.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Evidence must show use or testing in the stated authentic environment. Studio photos alone are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Use or testing in authentic environment (e.g., 'photograph in intended environment')",
+          "Real-life situation described",
+          "Familiar to the student",
+          "Demonstrated within the context"
+        ],
+        "negative_signals": [
+          "Studio photos only",
+          "No evidence of use in environment",
+          "Generic or unfamiliar context"
+        ],
+        "common_confusion": "Studio photos alone are insufficient; the outcome must be shown in use or tested within the authentic, familiar environment."
+      },
       "success_examples": [
         "“final photograph taken in the intended environment familiar to the student”"
       ],
@@ -92,7 +144,20 @@
       "description": "Collects documented, first-hand feedback from more than one stakeholder at more than one stage of development.",
       "level": "M",
       "weight": 1.5,
-      "detection_hint": "Feedback must be documented and first-hand from at least two stakeholders at separate stages. Single survey or single person is inadequate. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Feedback from multiple stakeholders (e.g., 'teacher and end-user')",
+          "At multiple stages (e.g., 'trial and final testing')",
+          "Documented and first-hand input",
+          "Separate stages of development"
+        ],
+        "negative_signals": [
+          "Feedback from only one stakeholder",
+          "Collected at only one stage",
+          "Not documented or indirect feedback"
+        ],
+        "common_confusion": "Feedback must be documented, first-hand, from more than one stakeholder at more than one stage; a single survey or person does not suffice."
+      },
       "success_examples": [
         "“teacher and end-user consulted during trial and final testing”"
       ],
@@ -103,7 +168,20 @@
       "description": "Applies stakeholder feedback to inform specific refinements that improve the outcome’s fitness for purpose.",
       "level": "M",
       "weight": 1.5,
-      "detection_hint": "Evidence must link feedback to a clear change (e.g., material, dimension). Listing feedback without showing resulting action does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Feedback linked to specific change (e.g., 'added switch after feedback')",
+          "Refinements described (e.g., 'changed material')",
+          "Improves fitness for purpose",
+          "Clear action taken based on feedback"
+        ],
+        "negative_signals": [
+          "Feedback listed without resulting changes",
+          "No link between feedback and refinements",
+          "Changes not shown to improve outcome"
+        ],
+        "common_confusion": "Listing feedback without evidence of application to specific refinements does not count; changes must be linked and improve fitness for purpose."
+      },
       "success_examples": [
         "“added accessible switch after whānau said button was hard to reach”"
       ],
@@ -114,7 +192,20 @@
       "description": "Explains reasoning behind decisions that improved the outcome’s fitness for purpose.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Must include rationale (why) not just description (what). Statements like “I changed it” without justification are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Rationale explained (e.g., 'chose crunchier pastry so filling stays contained')",
+          "Why decisions improved fitness for purpose",
+          "Reasoning behind changes",
+          "Justification provided"
+        ],
+        "negative_signals": [
+          "Only description of what was done",
+          "Statements like 'I changed it' without reason",
+          "No explanation of why"
+        ],
+        "common_confusion": "Must include rationale (why) the decisions improved the outcome; mere description (what) without justification is insufficient."
+      },
       "success_examples": [
         "“chose crunchier pastry so the filling stays contained”"
       ],
@@ -125,7 +216,20 @@
       "description": "Analyses how stakeholder feedback informed the development of the outcome for a person, whānau, or community, referencing trade-offs or priorities.",
       "level": "E",
       "weight": 1.5,
-      "detection_hint": "Must discuss cause-effect of feedback on design choices. Simple statements that feedback was ‘helpful’ are inadequate. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Cause-effect of feedback discussed (e.g., 'prioritised ventilation after feedback')",
+          "Trade-offs or priorities referenced",
+          "Analysis of how feedback informed development",
+          "Impact on outcome for person/whānau/community"
+        ],
+        "negative_signals": [
+          "Vague statements like 'feedback was helpful'",
+          "No discussion of cause-effect relationship",
+          "Missing reference to trade-offs or priorities"
+        ],
+        "common_confusion": "Must analyse the cause-effect influence of feedback on design choices, referencing trade-offs; simple affirmations are inadequate."
+      },
       "success_examples": [
         "“prioritised ventilation over capacity after whānau stressed damp shoes issue”"
       ],
@@ -136,7 +240,20 @@
       "description": "Critically evaluates the final outcome against the brief and specifications for fitness for purpose in the actual or modelled intended environment, with detailed, quantifiable evidence of specifications being met.",
       "level": "E",
       "weight": 2.5,
-      "detection_hint": "Must reference specific specifications, environment conditions, and measurable data. Generic affirmations are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Specific specifications referenced (e.g., 'weight ≤ 5 kg')",
+          "Environment conditions described",
+          "Quantifiable evidence provided (e.g., 'withstands 45°C for 2h')",
+          "Critical evaluation against brief"
+        ],
+        "negative_signals": [
+          "Generic affirmations without details",
+          "No measurable or quantifiable data",
+          "Missing reference to environment or specs"
+        ],
+        "common_confusion": "Evaluation must be critical with detailed, quantifiable evidence of specifications met in the environment; generic statements are insufficient."
+      },
       "success_examples": [
         "“meets weight ≤ 5 kg, fits 600 mm shelf width, withstands 45 °C for 2 h”"
       ],
@@ -168,7 +285,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-10-16",
+    "last_validated": "2025-07-18",
     "change_log": [
       "Added ‘person, whānau, or community’ to A1 and E1 for alignment with standard wording.",
       "Replaced ‘intended environment’ with ‘actual or modelled intended environment’ across relevant indicators.",

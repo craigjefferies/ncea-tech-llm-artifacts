@@ -38,7 +38,19 @@
       "description": "Describes key biological trends such as bipedalism, skull changes, or hand manipulation.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The response must identify and describe at least one trend in biological evolution. Listing without explanation is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Identifies at least one biological trend (e.g., bipedalism, skull changes, hand manipulation)",
+          "Provides explanation of the trend's significance or how it occurred",
+          "Uses specific anatomical examples in the description"
+        ],
+        "negative_signals": [
+          "Lists trends without any description or explanation",
+          "Describes cultural trends instead of biological ones",
+          "Mentions trends not related to hominin evolution"
+        ],
+        "common_confusion": "Biological trends refer to physical adaptations in hominins, distinct from cultural developments like tool use or fire."
+      },
       "success_examples": ["The pelvis is shorter and broader in humans.", "The spine is S-shaped to support upright walking."],
       "source_ref": "AS PDF p2 ¶4"
     },
@@ -47,7 +59,19 @@
       "description": "Describes key cultural trends such as tool use, fire, clothing, or shelter.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Response must state a cultural development and describe its use or function. Naming only is not sufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "States a specific cultural development (e.g., tool use, fire, clothing)",
+          "Describes its use or function in hominin life",
+          "Provides examples of application or impact"
+        ],
+        "negative_signals": [
+          "Names cultural items without explaining their use or function",
+          "Describes biological trends instead of cultural ones",
+          "General statements without specific details"
+        ],
+        "common_confusion": "Cultural trends are learned behaviors or technologies, not innate biological changes."
+      },
       "success_examples": ["Neanderthals used fibres to create cord for carrying food.", "Fire was used for warmth and cooking."],
       "source_ref": "AS PDF p2 ¶5"
     },
@@ -56,7 +80,19 @@
       "description": "Defines hominins and describes their dispersal patterns.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Response must clearly state the definition of hominins and mention migration/dispersal routes or patterns. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Provides a clear and accurate definition of hominins",
+          "Describes migration or dispersal routes/patterns",
+          "Mentions specific geographical regions involved"
+        ],
+        "negative_signals": [
+          "Defines hominins incorrectly (e.g., including great apes)",
+          "Omits any mention of dispersal patterns",
+          "Vague or incomplete descriptions of either definition or dispersal"
+        ],
+        "common_confusion": "Hominins are the human lineage excluding great apes, and dispersal refers to geographical spread over time, not just movement."
+      },
       "success_examples": ["Hominins moved out of Africa into Europe and Asia.", "Hominins are members of the human lineage, not including great apes."],
       "source_ref": "AS PDF p2 ¶3"
     },
@@ -65,7 +101,19 @@
       "description": "Explains how skeletal or anatomical features support bipedalism.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Must connect feature to function or advantage (e.g., valgus angle improves walking efficiency). Description alone is not enough. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Names a specific skeletal or anatomical feature",
+          "Connects the feature to bipedalism function or advantage",
+          "Provides reasoning for efficiency or benefit in walking"
+        ],
+        "negative_signals": [
+          "Describes anatomical features without linking to bipedalism",
+          "Mentions adaptations not related to upright walking",
+          "Lacks explanation of how the feature supports bipedalism"
+        ],
+        "common_confusion": "Adaptations must be explicitly tied to bipedalism, not just any anatomical change in hominins."
+      },
       "success_examples": ["The valgus angle positions knees under the body for better balance.", "The spine’s S-shape absorbs shock during walking."],
       "source_ref": "Moderator commentary ¶6"
     },
@@ -74,7 +122,19 @@
       "description": "Explains the function of a specific brain region and its role in hominin behaviour.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Student must name a brain region and link it to a function (e.g., language, tool use). Naming only is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Names a specific brain region (e.g., Broca’s area, parietal lobe)",
+          "Links the region to a specific function",
+          "Explains its role in hominin behavior or evolution"
+        ],
+        "negative_signals": [
+          "Names a brain region without explaining its function",
+          "Describes general brain functions without specificity",
+          "Makes incorrect or unsupported linkages"
+        ],
+        "common_confusion": "Specific brain regions must be connected to behavioral or evolutionary outcomes, not just general cognition."
+      },
       "success_examples": ["The parietal lobe allowed spatial reasoning for tool making.", "Broca’s area helped with speech development."],
       "source_ref": "Moderator commentary ¶6"
     },
@@ -83,7 +143,19 @@
       "description": "Links anatomical or behavioural features to survival or evolutionary advantage.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Must show how a feature (e.g., tool use, upright walking) contributed to reproductive or survival success. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Identifies a specific anatomical or behavioral feature",
+          "Links it directly to survival or evolutionary advantage",
+          "Explains how it contributed to reproductive or survival success"
+        ],
+        "negative_signals": [
+          "Describes features without connecting to any advantage",
+          "Links to non-evolutionary benefits (e.g., comfort)",
+          "Vague or unsupported connections to evolution"
+        ],
+        "common_confusion": "Advantages must relate to evolutionary success, such as increased reproduction or survival rates."
+      },
       "success_examples": ["Bipedalism freed hands for carrying tools and infants.", "Tool use increased food access and survival."],
       "source_ref": "Moderator commentary ¶6"
     },
@@ -92,7 +164,19 @@
       "description": "Evaluates trade-offs associated with an evolutionary change (e.g., costs and benefits).",
       "level": "E",
       "weight": 3,
-      "detection_hint": "Student must describe both advantages and disadvantages of a feature and provide reasoning or outcomes. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Describes advantages of an evolutionary change",
+          "Describes disadvantages or costs of the change",
+          "Provides reasoning or outcomes for the trade-offs"
+        ],
+        "negative_signals": [
+          "Lists only advantages without mentioning costs",
+          "Evaluates only disadvantages without benefits",
+          "Lacks any reasoning or analysis of trade-offs"
+        ],
+        "common_confusion": "Trade-offs require balanced evaluation of both costs and benefits, not just one side."
+      },
       "success_examples": ["Bipedalism increases injury risk but is efficient for travel.", "Large brain size led to birth complications but improved cognition."],
       "source_ref": "Moderator commentary ¶6"
     },
@@ -101,7 +185,19 @@
       "description": "Integrates biological and cultural trends to explain evolutionary outcomes.",
       "level": "E",
       "weight": 3,
-      "detection_hint": "Must combine at least one biological and one cultural factor and explain their interaction or combined effect. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Combines at least one biological and one cultural factor",
+          "Explains their interaction or combined effect",
+          "Links the integration to evolutionary outcomes"
+        ],
+        "negative_signals": [
+          "Describes only biological trends without cultural",
+          "Describes only cultural trends without biological",
+          "No explanation of how they interact or integrate"
+        ],
+        "common_confusion": "Integration requires showing how biological and cultural trends work together to produce outcomes."
+      },
       "success_examples": ["Smaller body size and simple tools helped H. floresiensis survive on limited island resources."],
       "source_ref": "Moderator commentary ¶6"
     },
@@ -110,7 +206,19 @@
       "description": "Uses scientific evidence to justify or analyse evolutionary interpretations.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Requires references to specific fossil, genetic, or archaeological evidence supporting the argument. General statements are not sufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "References specific fossil, genetic, or archaeological evidence",
+          "Uses the evidence to justify interpretations",
+          "Provides analysis of how the evidence supports the argument"
+        ],
+        "negative_signals": [
+          "Makes general statements without specific evidence",
+          "References evidence not tied to the argument",
+          "Uses incorrect or fabricated scientific evidence"
+        ],
+        "common_confusion": "Evidence must be specific scientific data that directly supports the evolutionary interpretation."
+      },
       "success_examples": ["The use of fibres shows cognitive ability supported by archaeological findings in France."],
       "source_ref": "Moderator commentary ¶6"
     },
@@ -119,7 +227,19 @@
       "description": "Structures ideas logically and uses coherent links between concepts.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Look for logical flow and connections between trends, ideas, or examples. A list of facts without linking phrases does not meet this indicator. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Demonstrates logical flow between ideas",
+          "Uses linking phrases to connect concepts",
+          "Maintains coherent structure throughout the response"
+        ],
+        "negative_signals": [
+          "Presents a list of facts without connections",
+          "Ideas are disorganized or fragmented",
+          "Lacks transitions or linking language"
+        ],
+        "common_confusion": "Coherence requires explicit links between concepts, not just juxtaposition of unrelated ideas."
+      },
       "success_examples": ["The advantages outweigh the disadvantages because they improved long-distance travel, which helped find food and escape predators."],
       "source_ref": "Moderator commentary ¶6"
     }
@@ -149,7 +269,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

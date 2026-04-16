@@ -34,186 +34,294 @@
 "description": "Describes how meanings and effects are created in significant aspects of texts and points to those details.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Look for explicit description of how a feature creates meaning or effect, not just naming the feature. Mentioning a device without stating its effect is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Explicit phrases describing how features create meaning or effect, e.g., 'creates meaning by...', 'achieves effect through...'",
+"Pointing to specific details or quotes from the text",
+"Clear explanation of the feature's impact on meaning or effect",
+"Direct linkage between the aspect and its contribution"
+],
+"negative_signals": [
+"Naming a feature without stating its effect",
+"Mentioning a device without explaining its contribution",
+"General statements lacking specific textual support"
+],
+"common_confusion": "Students often name literary devices but fail to explain their specific role in creating meaning or effect."
+},
 "success_examples": [
 "describing how meanings and effects are created",
 "using supporting evidence"
 ],
-"source_ref": "AS PDF p1 Explanatory Notes 1 (Achievement) 
-
-as91927
-
-"
+"source_ref": "AS PDF p1 Explanatory Notes 1 (Achievement)"
 },
 {
 "id": "uses_supporting_evidence_correctly",
 "description": "Selects and uses specific and relevant details from the text(s) as supporting evidence for ideas.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Evidence must be specific and relevant to the idea stated. General plot recall or unrelated quotations do not count as supporting evidence. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Use of specific quotes or details from the text",
+"Direct relevance of evidence to the stated idea",
+"Avoidance of general plot summary",
+"Clear linkage of evidence to support the idea"
+],
+"negative_signals": [
+"General plot recall without specific details",
+"Unrelated quotations or examples",
+"Vague or irrelevant evidence"
+],
+"common_confusion": "Students often provide plot summaries instead of specific, relevant details that directly support their ideas."
+},
 "success_examples": [
 "examples of specific and relevant details",
 "used to support ideas"
 ],
-"source_ref": "AS PDF p2 Explanatory Notes 4 
-
-as91927
-
-"
+"source_ref": "AS PDF p2 Explanatory Notes 4"
 },
 {
 "id": "addresses_purpose_and_audience",
 "description": "Identifies aspects related to purposes and audiences in the text and links them to meaning or effect.",
 "level": "A",
 "weight": 1,
-"detection_hint": "The response must explicitly reference purpose or audience and connect it to a textual aspect; merely naming an audience is not enough. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Explicit reference to purpose or audience",
+"Connection of purpose/audience to a textual aspect",
+"Linkage to meaning or effect",
+"Avoidance of mere naming without connection"
+],
+"negative_signals": [
+"Merely naming an audience without linking to aspect",
+"Stating purpose without connecting to meaning/effect",
+"Isolated mentions without integration"
+],
+"common_confusion": "Students often name the audience or purpose but fail to explain how it relates to the text's meaning or effect."
+},
 "success_examples": [
 "purposes and audiences"
 ],
-"source_ref": "AS PDF p2 Explanatory Notes 2 (list of significant aspects) 
-
-as91927
-
-"
+"source_ref": "AS PDF p2 Explanatory Notes 2 (list of significant aspects)"
 },
 {
 "id": "identifies_ideas_character_theme_setting",
 "description": "Identifies and discusses ideas such as character, theme, or setting as significant aspects contributing to meaning.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Student must link an idea (e.g., theme/character/setting) to meaning or effect; listing an idea without linkage is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Identification of specific ideas like character, theme, setting",
+"Discussion linking the idea to meaning or effect",
+"Avoidance of mere listing without linkage",
+"Explanation of contribution to overall meaning"
+],
+"negative_signals": [
+"Listing an idea without linking to meaning",
+"Stating theme/character without discussion",
+"Isolated identification without effect"
+],
+"common_confusion": "Students often identify ideas but fail to discuss how they contribute to the text's meaning."
+},
 "success_examples": [
 "ideas (such as character, theme, setting)"
 ],
-"source_ref": "AS PDF p2 Explanatory Notes 2 (ideas) 
-
-as91927
-
-"
+"source_ref": "AS PDF p2 Explanatory Notes 2 (ideas)"
 },
 {
 "id": "identifies_language_features_with_effect",
 "description": "Identifies language features (e.g., figurative language, style, syntax, symbolism, vocabulary) and states their effect.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Naming a feature is not enough; the response must state the effect it creates (e.g., mood, emphasis). Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Naming specific language features like metaphor, syntax",
+"Stating the effect created, e.g., mood, emphasis",
+"Clear linkage between feature and its impact",
+"Avoidance of mere naming without effect"
+],
+"negative_signals": [
+"Naming a feature without stating its effect",
+"Listing features without explanation of impact",
+"Generic mentions without specific effects"
+],
+"common_confusion": "Students often name language features but forget to explain the effect they create on the reader or text."
+},
 "success_examples": [
 "language features (such as figurative language, style, syntax, symbolism, vocabulary)"
 ],
-"source_ref": "AS PDF p2 Explanatory Notes 2 (language features) 
-
-as91927
-
-"
+"source_ref": "AS PDF p2 Explanatory Notes 2 (language features)"
 },
 {
 "id": "recognises_structure_or_conventions",
 "description": "Recognises structures (part/whole, narrative) or text conventions (spelling, punctuation, grammar) as significant aspects shaping meaning.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Student must connect a structure or convention to meaning/effect; merely noting a paragraph or punctuation mark is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Identification of structures like narrative, part/whole",
+"Recognition of conventions like punctuation, grammar",
+"Connection to how they shape meaning",
+"Avoidance of mere noting without linkage"
+],
+"negative_signals": [
+"Merely noting a paragraph or punctuation without connection",
+"Listing structures/conventions without meaning link",
+"Isolated mentions without effect on meaning"
+],
+"common_confusion": "Students often point out structures or conventions but fail to explain how they contribute to shaping the text's meaning."
+},
 "success_examples": [
 "structures (such as part text, whole text, narrative)",
 "text conventions (such as spelling, punctuation, grammar)"
 ],
-"source_ref": "AS PDF p2 Explanatory Notes 2 (structures; text conventions) 
-
-as91927
-
-"
+"source_ref": "AS PDF p2 Explanatory Notes 2 (structures; text conventions)"
 },
 {
 "id": "explains_how_aspects_work_together",
 "description": "Explains how significant aspects of texts work together to create meaning and effects, using supporting evidence.",
 "level": "M",
 "weight": 1,
-"detection_hint": "Look for explicit linkage words (e.g., ‘together’, ‘combine’, ‘reinforce’) connecting at least two aspects to a shared effect. Listing features separately is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Use of linkage words like 'together', 'combine', 'reinforce'",
+"Connection of at least two aspects to a shared effect",
+"Explanation of combined impact on meaning/effects",
+"Avoidance of separate listings without integration"
+],
+"negative_signals": [
+"Listing features separately without linkage",
+"Describing aspects in isolation",
+"Lack of words showing combination or reinforcement"
+],
+"common_confusion": "Students often describe individual aspects but fail to explain how they work together to create overall meaning and effects."
+},
 "success_examples": [
 "explaining how significant aspects of texts work together",
 "to create meaning and effects"
 ],
-"source_ref": "AS PDF p1 Explanatory Notes 1 (Merit) 
-
-as91927
-
-"
+"source_ref": "AS PDF p1 Explanatory Notes 1 (Merit)"
 },
 {
 "id": "connects_features_to_reader_impact",
 "description": "Explains how choices (e.g., mood/tone, ideas, features) impact reader understanding or response, supported by quotations.",
 "level": "M",
 "weight": 1,
-"detection_hint": "Response must make a cause–effect link between a textual choice and its impact on readers; generic statements of ‘effect’ are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Cause-effect link between choice and reader impact",
+"Explanation of how mood/tone/ideas/features affect understanding/response",
+"Support with quotations",
+"Avoidance of generic statements without specifics"
+],
+"negative_signals": [
+"Generic statements of effect without cause",
+"Lack of connection to reader understanding/response",
+"Absence of supporting quotations"
+],
+"common_confusion": "Students often describe effects but fail to link them clearly to specific textual choices and their impact on readers."
+},
 "success_examples": [
 "Support your explanation with quotations"
 ],
-"source_ref": "Exam Booklet p2–6 question stems and instruction lines 
-
-91927-exm-2024
-
-"
+"source_ref": "Exam Booklet p2-6 question stems and instruction lines; 91927-exm-2024"
 },
 {
 "id": "integrates_multiple_aspects_in_argument",
 "description": "Integrates ideas, language features, and structure within a coherent explanation of meaning/effect.",
 "level": "M",
 "weight": 1,
-"detection_hint": "The explanation must weave more than one aspect into a single argument; separate paragraphs that never connect aspects do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Weaving of multiple aspects (ideas, features, structure) into one argument",
+"Coherent explanation connecting aspects",
+"Avoidance of separate paragraphs without linkage",
+"Integrated discussion of meaning/effect"
+],
+"negative_signals": [
+"Separate paragraphs that never connect aspects",
+"Isolated discussions of individual aspects",
+"Lack of integration into a single argument"
+],
+"common_confusion": "Students often discuss aspects separately but fail to integrate them into a cohesive explanation of meaning or effect."
+},
 "success_examples": [
 "significant aspects of texts",
 "create meaning and effects"
 ],
-"source_ref": "AS PDF p1–2 Achievement/Merit scope and aspect list 
-
-as91927
-
-"
+"source_ref": "AS PDF p1-2 Achievement/Merit scope and aspect list"
 },
 {
 "id": "discusses_aspects_and_writers_purpose",
 "description": "Discusses the relationship between significant aspects and the writer’s purpose, using supporting evidence.",
 "level": "E",
 "weight": 1,
-"detection_hint": "Must include a clear statement of writer’s purpose and link it to identified aspects with evidence; naming purpose alone is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Clear statement of writer's purpose",
+"Linkage of purpose to identified aspects",
+"Use of supporting evidence",
+"Avoidance of naming purpose without connection"
+],
+"negative_signals": [
+"Naming purpose without linking to aspects",
+"Lack of evidence supporting the relationship",
+"Isolated statements without discussion"
+],
+"common_confusion": "Students often state the writer's purpose but fail to discuss its relationship to specific textual aspects with evidence."
+},
 "success_examples": [
 "discussing the relationship between significant aspects of texts",
 "writer's purpose"
 ],
-"source_ref": "AS PDF p1 Explanatory Notes 1 (Excellence) 
-
-as91927
-
-"
+"source_ref": "AS PDF p1 Explanatory Notes 1 (Excellence)"
 },
 {
 "id": "relates_aspects_to_wider_context",
 "description": "Discusses how significant aspects relate to wider context (e.g., cultural, social), supported by specific textual evidence.",
 "level": "E",
 "weight": 1,
-"detection_hint": "Response must explicitly name a wider context and explain its relationship to aspects; vague mentions of ‘context’ are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Explicit naming of wider context (cultural, social)",
+"Explanation of relationship to aspects",
+"Support with specific textual evidence",
+"Avoidance of vague mentions of 'context'"
+],
+"negative_signals": [
+"Vague mentions of 'context' without specifics",
+"Lack of explanation of relationship",
+"Absence of textual evidence"
+],
+"common_confusion": "Students often mention 'context' vaguely but fail to explicitly name and relate it to textual aspects with evidence."
+},
 "success_examples": [
 "wider context, using supporting evidence"
 ],
-"source_ref": "AS PDF p1 Explanatory Notes 1 (Excellence) 
-
-as91927
-
-"
+"source_ref": "AS PDF p1 Explanatory Notes 1 (Excellence)"
 },
 {
 "id": "acknowledges_maori_context_when_applicable",
 "description": "When a text is based in a Māori context, acknowledges this context and relates it to meaning or purpose with evidence.",
 "level": "E",
 "weight": 1,
-"detection_hint": "Indicator applies only when the text is in a Māori context. The student must explicitly connect the Māori context to meaning or purpose. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Explicit acknowledgment of Māori context",
+"Connection of context to meaning or purpose",
+"Use of evidence to support the relation",
+"Applies only when text is in Māori context"
+],
+"negative_signals": [
+"Failure to connect context to meaning/purpose",
+"Lack of evidence",
+"Ignoring Māori context when applicable"
+],
+"common_confusion": "Students may acknowledge the context but fail to explicitly relate it to the text's meaning or purpose with evidence."
+},
 "success_examples": [
 "One of the unfamiliar texts will be based in a Māori context."
 ],
-"source_ref": "AS PDF p2 Explanatory Notes 3 
-
-as91927
-
-"
+"source_ref": "AS PDF p2 Explanatory Notes 3"
 }
 ],
 "aggregation_rules": {
@@ -241,7 +349,7 @@ as91927
 "fallback_grade": "N1"
 },
 "governance": {
-"last_validated": "2025-06-13",
+"last_validated": "2025-07-18",
 "change_log": []
 }
 }

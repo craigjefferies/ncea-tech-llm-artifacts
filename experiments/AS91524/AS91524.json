@@ -25,7 +25,19 @@
       "description": "Provides accurate definitions of core physical quantities such as force, torque, or angular velocity.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The response must define physical quantities using correct terminology and directionality. Vague or circular definitions disqualify. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Provides accurate definitions using correct terminology",
+          "Includes directionality for vector quantities",
+          "Uses specific examples to illustrate definitions"
+        ],
+        "negative_signals": [
+          "Vague or circular definitions",
+          "Uses incorrect terminology",
+          "Omits key aspects like direction or units"
+        ],
+        "common_confusion": "Definitions must be precise and include directional information for vector quantities like force."
+      },
       "success_examples": ["centripetal force is directed toward the centre of the circle"],
       "source_ref": "Moderator Commentary - Achievement"
     },
@@ -34,7 +46,19 @@
       "description": "Draws a force diagram with all relevant forces in correct directions and locations.",
       "level": "A",
       "weight": 2,
-      "detection_hint": "Diagrams must include and label all significant forces acting on the object. Incorrect direction or missing vectors disqualify. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Includes all significant forces acting on the object",
+          "Labels forces with correct names",
+          "Shows forces in correct directions and locations"
+        ],
+        "negative_signals": [
+          "Missing one or more significant forces",
+          "Incorrect directions for forces",
+          "Unlabeled or incorrectly labeled vectors"
+        ],
+        "common_confusion": "All relevant forces must be represented in the diagram, not just the most obvious ones."
+      },
       "success_examples": ["drew free body diagrams correctly"],
       "source_ref": "Moderator Commentary - Achievement, Excellence"
     },
@@ -43,7 +67,19 @@
       "description": "Correctly uses angular kinematic relationships to solve for unknowns.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Equations like ω = θ/t or θ = ωt must be used with correct substitution. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Uses correct equations like ω = θ/t or θ = ωt",
+          "Performs proper substitution of values",
+          "Calculates unknowns with correct units"
+        ],
+        "negative_signals": [
+          "Uses incorrect equations",
+          "Makes errors in substitution",
+          "Ignores units or dimensional analysis"
+        ],
+        "common_confusion": "Angular kinematics equations must be applied with correct relationships and units."
+      },
       "success_examples": ["calculated angular velocity using rotational kinematics"],
       "source_ref": "Moderator Commentary - Achievement"
     },
@@ -52,7 +88,19 @@
       "description": "Identifies that net force arises from the sum of multiple interacting forces.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Must clearly state that a net force results from unbalanced forces and describe direction. Merely listing forces is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "States net force as the vector sum of forces",
+          "Describes the direction of the net force",
+          "Links net force to unbalanced forces"
+        ],
+        "negative_signals": [
+          "Lists forces without calculating the sum",
+          "Ignores the direction of net force",
+          "Treats net force as a single independent force"
+        ],
+        "common_confusion": "Net force is the resultant vector sum of all forces, not just any individual force."
+      },
       "success_examples": ["recognised that the net force provided the centripetal force"],
       "source_ref": "Moderator Commentary - Merit"
     },
@@ -61,7 +109,19 @@
       "description": "Applies conservation of energy reasoning across multiple energy forms.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "The student must state initial and final energy forms and equate them with reasoning. A single formula without linkage is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "States initial and final energy forms",
+          "Equates total energy with reasoning",
+          "Links transformations between energy forms"
+        ],
+        "negative_signals": [
+          "Uses a single formula without linkage",
+          "Ignores multiple energy forms",
+          "Provides no reasoning for conservation"
+        ],
+        "common_confusion": "Conservation requires equating total energy across all forms, not just one type."
+      },
       "success_examples": ["solved problems using the conservation of energy with mistake(s)"],
       "source_ref": "Moderator Commentary - Merit"
     },
@@ -70,7 +130,19 @@
       "description": "Explains how mass distribution affects rotational inertia or acceleration.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Must reference formulas (e.g., I ∝ mr²) or reasoning linking mass layout to motion outcome. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "References formulas like I ∝ mr²",
+          "Links mass layout to changes in inertia",
+          "Explains effects on rotational motion"
+        ],
+        "negative_signals": [
+          "No reference to relevant formulas",
+          "Incorrect reasoning about distribution",
+          "Ignores specifics of mass placement"
+        ],
+        "common_confusion": "Mass distribution affects rotational inertia, not just the total mass of the object."
+      },
       "success_examples": ["explain why rotational inertia decreases using a valid formulae or relationship"],
       "source_ref": "Moderator Commentary - Merit"
     },
@@ -79,7 +151,19 @@
       "description": "Identifies how energy is lost from a system and the physical mechanism responsible.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Must link specific energy loss (e.g., to heat, sound) to cause (e.g., friction). General references to 'loss' are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Links energy loss to specific form (e.g., heat, sound)",
+          "Identifies the physical cause (e.g., friction)",
+          "Explains the mechanism of loss"
+        ],
+        "negative_signals": [
+          "General references to 'energy loss' without specifics",
+          "No identification of the cause",
+          "Incorrect or vague mechanisms"
+        ],
+        "common_confusion": "Energy loss must be tied to a specific physical process like friction or air resistance."
+      },
       "success_examples": ["energy is lost as heat due to friction during damping"],
       "source_ref": "Moderator Commentary - Merit"
     },
@@ -88,7 +172,19 @@
       "description": "Compares relative force magnitudes or directions across different system conditions.",
       "level": "E",
       "weight": 3,
-      "detection_hint": "The response must describe how net forces vary between positions, including direction and cause. Listing forces without comparison disqualifies. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Describes how net forces vary between conditions",
+          "Includes direction and cause of variations",
+          "Provides comparative analysis"
+        ],
+        "negative_signals": [
+          "Lists forces without comparison",
+          "Ignores variations across conditions",
+          "Lacks context for the comparison"
+        ],
+        "common_confusion": "Comparison requires analyzing differences in force conditions between system states."
+      },
       "success_examples": ["comprehensive discussion of the net force", "relative net forces for different positions"],
       "source_ref": "Moderator Commentary - Excellence"
     },
@@ -97,7 +193,19 @@
       "description": "Uses physics equations and working to logically justify conclusions.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Justification must follow a clear progression: known → formula → substitution → result → conclusion. Listing final answers only is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Follows logical progression: known → formula → substitution → result → conclusion",
+          "Uses correct equations and substitutions",
+          "Provides clear step-by-step working"
+        ],
+        "negative_signals": [
+          "Lists final answers without working",
+          "Makes incorrect substitutions",
+          "Lacks logical sequence in justification"
+        ],
+        "common_confusion": "Justification requires showing the complete reasoning process, not just the final answer."
+      },
       "success_examples": ["used equations to justify answers", "produced clear logical and sequential layout"],
       "source_ref": "Moderator Commentary - Excellence"
     },
@@ -106,7 +214,19 @@
       "description": "Analyses a system's energy transformation sequence and explains cause–effect impact.",
       "level": "E",
       "weight": 3,
-      "detection_hint": "Must trace energy transitions and explain resulting motion or system change. General statements without linkage disqualify. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Traces the sequence of energy transformations",
+          "Explains cause–effect relationships",
+          "Links transformations to system changes"
+        ],
+        "negative_signals": [
+          "General statements without tracing sequence",
+          "Ignores cause–effect linkages",
+          "No explanation of impacts on motion"
+        ],
+        "common_confusion": "Analysis must follow the chain of transformations and their resulting effects on the system."
+      },
       "success_examples": ["reference to all energy transformations and cause and impact of loss"],
       "source_ref": "Moderator Commentary - Excellence"
     }
@@ -136,7 +256,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

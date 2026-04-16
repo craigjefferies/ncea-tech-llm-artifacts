@@ -17,11 +17,11 @@ The idea is simple: build a structured scaffold that shapes how an LLM behaves. 
 ### 1. LLM Instructions  
 These spell out the roles the LLM can take on:
 
-- **Process Instructor**  
-  Helps students step through a task—planning, structuring, problem-solving.
+- **Process Tutor**  
+  Helps students work through a larger task or project—planning, structuring, and problem-solving.
 
-- **Knowledge Instructor**  
-  Acts like a subject tutor—explains concepts, answers questions, builds understanding.
+- **Understanding Tutor**  
+  Acts like a subject tutor—explains concepts, answers questions, and builds understanding for exam or knowledge-heavy content.
 
 - **Grader**  
   Maps student work against observable indicators from NZQA Achievement Standards, giving feedback that’s structured and standards-based.
@@ -32,8 +32,8 @@ This is the backbone. OMIs turn standards into things you can actually see and c
 - **Observable Elements**  
   Clear, measurable markers of performance.
 
-- **Detection Hints**  
-  Cues for spotting whether the student has shown understanding.
+- **Evidence Guides**  
+  Positive signals, negative signals, and common confusions that make grading more transparent.
 
 - **Examples**  
   Sample responses that show what success looks like.

@@ -6,11 +6,7 @@
 "credits": 4,
 "assessment_type": "Internal",
 "source_pdf": "as91893.pdf",
-"purpose": "This achievement standard involves using advanced techniques to develop a digital media outcome. 
-
-as91893
-
-"
+"purpose": "This achievement standard involves using advanced techniques to develop a digital media outcome. \nas91893\n"
 },
 "grade_descriptors": {
 "N1": "Evidence does not reach the minimum threshold for Achieved-level indicators.",
@@ -29,33 +25,62 @@ as91893
 "description": "Uses appropriate tools and techniques that match the stated purpose and identified end users of the media outcome.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Tools must be explicitly tied to purpose and end users (e.g., why this editor/template fits). Listing tools without linkage does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Explicit explanation of why a tool or technique matches the purpose (e.g., 'Used video editing software for storytelling purpose')",
+"Explicit linkage to end users (e.g., 'Chose mobile-responsive tools for smartphone users')",
+"Artefact demonstrates tool selection tied to purpose and users"
+],
+"negative_signals": [
+"Tools listed without explaining relevance to purpose or end users",
+"Using tools that do not align with stated purpose or user needs"
+],
+"common_confusion": "Simply naming tools is not sufficient; there must be a clear connection to the purpose and end users."
+},
 "success_examples": [
 "using appropriate tools and techniques for the purpose and end users"
 ],
-"source_ref": "AS PDF p2 (Explanatory Note 2, Achieved). 
-
-as91893
-
-"
+"source_ref": "AS PDF p2 (Explanatory Note 2, Achieved). \nas91893\n"
 },
 {
 "id": "data_integrity_and_testing_applied",
 "description": "Applies data integrity and testing procedures to show the outcome functions as intended and information is fit for use.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Look for explicit tests (e.g., device/browser/format checks) and statements of integrity/accuracy. Vague claims of ‘it works’ are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Explicit tests described (e.g., 'Tested on multiple browsers for compatibility')",
+"Statements of data integrity (e.g., 'Validated input data for accuracy')",
+"Evidence of testing in logs or artefact functionality"
+],
+"negative_signals": [
+"Vague claims like 'it works' without specifics",
+"No mention of explicit testing procedures"
+],
+"common_confusion": "Vague assurances are insufficient; specific tests and integrity checks must be applied."
+},
 "success_examples": [
 "applying appropriate data integrity and testing procedures"
 ],
-"source_ref": "AS PDF p2 (Explanatory Note 2, Achieved); Achieved commentary: “applied data integrity and testing… functions as intended”."
+"source_ref": "AS PDF p2 (Explanatory Note 2, Achieved); Achieved commentary: \"applied data integrity and testing… functions as intended\"."
 },
 {
 "id": "relevant_conventions_used_for_media_type",
 "description": "Uses conventions relevant to the chosen media type (e.g., layout, structure, code practices) within the outcome.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Conventions must be named and shown in the artefact (e.g., alignment, hierarchy; valid HTML/CSS). Generic ‘followed conventions’ does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Named conventions shown in artefact (e.g., 'Used grid layout for web design')",
+"Conventions specific to media type (e.g., 'Applied video editing transitions')",
+"Evidence visible in the outcome's structure or code"
+],
+"negative_signals": [
+"Generic statements like 'followed conventions' without naming them",
+"Conventions not relevant to the chosen media type"
+],
+"common_confusion": "Conventions must be relevant to the media type and demonstrated in the outcome."
+},
 "success_examples": [
 "using relevant conventions for the media type"
 ],
@@ -66,7 +91,18 @@ as91893
 "description": "Explains identified relevant implications for the outcome (what they are, why relevant, and how they might be addressed).",
 "level": "A",
 "weight": 1,
-"detection_hint": "Must include explanation of implication + relevance + approach to address. Naming ‘accessibility’ alone is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Explanation of what the implication is (e.g., 'Privacy concerns for user data')",
+"Why it's relevant to the outcome",
+"How it might be addressed (e.g., 'Implement encryption')"
+],
+"negative_signals": [
+"Just naming implications without explanation",
+"No approach provided for addressing them"
+],
+"common_confusion": "Naming an implication alone is insufficient; full explanation including relevance and addressing is required."
+},
 "success_examples": [
 "explaining relevant implications"
 ],
@@ -77,7 +113,18 @@ as91893
 "description": "Demonstrates at least two advanced techniques in one media type, evidenced in artefacts or logs.",
 "level": "A",
 "weight": 1,
-"detection_hint": "Evidence must show two distinct advanced techniques from the same media type (e.g., scripts + composite effects). Labels without artefact proof do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Two distinct advanced techniques named (e.g., 'JavaScript event handling and CSS animations')",
+"Evidence in artefacts or logs showing the techniques",
+"Techniques from the same media type"
+],
+"negative_signals": [
+"Techniques labeled without artefact proof",
+"Techniques not advanced or not distinct"
+],
+"common_confusion": "Techniques must be advanced, distinct, and evidenced in artefacts, not just mentioned."
+},
 "success_examples": [
 "Students need to demonstrate at least two advanced techniques in one media type.",
 "The student has used at least two appropriate advanced tools and techniques"
@@ -89,7 +136,18 @@ as91893
 "description": "Uses information from testing procedures to improve the outcome (beyond error-correction) and shows resulting changes.",
 "level": "M",
 "weight": 1,
-"detection_hint": "Require explicit link: test finding → specific change → improved quality/operation. Merely fixing bugs without stated test evidence is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Link from test finding to change (e.g., 'Feedback indicated poor navigation, so redesigned menu')",
+"Specific improvements shown in artefact",
+"Beyond mere error correction"
+],
+"negative_signals": [
+"Fixing bugs without linking to testing information",
+"No evidence of quality improvement from tests"
+],
+"common_confusion": "Improvements must be tied to testing information and result in enhanced quality or operation."
+},
 "success_examples": [
 "using information from testing procedures to improve the quality of the outcome",
 "made significant improvements to its operation as a result"
@@ -101,7 +159,18 @@ as91893
 "description": "Applies relevant conventions deliberately to improve quality (aesthetic, readability, navigation, layout) of the outcome.",
 "level": "M",
 "weight": 1,
-"detection_hint": "Look for before/after or rationale that a convention change improved quality. Listing conventions without improvement evidence does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Rationale for convention improving quality (e.g., 'Used white space to enhance readability')",
+"Evidence of deliberate application (e.g., before/after)",
+"Improvement in aesthetic, readability, etc."
+],
+"negative_signals": [
+"Conventions listed without evidence of quality improvement",
+"Conventions applied without deliberate intent"
+],
+"common_confusion": "Conventions must be applied deliberately to improve quality, not just used."
+},
 "success_examples": [
 "applying relevant conventions to improve the quality of the outcome",
 "effectively used design conventions such as alignment, hierarchy, contrast"
@@ -113,7 +182,18 @@ as91893
 "description": "Shows how at least two identified relevant implications are addressed within the outcome and its artefacts.",
 "level": "M",
 "weight": 1,
-"detection_hint": "Evidence must show the addressed implications in the artefact (e.g., alt text, credits, cultural appropriateness). Statements of intent alone are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"At least two implications addressed in artefact (e.g., 'Added captions for accessibility')",
+"Evidence visible in the outcome",
+"Addressing shown, not just stated"
+],
+"negative_signals": [
+"Statements of intent without artefact evidence",
+"Implications identified but not addressed"
+],
+"common_confusion": "Addressing must be demonstrated in the artefacts, not merely stated."
+},
 "success_examples": [
 "addressing relevant implications",
 "has shown how their digital media outcome addresses at least two identified relevant implications"
@@ -125,7 +205,18 @@ as91893
 "description": "Documents iterative improvement throughout design, development, and testing via deliberate cycles that substantially improve the outcome.",
 "level": "E",
 "weight": 1,
-"detection_hint": "Require multiple cycles with rationale and resulting improvements (e.g., interface, navigation, code). Single pass or undocumented tweaks do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Multiple cycles documented with rationale (e.g., 'Cycle 1: Initial design; Cycle 2: Improved based on feedback')",
+"Resulting substantial improvements shown",
+"Deliberate cycles throughout process"
+],
+"negative_signals": [
+"Single pass or undocumented minor tweaks",
+"No rationale for changes or lack of improvement"
+],
+"common_confusion": "Cycles must be deliberate, iterative, and result in substantial improvements."
+},
 "success_examples": [
 "iterative improvement throughout the design, development and testing process",
 "employing deliberate cycles … resulting in its substantial improvement"
@@ -137,7 +228,18 @@ as91893
 "description": "Uses efficient tools and techniques in production (e.g., asset management, stylesheets, templates, optimisation) and shows this in artefacts.",
 "level": "E",
 "weight": 1,
-"detection_hint": "Presence of efficient practices must be evidenced (e.g., file structure, master pages, optimisation logs). Generic claims of efficiency are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+"evidence_guide": {
+"positive_signals": [
+"Efficient practices evidenced (e.g., 'Used CSS preprocessors for maintainable styles')",
+"Shown in artefacts (e.g., 'Organized file structure with assets folder')",
+"Optimisation logs or production techniques"
+],
+"negative_signals": [
+"Generic claims of efficiency without evidence",
+"No demonstration in artefacts"
+],
+"common_confusion": "Efficiency must be evidenced through specific practices visible in production."
+},
 "success_examples": [
 "using efficient tools and techniques in the outcome’s production",
 "a file structure that follows conventions, with a separate images sub-folder"
@@ -170,7 +272,7 @@ as91893
 "fallback_grade": "N1"
 },
 "governance": {
-"last_validated": "2025-06-13",
+"last_validated": "2025-07-18",
 "change_log": []
 }
 }

@@ -34,150 +34,332 @@
       "description": "Program demonstrably performs the specified task from the assessment brief.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Show the program running with screenshots or a short screencast. Link each observed behaviour to the brief (✓ checklist). Generic statements are insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Screenshots or screencast showing program running",
+          "Observed behaviors linked to brief requirements",
+          "Log outputs matching expected inputs and outputs",
+          "Demonstration of each key feature from the brief"
+        ],
+        "negative_signals": [
+          "Generic statements without specific evidence",
+          "Only code shown without execution proof",
+          "Incomplete coverage of brief requirements"
+        ],
+        "common_confusion": "The program must be shown running; describing it or showing code alone is insufficient."
+      },
       "success_examples": [
         "Screencast runs through menu options that match the brief.",
         "Log shows 'Input: 3,2,1 → Output: [1, 2, 3]' for the sort step."
-      ]
+      ],
+      "source_ref": "AS91906 Achievement criteria; assessor guidance"
     },
     {
       "id": "uses_functions_and_lists",
       "description": "Program uses at least two advanced techniques in Python 3: (1) functions with parameters and return values; AND (2) lists that are accessed/updated meaningfully (looping, indexing, filtering, aggregating). Other advanced techniques may also be included.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Provide code excerpts showing (a) a function that takes an argument and returns a value; (b) a list used beyond trivial storage (e.g., append + later read, loop, index, compute min/max/avg). Stubs or unused code do not count.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Function definition with parameters and return statement",
+          "List operations like append, loop, index, or aggregation",
+          "Code excerpts showing meaningful use of lists",
+          "Evidence of both functions and lists in action"
+        ],
+        "negative_signals": [
+          "Stubs or unused functions",
+          "Lists used only for trivial storage",
+          "Only one of the required techniques present"
+        ],
+        "common_confusion": "Both functions with parameters/return and meaningful list usage must be demonstrated, not just declared."
+      },
       "success_examples": [
         "def add(a, b): return a + b",
         "guesses = []; guesses.append(user_guess); print(len(guesses))",
         "scores = [15, 12, 18]; average = sum(scores) / len(scores)"
-      ]
+      ],
+      "source_ref": "AS91906 Achievement criteria; assessor guidance"
     },
     {
       "id": "code_layout_readable",
       "description": "Code is clearly laid out: consistent indentation and spacing improve readability.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Use 4-space indentation consistently, add blank lines between functions, and group related lines. A single banner comment cannot compensate for poor layout.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Consistent 4-space indentation throughout",
+          "Blank lines separating functions and sections",
+          "Grouped related lines logically",
+          "Readable structure without cramped code"
+        ],
+        "negative_signals": [
+          "Inconsistent indentation or mixed tabs/spaces",
+          "No separation between functions",
+          "Poor grouping leading to hard-to-read code"
+        ],
+        "common_confusion": "A single comment cannot make up for poor layout; consistency in indentation and spacing is key."
+      },
       "success_examples": [
         "Functions separated by blank lines; all blocks use 4-space indentation."
-      ]
+      ],
+      "source_ref": "AS91906 Achievement criteria; assessor guidance"
     },
     {
       "id": "comments_present_documenting_code",
       "description": "Comments explain the purpose and behaviour of main code sections.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "At least two comments in different sections that describe purpose/behaviour (not single words). Avoid restating obvious syntax.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Comments describing purpose of sections",
+          "Explanations of behavior in different parts",
+          "At least two meaningful comments",
+          "Comments that go beyond obvious syntax"
+        ],
+        "negative_signals": [
+          "Single-word comments or restating syntax",
+          "No comments in main sections",
+          "Comments that don't explain purpose"
+        ],
+        "common_confusion": "Comments must explain purpose and behavior, not just what the code does line-by-line."
+      },
       "success_examples": [
         "# Ask user to guess the number",
         "# Calculate average score from list"
-      ]
+      ],
+      "source_ref": "AS91906 Achievement criteria; assessor guidance"
     },
     {
       "id": "testing_evidence_organised",
       "description": "Testing evidence is organised to show inputs and whether expected outputs occurred.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Use a simple table or screenshots mapping Input → Expected → Actual → Pass/Fail. Include at least one bug found/fixed and re-tested.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Table or screenshots mapping Input to Expected to Actual",
+          "Pass/Fail indicators for each test",
+          "Evidence of at least one bug found and fixed",
+          "Organized format like a checklist or log"
+        ],
+        "negative_signals": [
+          "Unorganized testing without clear mapping",
+          "No evidence of re-testing after fixes",
+          "Missing expected vs actual comparisons"
+        ],
+        "common_confusion": "Testing must be organized with clear inputs and outputs; random notes are insufficient."
+      },
       "success_examples": [
         "Input: 5 → Expected: 'Correct'; Actual: 'Correct' (after fixing loop).",
         "Table row: Name=Sam → 'Hello Sam' (pass)"
-      ]
+      ],
+      "source_ref": "AS91906 Achievement criteria; assessor guidance"
     },
     {
       "id": "testing_expected_cases",
       "description": "Testing shows the program works on a sample of typical/expected inputs and includes at least one debugging fix.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Provide a sample of at least 3–4 normal-case tests with Expected vs Actual, plus one before/after example linked to a fix (commit/message or note).",
+      "evidence_guide": {
+        "positive_signals": [
+          "3-4 normal-case tests with Expected vs Actual",
+          "Evidence of debugging fix with before/after",
+          "Typical inputs showing correct behavior",
+          "Re-testing after fixes"
+        ],
+        "negative_signals": [
+          "Fewer than 3 tests",
+          "No evidence of debugging or fixes",
+          "Only boundary or invalid cases"
+        ],
+        "common_confusion": "Must include typical expected inputs, not just edge cases, and show at least one fix."
+      },
       "success_examples": [
         "Before: wrong total = 25; After: fixed formula → total = 30 (pass)",
         "Three typical inputs for the quiz show correct scoring and feedback."
-      ]
+      ],
+      "source_ref": "AS91906 Achievement criteria; assessor guidance"
     },
     {
       "id": "appropriate_names_and_comments",
       "description": "Document the program with appropriate names and comments that describe code function and behaviour.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Check that identifiers reflect role/content (e.g., total_score, player_name) and that comments explain WHY sections exist (purpose/behaviour), not line-by-line WHAT. Names and comments should be consistent across the program.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Identifiers reflecting role (e.g., total_score, player_name)",
+          "Comments explaining WHY sections exist",
+          "Consistent naming and commenting style",
+          "Avoidance of generic names like x1 or tmp"
+        ],
+        "negative_signals": [
+          "Generic or unclear variable names",
+          "Comments that restate what the code does",
+          "Inconsistent documentation"
+        ],
+        "common_confusion": "Names and comments should describe function and behavior, not just syntax; consistency is required."
+      },
       "success_examples": [
         "player_name, total_score, max_tries (avoids x1/tmp).",
         "# Update leaderboard after each round (explains purpose).",
         "# Validate input and collect error messages for the user."
-      ]
+      ],
+      "source_ref": "AS91906 Merit criteria; assessor guidance"
     },
     {
       "id": "follows_language_conventions",
       "description": "Follow common conventions for the chosen programming language throughout.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Demonstrate consistent idiomatic usage: Python snake_case for functions/variables, CapWords for classes, 4-space indentation, clear if/elif/else and for/while usage. Mixed styles without rationale are insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Consistent snake_case for functions and variables",
+          "CapWords for classes",
+          "Proper indentation and control structures",
+          "Idiomatic usage without mixed styles"
+        ],
+        "negative_signals": [
+          "Mixed naming conventions without rationale",
+          "Inconsistent indentation or control flow",
+          "Non-idiomatic code patterns"
+        ],
+        "common_confusion": "Conventions must be followed consistently; mixed styles are insufficient even with explanation."
+      },
       "success_examples": [
         "def calculate_total(): ...",
         "while guess != target: ...",
         "Consistent 4-space indentation; no mixed tabs/spaces."
-      ]
+      ],
+      "source_ref": "AS91906 Merit criteria; assessor guidance"
     },
     {
       "id": "boundary_testing_performed",
       "description": "Test and debug the program effectively so it works on a sample of both expected cases and relevant boundary cases.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Provide specific tests for at least one identified boundary: below / on / above, with Expected vs Actual and Pass/Fail. Include evidence of debugging where a boundary initially failed (before/after note or commit). This is in addition to normal/expected-case tests.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Tests for below, on, and above boundaries",
+          "Expected vs Actual with Pass/Fail for boundaries",
+          "Evidence of debugging fixes for boundary failures",
+          "Re-testing after boundary fixes"
+        ],
+        "negative_signals": [
+          "No specific boundary tests",
+          "Boundaries tested without debugging evidence",
+          "Only expected cases, no boundaries"
+        ],
+        "common_confusion": "Boundary testing is in addition to normal cases; must include debugging where boundaries initially fail."
+      },
       "success_examples": [
         "Age (12–18): 11 → reject, 12 → accept, 19 → reject (all pass).",
         "Page size (1–100): 0 → error, 1 → ok, 101 → error (after fix passes).",
         "Table shows 3–4 expected cases all passing + boundary row re-tested after fix."
-      ]
+      ],
+      "source_ref": "AS91906 Merit criteria; assessor guidance"
     },
     {
       "id": "well_structured_logical_response",
       "description": "Ensure the program is a well-structured, logical response to the specified task.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Show clear separation of concerns using functions (e.g., input → process → output). Minimise duplication; keep data flow simple and traceable. The structure should match the brief (each requirement handled in a clear place).",
+      "evidence_guide": {
+        "positive_signals": [
+          "Clear separation of concerns with functions",
+          "Simple data flow: input → process → output",
+          "Structure matching the brief requirements",
+          "Minimal duplication and traceable logic"
+        ],
+        "negative_signals": [
+          "Copy-paste branches or repeated logic",
+          "Complex or untraceable data flow",
+          "Structure not aligned with brief"
+        ],
+        "common_confusion": "The program must logically respond to the task with clear structure; each requirement should be handled distinctly."
+      },
       "success_examples": [
         "Functions: get_input(), validate_age(a), compute_score(lst), show_results(scores).",
         "Main flow calls functions in a simple order; no copy-paste branches.",
         "List holds attempts; helpers read/update it rather than repeating logic."
-      ]
+      ],
+      "source_ref": "AS91906 Excellence criteria; assessor guidance"
     },
     {
       "id": "flexible_values_over_literals",
       "description": "Make the program flexible: avoid magic numbers; prefer variables/constants/parameters and simple derived values.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Replace repeated literals with named values; pass values into functions as parameters; compute results from inputs. Show one place to change a setting (e.g., MAX_TRIES, PASS_MARK).",
+      "evidence_guide": {
+        "positive_signals": [
+          "Named constants instead of magic numbers",
+          "Parameters passed into functions",
+          "Values computed from inputs",
+          "Single place to change settings"
+        ],
+        "negative_signals": [
+          "Repeated literals without naming",
+          "Hardcoded values not derived from inputs",
+          "No flexibility in key settings"
+        ],
+        "common_confusion": "Avoid magic numbers by using variables or constants; make changes easy by centralizing values."
+      },
       "success_examples": [
         "MAX_TRIES = 5; PASS_MARK = 50",
         "def apply_discount(price, rate): return price * rate",
         "Thresholds read once, reused across checks (no repeated ‘50’)."
-      ]
+      ],
+      "source_ref": "AS91906 Excellence criteria; assessor guidance"
     },
     {
       "id": "robustness_evidenced_by_testing",
       "description": "Make the program robust: handle invalid/unexpected input and keep a correct, usable state.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Link adverse tests to behaviour: clear error messages, retries, safe defaults, lists/state not corrupted. Show that after an error the program still works (next action succeeds).",
+      "evidence_guide": {
+        "positive_signals": [
+          "Error messages for invalid inputs",
+          "Retries or safe defaults after errors",
+          "State remains correct after adverse inputs",
+          "Program continues working after errors"
+        ],
+        "negative_signals": [
+          "Crashes on invalid input",
+          "No error handling or messages",
+          "Corrupted state after errors"
+        ],
+        "common_confusion": "Robustness requires handling errors gracefully; the program must remain usable and correct after invalid inputs."
+      },
       "success_examples": [
         "Input: 'abc' → 'Please enter a number.' (re-prompt; no crash).",
         "Out-of-range age → message + retry; stored results unchanged.",
         "Empty list case handled: average() returns 0 and shows hint."
-      ]
+      ],
+      "source_ref": "AS91906 Excellence criteria; assessor guidance"
     },
     {
       "id": "comprehensive_testing_invalid_unexpected",
       "description": "Comprehensively test and debug the program: include expected, boundary, and invalid/unexpected cases with re-tests after fixes.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Provide an organised test table (Input → Expected → Actual → Pass/Fail → Notes). Cover: (1) 3–4 typical cases; (2) below/on/above at least one boundary; (3) at least one invalid/unexpected per key input. Show at least one failing test, the fix, and a passing re-test.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Organized test table with Input, Expected, Actual, Pass/Fail",
+          "Coverage of typical, boundary, and invalid cases",
+          "Evidence of fixes and re-tests",
+          "At least one failing test fixed and re-tested"
+        ],
+        "negative_signals": [
+          "Incomplete coverage of case types",
+          "No evidence of debugging fixes",
+          "Unorganized testing without clear results"
+        ],
+        "common_confusion": "Must include all types: expected, boundary, invalid; show fixes and re-tests for comprehensive evidence."
+      },
       "success_examples": [
         "Age (12–18): 11 ✗ (fixed) → re-test ✓; 12 ✓; 19 ✓.",
         "qty='abc' → error message + retry (✓).",
         "Summary: 10 tests total → 9 pass; 1 fixed then re-tested → pass."
-      ]
+      ],
+      "source_ref": "AS91906 Excellence criteria; assessor guidance"
     }
   ],
   "aggregation_rules": {
@@ -190,7 +372,7 @@
     }
   },
   "governance": {
-    "last_validated": "2025-10-02",
+    "last_validated": "2025-07-18",
     "change_log": [
       "v2: Updated to AS91906 metadata; merged Achieved/Merit/Excellence OMIs aligned with AS92004 overlaps (detection hints and success examples), Python-focused, functions + lists baseline, comprehensive testing requirements."
     ]

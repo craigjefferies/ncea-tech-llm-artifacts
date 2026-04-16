@@ -25,7 +25,20 @@
       "description": "Shows a functional electronics outcome using appropriate resources and techniques.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "A working build must be demonstrated, not only described. Screenshots, videos, or direct operation must confirm full functionality. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Screenshots or videos showing the circuit operating as intended",
+          "Direct demonstration of the electronics outcome in action",
+          "Description of successful build and operation with evidence",
+          "Confirmation of full functionality through multiple tests"
+        ],
+        "negative_signals": [
+          "Only describing the build without any visual or operational evidence",
+          "Screenshots of code or schematics without showing operation",
+          "Incomplete or non-functional demonstrations"
+        ],
+        "common_confusion": "A working build must be physically demonstrated, not just described in text."
+      },
       "success_examples": [
         "using appropriate resources and techniques to develop a functional electronics outcome"
       ],
@@ -36,7 +49,20 @@
       "description": "Constructs, tests, and analyses functional circuits to ensure performance to specifications.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Testing must reference performance criteria (e.g., signal range, timing, stability) and include analysis of results. Statements like 'it worked fine' without reference to specification do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Measurement of signal range, timing, or stability against specifications",
+          "Analysis of test results showing performance metrics",
+          "Comparison of actual vs. expected behavior with data",
+          "Documentation of testing procedures and outcomes"
+        ],
+        "negative_signals": [
+          "Vague statements like 'it worked fine' without specific data",
+          "Testing without reference to performance criteria",
+          "Lack of analysis or interpretation of test results"
+        ],
+        "common_confusion": "Testing must include quantitative analysis against specifications, not just qualitative descriptions."
+      },
       "success_examples": [
         "constructing, testing, and analysing functional circuits to ensure that the electronics outcome performs to specifications",
         "tested filtering and noise suppression to meet performance specifications"
@@ -48,7 +74,20 @@
       "description": "Provides evidence of testing, modifying, and debugging the outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "All three processes—testing, modification, and debugging—must be evidenced. Debugging must include identification and correction of errors such as faulty code, wiring, or logic conflicts. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Description of identifying and correcting errors in code or wiring",
+          "Evidence of modifying components based on test results",
+          "Documentation of debugging processes like fixing logic conflicts",
+          "Multiple iterations of testing and adjustments"
+        ],
+        "negative_signals": [
+          "Only mentioning testing without showing modifications or debugging",
+          "Describing errors without explaining how they were fixed",
+          "Lack of evidence for all three processes: testing, modifying, debugging"
+        ],
+        "common_confusion": "All three elements—testing, modification, and debugging—must be explicitly evidenced, not just implied."
+      },
       "success_examples": [
         "testing, modifying, debugging the outcome",
         "used software interrupts to debug sensor feedback"
@@ -60,7 +99,20 @@
       "description": "Explains the behaviour and function of the electronics outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Explanation must describe how components or subsystems interact to achieve the desired function. Naming components or providing a simple description of appearance is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Description of how components interact to achieve function",
+          "Explanation of subsystem interactions and outcomes",
+          "Clear linkage between parts and overall behavior",
+          "Technical details on signal flow or control logic"
+        ],
+        "negative_signals": [
+          "Only naming components without explaining interactions",
+          "Simple descriptions of appearance or basic features",
+          "Lack of detail on how parts contribute to function"
+        ],
+        "common_confusion": "Explanation must go beyond naming parts to describe how they interact and produce the desired behavior."
+      },
       "success_examples": [
         "explaining the behaviour and function of the electronics outcome",
         "explained how sensor input and microcontroller output interact to control the display"
@@ -72,7 +124,20 @@
       "description": "Explains the relevant communication protocol(s) used in the outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Explanation must include how data is transmitted, the role of each device, and why the chosen protocol (e.g., I2C, serial, wireless) was appropriate. Merely naming a protocol does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Description of how data is transmitted between devices",
+          "Explanation of the role of each device in the protocol",
+          "Rationale for why the chosen protocol was appropriate",
+          "Details on protocol specifics like I2C, serial, or wireless"
+        ],
+        "negative_signals": [
+          "Merely naming the protocol without explanation",
+          "Lack of detail on data transmission or device roles",
+          "No justification for the protocol choice"
+        ],
+        "common_confusion": "Simply stating the protocol name is not enough; explanation of its operation and appropriateness is required."
+      },
       "success_examples": [
         "explaining relevant communication protocols",
         "explained how the I2C protocol transfers data between the MCU and sensor"
@@ -84,7 +149,20 @@
       "description": "Shows how at least two relevant implications are addressed in the outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must explicitly link design decisions to implications such as functionality, safety, aesthetics, or end-user needs. Listing implications without describing how they were met is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit links between design decisions and implications like safety or usability",
+          "Description of how implications were met through specific choices",
+          "Examples of addressing functionality, aesthetics, or end-user needs",
+          "Evidence of considering at least two distinct implications"
+        ],
+        "negative_signals": [
+          "Listing implications without explaining how they were addressed",
+          "Vague references without specific design links",
+          "Focusing on only one implication"
+        ],
+        "common_confusion": "Implications must be explicitly tied to design decisions, not just mentioned in isolation."
+      },
       "success_examples": [
         "addressing relevant implications",
         "demonstrated how design choices improved usability and met end-user considerations"
@@ -96,7 +174,20 @@
       "description": "Demonstrates at least two complex techniques in the electronics outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Evidence must show two distinct complex techniques, such as implementing communication protocols, wireless data transfer, feedback control, interrupts, CAD/PCB fabrication, or filtering for noise suppression. Mentioning difficulty without showing process does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Implementation of communication protocols like I2C or wireless",
+          "Use of feedback control loops or interrupts",
+          "CAD/PCB fabrication or noise suppression filtering",
+          "Evidence of two distinct complex techniques in action"
+        ],
+        "negative_signals": [
+          "Mentioning difficulty without showing the process",
+          "Only one complex technique demonstrated",
+          "Describing techniques without evidence of implementation"
+        ],
+        "common_confusion": "Evidence must show the actual use of techniques, not just their mention or perceived complexity."
+      },
       "success_examples": [
         "They have used at least two complex techniques",
         "implemented I2C communication and feedback control loop"
@@ -108,7 +199,20 @@
       "description": "Uses information from testing and analysis to ensure the circuit(s) functions reliably.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Testing must include repeated trials, data logs, or measurement comparisons demonstrating improved reliability. Simply stating that it 'works' is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Repeated trials or data logs showing improved reliability",
+          "Measurement comparisons demonstrating consistency",
+          "Use of test data to make adjustments for reliability",
+          "Analysis of results leading to reliability enhancements"
+        ],
+        "negative_signals": [
+          "Simply stating that it 'works' without data",
+          "Testing without analysis or application to reliability",
+          "Lack of evidence from multiple tests"
+        ],
+        "common_confusion": "Reliability must be evidenced through repeated testing and data analysis, not just a single successful run."
+      },
       "success_examples": [
         "using information from testing and analysis to ensure the circuit(s) functions reliably",
         "averaged sensor values and checked against invalid inputs to improve consistency"
@@ -120,7 +224,20 @@
       "description": "Demonstrates that the system functions consistently in its intended location or context.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Must provide contextual reliability evidence, such as consistent readings in an intended environment or stability over time. A single successful demonstration is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Consistent readings in the intended environment",
+          "Stability over time or under varying conditions",
+          "Testing in context showing reliable operation",
+          "Evidence of performance in real-world scenarios"
+        ],
+        "negative_signals": [
+          "A single successful demonstration without context",
+          "Testing in controlled conditions not matching intended use",
+          "Lack of evidence for consistency over time"
+        ],
+        "common_confusion": "Consistency must be shown in the actual intended location or context, not just in ideal conditions."
+      },
       "success_examples": [
         "showed that the system can function in a consistent manner in its intended location",
         "tested the system under varying conditions to confirm stable operation"
@@ -132,7 +249,20 @@
       "description": "Undertakes iterative improvement throughout design, development, and testing, showing deliberate cycles and resulting refinements.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Evidence must show multiple design-test-improve cycles, such as refining circuit layout, code logic, or EMI performance. A single revision without reflection does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Multiple design-test-improve cycles documented",
+          "Refinements to circuit layout, code, or EMI performance",
+          "Evidence of deliberate iterations with reflections",
+          "Progressive improvements shown over time"
+        ],
+        "negative_signals": [
+          "A single revision without showing the cycle",
+          "Mentioning improvements without documenting the process",
+          "Lack of reflection on why changes were made"
+        ],
+        "common_confusion": "Evidence must show multiple cycles of improvement, not just one change or final result."
+      },
       "success_examples": [
         "undertaking iterative improvement throughout the design, development and testing process",
         "iteratively refined PCB layout and code to improve reliability"
@@ -144,7 +274,20 @@
       "description": "Justifies the choice of communication protocol(s) against alternatives, with advantages and disadvantages.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Justification must compare alternative protocols (e.g., I2C vs serial vs wireless) and explain why the selected one best suits performance or reliability. Listing advantages without contrast is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Comparison of alternative protocols (e.g., I2C vs serial)",
+          "Explanation of advantages and disadvantages of chosen protocol",
+          "Rationale for why it suits performance or reliability",
+          "Contrast with other options and justification"
+        ],
+        "negative_signals": [
+          "Listing advantages without comparing alternatives",
+          "Choosing a protocol without justification",
+          "Lack of discussion on disadvantages or alternatives"
+        ],
+        "common_confusion": "Justification requires comparing alternatives, not just stating why the chosen one is good."
+      },
       "success_examples": [
         "justifying the choice of communication protocols",
         "explained the advantages and disadvantages of using RS232 over other protocols"
@@ -156,7 +299,20 @@
       "description": "Justifies the selection of components and subsystems by comparing alternatives and explaining reasoning.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Must include rationale based on performance, efficiency, or design requirements. Listing components without explaining why they were chosen over others does not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Rationale based on performance, efficiency, or requirements",
+          "Comparison of competing components or interfaces",
+          "Explanation of why chosen over alternatives",
+          "Links to design needs or performance criteria"
+        ],
+        "negative_signals": [
+          "Listing components without explaining choices",
+          "Choosing without comparison to alternatives",
+          "Lack of reasoning tied to performance or efficiency"
+        ],
+        "common_confusion": "Justification must include why alternatives were not chosen, not just why the selected ones are suitable."
+      },
       "success_examples": [
         "justifying the choice of components and subsystems",
         "compared competing components and interfaces for the same purpose and justified their decisions"
@@ -189,7 +345,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

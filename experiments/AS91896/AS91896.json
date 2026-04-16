@@ -25,7 +25,18 @@
       "description": "Program demonstrably performs the specified task from the assessment brief.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Provide direct evidence (run logs, screenshots, or screencast) of required task behaviour. Stating intent without demonstration is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Run logs showing successful execution of the specified task",
+          "Screenshots demonstrating program output matching requirements",
+          "Screencast evidencing required task behavior"
+        ],
+        "negative_signals": [
+          "Stating intent without direct evidence",
+          "Code that fails to run or execute the task"
+        ],
+        "common_confusion": "Demonstration must be direct and observable; verbal claims or intent statements are insufficient."
+      },
       "success_examples": ["code was able to be run", "screencasts confirmed function of the program"],
       "source_ref": "Moderator commentary – Performance overview"
     },
@@ -34,7 +45,18 @@
       "description": "Implements at least two advanced programming techniques during development.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Show concrete code for two+ advanced techniques used in development. Mere claims or plans without code evidence do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Code snippets implementing object-oriented classes",
+          "Code demonstrating recursion or complex algorithms",
+          "Use of advanced libraries or frameworks in code"
+        ],
+        "negative_signals": [
+          "Mere verbal claims of using techniques",
+          "Plans or descriptions without actual code implementation"
+        ],
+        "common_confusion": "Techniques must be evidenced in the code; claims or plans alone do not count."
+      },
       "success_examples": [],
       "source_ref": "AS PDF"
     },
@@ -43,7 +65,19 @@
       "description": "Code is clearly laid out (consistent indentation, logical sections, whitespace for readability).",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Demonstrate consistently formatted source files with obvious structure. A single header comment cannot substitute for poor layout. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Consistent indentation across all code files",
+          "Logical grouping of code into sections",
+          "Appropriate use of whitespace for readability"
+        ],
+        "negative_signals": [
+          "Inconsistent or missing indentation",
+          "Single header comment without overall structure",
+          "Poorly organized code sections"
+        ],
+        "common_confusion": "Layout must be consistent and structured; a single comment cannot compensate for poor formatting."
+      },
       "success_examples": [],
       "source_ref": "AS PDF"
     },
@@ -52,7 +86,19 @@
       "description": "Code includes comments that document purpose and behaviour of sections.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Provide comments that explain purpose/behaviour of sections where needed. Sparse single-word or purely restating code syntax is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Comments explaining the purpose of functions",
+          "Comments describing the behavior of code sections",
+          "Multi-line comments for complex logic"
+        ],
+        "negative_signals": [
+          "Sparse single-word comments",
+          "Comments merely restating code syntax",
+          "Absence of comments in key sections"
+        ],
+        "common_confusion": "Comments must document purpose and behavior, not just repeat the code."
+      },
       "success_examples": ["documenting the code with comments"],
       "source_ref": "Moderator commentary – Performance overview"
     },
@@ -61,7 +107,19 @@
       "description": "Testing evidence is organised to show inputs used and whether expected outputs occurred.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Include a table or structured artefact mapping each input to expected vs actual output. Unstructured claims of working are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Table mapping inputs to expected and actual outputs",
+          "Structured test logs with input-output pairs",
+          "Organized evidence showing test results"
+        ],
+        "negative_signals": [
+          "Unstructured verbal claims of functionality",
+          "No mapping between inputs and outputs",
+          "Disorganized test evidence"
+        ],
+        "common_confusion": "Evidence must be organized and structured; informal claims are insufficient."
+      },
       "success_examples": ["shows each input of the program being tested", "whether expected outputs were generated or not"],
       "source_ref": "Moderator commentary – Performance overview"
     },
@@ -70,7 +128,19 @@
       "description": "Testing demonstrates correct behaviour on typical/expected inputs; includes at least one debugging instance.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Show typical-case tests with expected and actual results plus one before/after debugging example. Saying “it works” without data is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Test cases showing expected and actual outputs for typical inputs",
+          "Before-and-after debugging example",
+          "Demonstration of correct behavior on expected cases"
+        ],
+        "negative_signals": [
+          "Statements like 'it works' without data",
+          "Lack of debugging evidence",
+          "No test cases provided"
+        ],
+        "common_confusion": "Must include at least one debugging instance; typical tests alone are insufficient."
+      },
       "success_examples": [],
       "source_ref": "Moderator commentary – Performance overview"
     },
@@ -79,7 +149,19 @@
       "description": "Uses appropriate names and comments that describe code function and behaviour.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Identifiers must reflect role/content; comments clarify what sections do. Names like x1/tmp or vague comments are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Variable names reflecting their role (e.g., 'score' instead of 'x')",
+          "Comments describing code function and behavior",
+          "Descriptive identifiers throughout the code"
+        ],
+        "negative_signals": [
+          "Generic names like 'x1' or 'tmp'",
+          "Vague or non-descriptive comments",
+          "Inappropriate naming conventions"
+        ],
+        "common_confusion": "Names and comments must be descriptive and appropriate; generic ones fail the criteria."
+      },
       "success_examples": ["describe code function and behaviour"],
       "source_ref": "AS PDF"
     },
@@ -88,7 +170,19 @@
       "description": "Follows common conventions for the chosen programming language throughout.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Demonstrate consistent idiomatic usage (naming, structures, idioms) for the chosen language. Mixed or ad-hoc styles without rationale are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Consistent naming conventions (e.g., camelCase in JavaScript)",
+          "Use of language-specific structures and idioms",
+          "Uniform style throughout the codebase"
+        ],
+        "negative_signals": [
+          "Mixed or inconsistent styles",
+          "Ad-hoc approaches without rationale",
+          "Deviation from common conventions"
+        ],
+        "common_confusion": "Conventions must be followed consistently; mixed styles are insufficient."
+      },
       "success_examples": ["common conventions for the chosen programming language"],
       "source_ref": "AS PDF"
     },
@@ -97,7 +191,19 @@
       "description": "Testing includes relevant boundary cases demonstrating correct behaviour on and around boundaries.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Provide tests at, below, and above identified boundaries with expected vs actual results. Mentioning boundaries without concrete test evidence is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Test cases at exact boundary values",
+          "Tests below and above boundaries",
+          "Expected versus actual results for boundary tests"
+        ],
+        "negative_signals": [
+          "Mentioning boundaries without concrete tests",
+          "Lack of test evidence for boundaries",
+          "No demonstration of correct behavior"
+        ],
+        "common_confusion": "Tests must be concrete and include results; mere mentions are insufficient."
+      },
       "success_examples": ["lack of boundary testing for Merit", "on and around boundaries"],
       "source_ref": "Moderator commentary – Practices that need strengthening"
     },
@@ -106,7 +212,19 @@
       "description": "Program constitutes a well-structured, logical response to the specified task.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Show coherent modular structure aligned to task requirements. Functioning but tangled, duplicated, or ad-hoc designs are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Modular functions with clear responsibilities",
+          "Logical organization of code aligned to task",
+          "Coherent structure without tangles"
+        ],
+        "negative_signals": [
+          "Tangled or spaghetti code",
+          "Duplicated code sections",
+          "Ad-hoc or illogical design"
+        ],
+        "common_confusion": "Program must be well-structured and logical; mere functionality is insufficient."
+      },
       "success_examples": [],
       "source_ref": "AS PDF"
     },
@@ -115,7 +233,19 @@
       "description": "Comprehensive testing includes invalid and unexpected inputs, evidencing robustness.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Provide organised tests for invalid/unexpected inputs with observed handling. Typical-only tests are insufficient for Excellence. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Test cases for invalid inputs with handling",
+          "Tests for unexpected inputs demonstrating robustness",
+          "Organized evidence of input handling"
+        ],
+        "negative_signals": [
+          "Testing only typical inputs",
+          "Lack of invalid or unexpected input tests",
+          "No evidence of robustness"
+        ],
+        "common_confusion": "Must include invalid and unexpected inputs; typical-only testing is insufficient for Excellence."
+      },
       "success_examples": ["Comprehensive testing is required for Excellence.", "include details of invalid and unexpected inputs"],
       "source_ref": "Moderator commentary – Practices that need strengthening"
     },
@@ -124,7 +254,19 @@
       "description": "Testing evidence supports that the program is robust under adverse or unexpected conditions.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Make an explicit link from test results to robustness (e.g., graceful failure/recovery). Stating robustness without corroborating tests is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Tests showing graceful failure under adverse conditions",
+          "Evidence of recovery from unexpected inputs",
+          "Explicit links from test results to robustness claims"
+        ],
+        "negative_signals": [
+          "Stating robustness without test evidence",
+          "Lack of corroborating test results",
+          "No demonstration of adverse condition handling"
+        ],
+        "common_confusion": "Must explicitly link test results to robustness; unsupported claims are insufficient."
+      },
       "success_examples": ["the program is robust"],
       "source_ref": "Moderator commentary – Practices that need strengthening"
     }
@@ -154,7 +296,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

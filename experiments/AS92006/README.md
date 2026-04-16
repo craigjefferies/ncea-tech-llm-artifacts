@@ -8,7 +8,7 @@
 
 This guide shows how to construct a **context-engineered LLM assistant** by combining:
 
-1. **LLM Instructions** – defining the role (Process Instructor, Knowledge Instructor, Grader)  
+1. **LLM Instructions** – defining the role (Process Tutor, Understanding Tutor, Grader)  
 2. **Assessment (OMIs)** – finely—decomposed indicators  
 3. **Content-Knowledge** – focused domain resources  
 
@@ -43,4 +43,3 @@ Open your preferred LLM-as-service platform:
   - *“Explain usability in a human-computer interface.”*
   - *“Evaluate this student response: [insert answer].”*
 - Observe how the assistant responds—instructor mode, grader mode, etc.
-

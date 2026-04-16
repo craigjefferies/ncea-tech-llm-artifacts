@@ -25,7 +25,19 @@
       "description": "Explains key aspects of computer vision, such as image processing or feature extraction.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The student must describe at least one key concept such as noise, thresholding, edge detection, or image processing. Merely naming the term is insufficient; there must be a brief explanation of what it is or how it works. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explains at least one key computer vision concept such as noise, thresholding, edge detection, or image processing",
+          "Describes what the concept is or how it works",
+          "Uses the concept as part of a clear explanation rather than just naming it"
+        ],
+        "negative_signals": [
+          "Merely names a concept without explanation",
+          "Uses vague phrases such as 'computer vision uses images' with no key aspect",
+          "Lists several concepts without describing any of them"
+        ],
+        "common_confusion": "Students often name a technical term and assume that counts as explanation, but this indicator requires a brief explanation of the concept."
+      },
       "success_examples": [
         "Noise refers to random variation in brightness or colour in images.",
         "Edge detection helps identify object boundaries by finding brightness changes."
@@ -37,7 +49,19 @@
       "description": "Describes an algorithm or mechanism behind a computer vision technique.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The response must explain how a specific technique operates, such as convolution, a Sobel operator, or Viola-Jones detection. Naming the algorithm without description is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Names a specific computer vision technique or algorithm",
+          "Explains how that technique operates",
+          "Describes the role of the mechanism in producing the computer vision result"
+        ],
+        "negative_signals": [
+          "Names an algorithm without describing how it works",
+          "Describes computer vision generally with no specific mechanism",
+          "Mentions a technique with no operational explanation"
+        ],
+        "common_confusion": "Students often recognise the algorithm name, but this indicator requires an explanation of how the mechanism operates."
+      },
       "success_examples": [
         "Convolution applies a kernel that moves across the image to detect features.",
         "Viola-Jones uses rectangular Haar-like features to detect faces."
@@ -49,7 +73,19 @@
       "description": "Provides at least one example of how computer vision is used or implemented.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must include a clear real-world application (e.g., face detection, autonomous vehicles, or medical imaging) linked to a specific technique. General mentions of AI or automation without visual processing are insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Gives a specific real-world computer vision application",
+          "Links the application to a technique such as CNNs, stereo vision, or feature detection",
+          "Explains how the technique is used in that context"
+        ],
+        "negative_signals": [
+          "Mentions AI or automation without a computer vision application",
+          "Names a context with no technique link",
+          "Describes a general use with no visual-processing component"
+        ],
+        "common_confusion": "Students often give a broad technology example, but this indicator requires a specific computer vision use linked to a technique."
+      },
       "success_examples": [
         "Stereo vision is used in autonomous cars to detect distances to obstacles.",
         "Medical imaging uses CNNs to classify MRI scans."
@@ -61,7 +97,19 @@
       "description": "Identifies key problems or issues related to computer vision.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Must clearly identify at least one issue such as image noise, limited training data, or false positives. Vague phrases like 'it can be wrong sometimes' do not meet the threshold. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Identifies a specific issue such as noise, false positives, bias, or limited training data",
+          "Names the issue clearly enough to show technical understanding",
+          "Links the issue to the computer vision system being discussed"
+        ],
+        "negative_signals": [
+          "Uses vague statements such as 'it can be wrong sometimes'",
+          "Mentions problems generally without naming a specific issue",
+          "Describes a limitation with no clear issue statement"
+        ],
+        "common_confusion": "Students often imply that computer vision has problems, but this indicator requires at least one clearly identified issue."
+      },
       "success_examples": [
         "Low-light conditions increase noise, making features harder to detect.",
         "Biased training data can lead to inaccurate facial recognition."
@@ -73,7 +121,19 @@
       "description": "Explains how identified problems in computer vision have been or may be addressed.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Response must present a method for mitigating a known issue — such as using filters to reduce noise or augmenting data to improve model generalisation. Naming a tool without a purpose is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Presents a mitigation method linked to a known computer vision issue",
+          "Explains how the method addresses the issue",
+          "Uses a specific response such as filtering, augmentation, or better training data"
+        ],
+        "negative_signals": [
+          "Names a tool or method without saying what issue it addresses",
+          "Identifies an issue but gives no response",
+          "Offers a generic fix with no purpose or linkage"
+        ],
+        "common_confusion": "Students often know a mitigation method, but this indicator requires them to explain how it addresses the identified problem."
+      },
       "success_examples": [
         "Denoising filters smooth out random brightness variations before analysis.",
         "Augmenting data with rotated images improves generalisation."
@@ -85,7 +145,19 @@
       "description": "Explains how technical capabilities and limitations relate to human needs or uses.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Must link a technical limitation (e.g., latency, lighting conditions) to its real-world effect on human experience or system reliability. General usefulness statements do not meet the requirement. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Links a technical capability or limitation to a human need, use, or experience",
+          "Explains the real-world effect on users or system reliability",
+          "Uses an example showing why the technical detail matters for people"
+        ],
+        "negative_signals": [
+          "Describes technical features with no human or use-related impact",
+          "Uses generic usefulness statements with no specific consequence",
+          "Mentions a user context without linking it to the technical capability or limitation"
+        ],
+        "common_confusion": "Students often stay at the technical level, but Merit requires them to connect the capability or limitation to people, uses, or reliability."
+      },
       "success_examples": [
         "Facial recognition fails under poor lighting, reducing security reliability.",
         "Lag in detection impacts user experience in AR systems."
@@ -97,7 +169,19 @@
       "description": "Compares and contrasts different perspectives on computer vision.",
       "level": "M",
       "weight": 2,
-      "detection_hint": "Response must show a contrast between at least two perspectives, using comparative language such as 'whereas', 'unlike', or 'on the other hand'. Listing features without comparison is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Contrasts at least two perspectives using comparative language",
+          "Explains how the perspectives differ rather than listing them separately",
+          "Uses wording such as 'whereas', 'unlike', or 'on the other hand'"
+        ],
+        "negative_signals": [
+          "Lists different perspectives without comparison",
+          "Describes two approaches with no contrast language",
+          "Focuses on only one perspective in detail"
+        ],
+        "common_confusion": "Students often mention several viewpoints, but this indicator requires an explicit compare-and-contrast structure."
+      },
       "success_examples": [
         "LiDAR is accurate for depth, whereas stereo vision is cheaper and more scalable.",
         "Manual image tagging is slow, but CNNs automate it faster with less accuracy."
@@ -109,7 +193,19 @@
       "description": "Draws insightful conclusions about computer vision.",
       "level": "E",
       "weight": 3,
-      "detection_hint": "Conclusion must demonstrate synthesis or forward-looking thought — e.g., linking concepts, predicting trends, or proposing improvements. Repeating previous facts is not sufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Draws a conclusion that synthesizes earlier ideas",
+          "Shows forward-looking thought such as a prediction, implication, or improvement",
+          "Moves beyond repeating previously stated facts"
+        ],
+        "negative_signals": [
+          "Restates earlier points without synthesis",
+          "Ends with a summary only",
+          "Adds a future claim with no real connection to the analysis"
+        ],
+        "common_confusion": "Students often write a summary paragraph, but Excellence requires a conclusion that synthesizes or extends the analysis."
+      },
       "success_examples": [
         "As CV improves, it may replace manual diagnostic steps in rural healthcare.",
         "Techniques used in self-driving cars could support visually impaired navigation."
@@ -121,7 +217,19 @@
       "description": "Evaluates the broader impact of computer vision in society or technology.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Must make a judgment and support it with a rationale or example — e.g., ethical, societal, or economic impact. Listing pros and cons without evaluation is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Makes a judgment about the broader impact of computer vision",
+          "Supports that judgment with a rationale or example",
+          "Evaluates significance rather than merely listing pros and cons"
+        ],
+        "negative_signals": [
+          "Lists positives and negatives without evaluating them",
+          "Makes a judgment with no supporting rationale",
+          "Describes an impact with no evaluative statement"
+        ],
+        "common_confusion": "Students often describe effects on society or technology, but this indicator requires a supported evaluative judgment."
+      },
       "success_examples": [
         "CV helps in security, but raises privacy concerns with constant surveillance.",
         "Automated inspections improve efficiency but reduce skilled labour demand."
@@ -133,7 +241,19 @@
       "description": "Makes a justified prediction about the future of computer vision.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "Prediction must include both a future claim and reasoning, such as improved algorithm performance or new applications. Pure speculation without reasoning is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "States a future prediction about computer vision",
+          "Explains why that future development is likely",
+          "Links the prediction to current techniques, trends, or constraints"
+        ],
+        "negative_signals": [
+          "Gives a speculative future claim with no reasoning",
+          "Repeats a hope or opinion instead of a justified prediction",
+          "Names a future application without explaining why it is plausible"
+        ],
+        "common_confusion": "Students often make a future claim, but this indicator requires reasoning that justifies the prediction."
+      },
       "success_examples": [
         "With cheaper sensors, CV will expand into home robotics and elder care.",
         "Advances in CNNs will make diagnosis faster in under-resourced clinics."
@@ -166,7 +286,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

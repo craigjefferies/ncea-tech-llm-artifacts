@@ -59,7 +59,7 @@
     "term": "Data Ethics",
     "definition": "Principles guiding responsible data use, including privacy, fairness, and accountability."
   }
-]
+],
 
 
   "omis": [
@@ -68,7 +68,19 @@
       "description": "Explains key aspects of the chosen big data area, such as volume, variety, velocity, generation, processing, or interpretation.",
       "level": "A",
       "weight": 2,
-      "detection_hint": "The response must clearly explain core characteristics or components of big data, not merely list them. Statements like “big data has lots of information” are insufficient without explanation of the specific aspect. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Clear explanation of volume (e.g., 'Volume refers to the enormous amount of data generated daily...')",
+          "Detailed description of variety (e.g., 'Variety includes diverse data types like text, images, and sensors...')",
+          "Explanation of velocity (e.g., 'Velocity is the rapid speed of data creation and processing...')",
+          "Description of generation, processing, or interpretation mechanisms"
+        ],
+        "negative_signals": [
+          "Merely listing aspects without explanation (e.g., 'Big data has volume, variety, velocity')",
+          "Vague statements (e.g., 'Big data has lots of information')"
+        ],
+        "common_confusion": "Listing key aspects is not sufficient; each aspect must be explained in detail, showing understanding of its meaning and relevance to big data."
+      },
       "success_examples": [
         "the key aspects of the computer science area",
         "characteristics of big data (volume, variety, velocity, etc.)"
@@ -80,7 +92,18 @@
       "description": "Explains relevant mechanisms, processes, or technologies used to generate, store, process, analyse, or represent big data.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "The explanation must describe how at least one mechanism works in the big data context. Naming tools (e.g., Hadoop, SQL) without explaining their function does not meet this indicator. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Description of how a technology works (e.g., 'Hadoop distributes data across clusters for parallel processing...')",
+          "Explanation of processes like data pipelines (e.g., 'Data pipelines extract, transform, and load data...')",
+          "Mechanisms for storage or analysis (e.g., 'NoSQL databases handle unstructured data efficiently...')"
+        ],
+        "negative_signals": [
+          "Naming tools without explanation (e.g., 'Uses Hadoop and SQL')",
+          "Vague descriptions of mechanisms"
+        ],
+        "common_confusion": "Simply naming technologies or processes is insufficient; their function and relevance to big data must be clearly explained."
+      },
       "success_examples": [
         "relevant algorithms or other mechanisms behind the area",
         "processing and analysing data in different formats"
@@ -92,7 +115,18 @@
       "description": "Explains how big data is used, implemented, or occurs in real contexts, supported with specific examples.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Look for a description of a big data application paired with a specific example (e.g., traffic modelling, fraud detection). Vague claims like “big data helps companies” without an example do not meet this indicator. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Specific application with example (e.g., 'In fraud detection, big data analyzes transaction patterns to identify anomalies...')",
+          "Real-world context (e.g., 'Traffic modeling uses sensor data to predict congestion in cities...')",
+          "Implementation details with examples"
+        ],
+        "negative_signals": [
+          "Vague claims without examples (e.g., 'Big data helps companies make decisions')",
+          "General statements about usage"
+        ],
+        "common_confusion": "Examples must be specific and directly tied to the application or context; general benefits are not sufficient."
+      },
       "success_examples": [
         "how the area is used, is implemented, or occurs, giving examples",
         "applied concepts to real-world scenarios"
@@ -104,7 +138,18 @@
       "description": "Explains key problems or issues in big data such as privacy, bias, data quality, or governance, and how these have been or may be addressed.",
       "level": "A",
       "weight": 2,
-      "detection_hint": "A valid response must identify a specific issue (e.g., algorithmic bias) AND describe an addressing method (e.g., diverse training sets). Mentioning an issue alone is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Identification of issue and addressing method (e.g., 'Privacy concerns can be addressed through encryption and anonymization...')",
+          "Specific examples of issues like bias (e.g., 'Algorithmic bias is mitigated by diverse training data...')",
+          "Explanation of governance or quality issues with responses"
+        ],
+        "negative_signals": [
+          "Mentioning issues without addressing methods (e.g., 'Big data has privacy problems')",
+          "Vague or unsupported responses"
+        ],
+        "common_confusion": "Both the issue and a clear method to address it must be explained; identifying the problem alone is insufficient."
+      },
       "success_examples": [
         "key problems or issues related to the area and how these have been or may be addressed",
         "big data considerations (privacy, ethics, and data governance)"
@@ -116,7 +161,18 @@
       "description": "Explains how technical capabilities and limitations of big data systems relate to people, users, or stakeholders, with examples.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Look for explicit linkage between system capabilities/limitations (e.g., scalability, latency, accuracy) and human consequences (e.g., decision-making, workload, access). Technical description alone is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Linkage to human consequences (e.g., 'High scalability enables faster decision-making for users...')",
+          "Examples of limitations (e.g., 'Latency issues can delay critical responses in healthcare...')",
+          "Relation to stakeholders with examples"
+        ],
+        "negative_signals": [
+          "Technical description without human relation (e.g., 'Systems have high scalability')",
+          "No examples provided"
+        ],
+        "common_confusion": "Explanations must connect technical aspects directly to people, users, or stakeholders; pure technical details are insufficient."
+      },
       "success_examples": [
         "how the technical capabilities and limitations of the area relate to humans, giving examples",
         "applied concepts to real-world scenarios"
@@ -128,7 +184,17 @@
       "description": "Compares and contrasts different perspectives on the big data area, such as ethical, computational, social, organisational, or governance viewpoints.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "A comparison must include at least two perspectives AND contrast them using explicit comparative language (e.g., whereas, on the other hand). Listing perspectives separately without comparison is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit comparison with contrasting language (e.g., 'Ethically, privacy is paramount, whereas computationally, efficiency takes precedence...')",
+          "At least two perspectives contrasted (e.g., 'Socially, big data connects communities, but organisationally, it poses integration challenges...')"
+        ],
+        "negative_signals": [
+          "Listing perspectives without comparison (e.g., 'Ethical, social, and computational views')",
+          "No use of comparative language"
+        ],
+        "common_confusion": "Perspectives must be actively compared and contrasted using terms like 'whereas' or 'in contrast'; separate descriptions do not qualify."
+      },
       "success_examples": [
         "comparing and contrasting different perspectives",
         "compare two approaches"
@@ -140,7 +206,18 @@
       "description": "Provides depth and breadth by exploring complex or interconnected aspects of big data using well-chosen examples.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Look for multi-layered explanations, such as linking data formats to processing constraints or connecting bias to governance. A single undeveloped example indicates insufficient depth or breadth. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Multi-layered explanations (e.g., 'Data variety affects processing constraints, leading to specialized storage solutions...')",
+          "Interconnected aspects (e.g., 'Bias in data connects to governance policies that ensure fairness...')",
+          "Well-chosen examples showing complexity"
+        ],
+        "negative_signals": [
+          "Single undeveloped example (e.g., 'Big data is used in healthcare')",
+          "Shallow or surface-level explanations"
+        ],
+        "common_confusion": "Depth requires exploring interconnections and complexity; a single, simple example does not demonstrate sufficient breadth or depth."
+      },
       "success_examples": [
         "analyse, in depth, an area of computer science",
         "adequate depth of analysis with a clear explanation of key concepts"
@@ -152,7 +229,18 @@
       "description": "Draws insightful conclusions about the big data area, demonstrating higher-level thinking beyond restating information.",
       "level": "E",
       "weight": 2,
-      "detection_hint": "The conclusion must synthesise or evaluate ideas, not summarise. Look for statements showing implications, significance, or consequences. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Synthesis of ideas (e.g., 'Overall, big data's velocity and volume necessitate new ethical frameworks...')",
+          "Evaluation showing implications (e.g., 'This could lead to unprecedented societal shifts in privacy norms...')",
+          "Higher-level thinking beyond restatement"
+        ],
+        "negative_signals": [
+          "Mere summarization (e.g., 'Big data has volume, variety, and velocity')",
+          "Restating information without insight"
+        ],
+        "common_confusion": "Conclusions must synthesize or evaluate ideas, showing implications or significance; simple restatements or summaries are insufficient."
+      },
       "success_examples": [
         "drawing insightful conclusions about the computer science area",
         "show deep, critical analysis"
@@ -164,7 +252,18 @@
       "description": "Explores less obvious or longer-term implications of big data, such as systemic bias propagation, future governance challenges, or societal shifts.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Look for impacts that extend beyond immediate technical issues. Simple mentions of privacy or speed are insufficient unless exploring deeper implications. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Deeper implications (e.g., 'Systemic bias could propagate through generations, affecting social equity...')",
+          "Longer-term challenges (e.g., 'Future governance may require global standards to handle cross-border data flows...')",
+          "Societal shifts explored"
+        ],
+        "negative_signals": [
+          "Simple mentions without depth (e.g., 'Big data has privacy issues')",
+          "Focusing only on immediate technical issues"
+        ],
+        "common_confusion": "Implications must be less obvious or longer-term; basic issues like privacy or speed are insufficient unless explored in depth."
+      },
       "success_examples": [
         "broader implications of the topic",
         "complex concepts with significant detail"
@@ -176,7 +275,18 @@
       "description": "Justifies predictions about future developments or improvements in big data using clear reasoning linked to current capabilities, limitations, or trends.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "The prediction or improvement must include justification grounded in technical or contextual evidence. Unsupported guesses do not meet this indicator. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Justified prediction with evidence (e.g., 'Due to current processing limitations, quantum computing will improve analysis speeds...')",
+          "Reasoning linked to trends (e.g., 'Increasing data volume trends suggest advancements in storage technologies...')",
+          "Improvements grounded in capabilities"
+        ],
+        "negative_signals": [
+          "Unsupported guesses (e.g., 'Big data will get better in the future')",
+          "No justification or evidence provided"
+        ],
+        "common_confusion": "Predictions or improvements must be justified with clear reasoning tied to current evidence; unsubstantiated claims do not qualify."
+      },
       "success_examples": [
         "making justified predictions",
         "suggesting improvements"
@@ -209,7 +319,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }

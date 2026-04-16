@@ -25,7 +25,18 @@
       "description": "Uses appropriate project management tools and techniques to plan the development of the digital technologies outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Provide artefacts (e.g., task plan, timeline, milestones) showing planning for development tasks. Planning the outcome’s features alone does not count; it must plan the development process. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Presence of a task plan or timeline with milestones and dates",
+          "Use of project management tools like Trello or Monday.com with tasks, dates, and status",
+          "Artefacts showing development tasks, such as spreadsheets or diagrams"
+        ],
+        "negative_signals": [
+          "Planning only the outcome’s features without detailing the development process",
+          "Generic mentions of planning without specific artefacts"
+        ],
+        "common_confusion": "Planning the outcome’s features alone does not count; it must plan the development process."
+      },
       "success_examples": [
         "using appropriate project management tools and techniques to plan the development of a digital technologies outcome",
         "a table or spreadsheet plan showing tasks/milestones, dates, and status (to-do, doing, done)",
@@ -38,7 +49,18 @@
       "description": "Decomposes the outcome into smaller components.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Show an explicit breakdown (list/diagram) of components or sub-systems. Mentioning generic parts without a deliberate decomposition is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit list or diagram showing breakdown of components or sub-systems",
+          "Deliberate decomposition into smaller parts",
+          "Clear identification of sub-problems or modules"
+        ],
+        "negative_signals": [
+          "Mentioning generic parts without deliberate decomposition",
+          "Vague descriptions of components without breakdown"
+        ],
+        "common_confusion": "Mentioning generic parts without a deliberate decomposition is insufficient."
+      },
       "success_examples": [
         "decomposing the outcome into smaller components"
       ],
@@ -49,7 +71,18 @@
       "description": "Trials the components of the digital technologies outcome.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Include trial records with purpose and observations used to inform decisions. Running something without recording intent or findings is not trialling. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Trial records documenting purpose and observations",
+          "Use of trial results to inform decisions",
+          "Evidence of iterative testing of components"
+        ],
+        "negative_signals": [
+          "Running components without recording intent or findings",
+          "No observations or decision-making based on trials"
+        ],
+        "common_confusion": "Running something without recording intent or findings is not trialling."
+      },
       "success_examples": [
         "trialling the components of the digital technologies outcome"
       ],
@@ -60,7 +93,18 @@
       "description": "Tests that the digital technologies outcome functions as intended.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Provide test evidence mapped to intended functions (pass/fail or screenshots). Bug lists or intentions without confirmation do not count. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Test evidence with pass/fail results or screenshots mapped to functions",
+          "Confirmation that functions work as intended",
+          "Structured test reports showing intended vs actual behavior"
+        ],
+        "negative_signals": [
+          "Bug lists without confirmation of fixes or functionality",
+          "Stating intentions without evidence"
+        ],
+        "common_confusion": "Bug lists or intentions without confirmation do not count."
+      },
       "success_examples": [
         "testing that the digital technologies outcome functions as intended"
       ],
@@ -71,9 +115,20 @@
       "description": "Explains relevant implications.",
       "level": "A",
       "weight": 1,
-      "detection_hint": "Explain at least two relevant implications (e.g., privacy, accessibility, cultural appropriateness, usability, legal, ethical). The student must identify and explain how the implication applies to their outcome, and state what the outcome needs to do or include to meet the implication. Explanations should occur early in the design or development process so they inform the outcome’s design/development. Listing implications without explanation is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explanation of at least two implications (e.g., privacy, accessibility) with how they apply to the outcome",
+          "Statements of what the outcome needs to do or include to meet implications",
+          "Explanations occurring early in design/development process"
+        ],
+        "negative_signals": [
+          "Listing implications without detailed explanations",
+          "Explanations not linked to outcome design or development"
+        ],
+        "common_confusion": "Listing implications without explanation is insufficient."
+      },
       "success_examples": [
-        'explaining relevant implications',
+        "explaining relevant implications",
         "documentation explaining privacy issues when storing personal information in a database, and how the system will address them",
         "explanation of accessibility needs (e.g., colour-blind users) and design choices made to ensure access",
         "discussion of cultural appropriateness, such as correct use of Te Reo Māori and fair representation of cultures",
@@ -86,7 +141,18 @@
       "description": "Effectively uses project management and version control tools and techniques to manage development.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Show evidence of effective management (e.g., archived file versions or folder structures, milestone updates, planning updates or completions, collaboration logs). Naming tools without demonstrating management use is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Archived file versions or folder structures (e.g., _v1, _v2)",
+          "Milestone updates, planning completions, or collaboration logs",
+          "Evidence of ongoing project management and version control use"
+        ],
+        "negative_signals": [
+          "Naming tools without demonstrating management use",
+          "No evidence of effective management or version control"
+        ],
+        "common_confusion": "Naming tools without demonstrating management use is insufficient."
+      },
       "success_examples": [
         "effectively using ongoing project management (e.g., updates, status changes) and version control tools and techniques",
         "archived versions of code such as app.py, HTML files, or web app components with clear version markers (_v1, _v2, etc.)",
@@ -97,13 +163,23 @@
       "source_ref": "AS PDF p2 (Merit); Moderator commentary: Assessment guidance"
     },
 
-    /* #3: NEW Merit OMI — Systematic test cases incl. boundaries/edge cases */
     {
       "id": "designs_systematic_test_cases",
       "description": "Designs and applies systematic test cases, including valid, invalid, boundary, and edge cases, mapped to intended functions.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Look for structured test artefacts (e.g., test tables or automated tests) covering valid/invalid inputs and boundary values, with Expected vs Actual results and Pass/Fail. Ad-hoc or purely narrative testing is insufficient.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Structured test tables covering valid/invalid inputs and boundary values",
+          "Automated unit tests asserting function behavior for edge cases",
+          "Expected vs Actual results with Pass/Fail indicators"
+        ],
+        "negative_signals": [
+          "Ad-hoc testing without structure",
+          "Purely narrative descriptions without test data"
+        ],
+        "common_confusion": "Ad-hoc or purely narrative testing is insufficient."
+      },
       "success_examples": [
         "boundary testing table for inputs (e.g., 9 / 10 / 60 / 61) with Expected→Actual→Pass/Fail",
         "automated unit tests that assert function behaviour for edge cases",
@@ -117,7 +193,18 @@
       "description": "Trials multiple components and/or techniques for the same sub-problem and selects the most suitable.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Contrast different approaches for the same sub-problem and justify the selection. Listing two attempts without comparison is not selection. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Contrast of different approaches (e.g., algorithms, structures) for the same sub-problem",
+          "Justification of why one approach was selected over others",
+          "Evidence of trialling multiple techniques with comparisons"
+        ],
+        "negative_signals": [
+          "Listing two attempts without comparison or justification",
+          "No selection process documented"
+        ],
+        "common_confusion": "Listing two attempts without comparison is not selection."
+      },
       "success_examples": [
         "trialling multiple components and/or techniques",
         "selecting those which are most suitable",
@@ -132,7 +219,18 @@
       "description": "Uses information from testing and trialling to improve the functionality of the outcome.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Link specific test/trial findings to implemented changes that enhance functionality. Bug fixes alone do not constitute improvement. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Links between specific test/trial findings and implemented changes",
+          "Changes that enhance functionality (e.g., better performance, reliability)",
+          "Re-testing to confirm improvements"
+        ],
+        "negative_signals": [
+          "Bug fixes alone without enhancing functionality",
+          "No documented link between findings and changes"
+        ],
+        "common_confusion": "Bug fixes alone do not constitute improvement."
+      },
       "success_examples": [
         "using information appropriately from testing and trialling to improve the functionality",
         "after boundary tests revealed failures, implemented input validation and re-tested to confirm reliability",
@@ -145,7 +243,18 @@
       "description": "Shows that the outcome addresses the relevant implications previously explained.",
       "level": "M",
       "weight": 1,
-      "detection_hint": "Provide explicit design/implementation evidence that responds to the earlier implications. Restating implications without demonstrating changes is insufficient. Highlight the exact phrase(s) that satisfy or violate this indicator.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Design/implementation evidence responding to implications (e.g., ALT tags for accessibility)",
+          "Changes in outcome based on earlier explanations",
+          "Privacy measures, cultural appropriateness, usability features"
+        ],
+        "negative_signals": [
+          "Restating implications without demonstrating changes",
+          "No evidence of implementation or design adjustments"
+        ],
+        "common_confusion": "Restating implications without demonstrating changes is insufficient."
+      },
       "success_examples": [
         "addressing relevant implications",
         "use of ALT tags in HTML code to support accessibility",
@@ -161,13 +270,23 @@
       "source_ref": "AS PDF p2 (Merit); Moderator commentary: Assessment guidance; Relevant Implications resource"
     },
 
-    /* #6: Strengthen Excellence discussions for depth and beyond-fixes improvements */
     {
       "id": "discusses_info_assisting_high_quality_outcome",
       "description": "Discusses how information from planning, testing, and trialling assisted the development of a high-quality outcome.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Provide a coherent discussion that links specific planning/testing/trialling information to how it assisted the final outcome’s quality. Show that improvements went beyond bug fixes to enhance usability, efficiency, accessibility, reliability, or maintainability.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Coherent discussion linking specific planning/testing/trialling info to quality",
+          "Improvements beyond bug fixes (e.g., usability, efficiency, accessibility)",
+          "Examples of how info informed final outcome quality"
+        ],
+        "negative_signals": [
+          "No specific links between information and quality improvements",
+          "Discussion limited to bug fixes only"
+        ],
+        "common_confusion": "Improvements must go beyond bug fixes to enhance usability, efficiency, accessibility, reliability, or maintainability."
+      },
       "success_examples": [
         "discussing how the information from planning, testing and trialling",
         "development of a high-quality outcome",
@@ -181,7 +300,18 @@
       "description": "Integrates a range of information sources (planning, testing and trialling of components) within the discussion of how the outcome was developed.",
       "level": "E",
       "weight": 1,
-      "detection_hint": "Look for explicit references to multiple distinct information sources (e.g., planning notes, structured testing results, trialling comparisons, user feedback, external research) tied into the development discussion. The student must not only mention these sources but also explain how each informed their decisions.",
+      "evidence_guide": {
+        "positive_signals": [
+          "Explicit references to multiple sources (e.g., planning notes, testing results, user feedback)",
+          "Explanation of how each source informed decisions",
+          "Integration of sources within the development discussion"
+        ],
+        "negative_signals": [
+          "Mentioning sources without explaining their influence",
+          "Sources not tied into the discussion of outcome development"
+        ],
+        "common_confusion": "The student must explain how each information source informed their decisions."
+      },
       "success_examples": [
         "a range of sources",
         "user feedback, trialling and research",
@@ -216,7 +346,7 @@
     "fallback_grade": "N1"
   },
   "governance": {
-    "last_validated": "2025-06-13",
+    "last_validated": "2025-07-18",
     "change_log": []
   }
 }
