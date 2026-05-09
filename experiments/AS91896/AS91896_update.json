@@ -1,0 +1,643 @@
+{
+  "meta": {
+    "as_code": "AS91896",
+    "title": "Use advanced programming techniques to develop a computer program",
+    "version": "2",
+    "level": 2,
+    "credits": 6,
+    "assessment_type": "Achievement Standard",
+    "assessment": "Internal",
+    "subject_reference": "Digital Technologies and Hangarau Matihiko 2.7",
+    "subfield": "Technology",
+    "domain": "Digital Technologies",
+    "status": "Approved",
+    "status_date": "September 2024",
+    "date_version_published": "December 2024",
+    "planned_review_date": "December 2028",
+    "source_pdf": "as91896-version-2.pdf",
+    "purpose": "This achievement standard involves using advanced programming techniques to develop a computer program."
+  },
+  "grade_descriptors": {
+    "N1": "Evidence is substantially below the Achieved requirements. There may be limited code, unclear task performance, or little direct evidence that the program meets the standard.",
+    "N2": "Some Achieved-level evidence is present, but key Achieved requirements are missing, weak, or not convincingly demonstrated.",
+    "A3": "The evidence just meets the Achieved requirements. The program performs the specified task and shows the required advanced program features, but Merit evidence is limited or inconsistent.",
+    "A4": "The evidence clearly meets Achieved and shows some Merit-level qualities, but not enough for an overall Merit judgement.",
+    "M5": "The evidence meets Achieved and Merit requirements. The program is informed by appropriate naming, comments, conventions, and boundary testing, but Excellence evidence is limited.",
+    "M6": "The evidence strongly meets Merit and shows some Excellence-level qualities, but not enough for an overall Excellence judgement.",
+    "E7": "The evidence meets Achieved and Merit and reaches Excellence overall. The program is refined, with convincing evidence of structure, flexibility, robustness, and comprehensive testing, though some aspects may be stronger than others.",
+    "E8": "The evidence strongly and consistently meets Excellence. The program is a refined, well-structured, flexible, robust response to the task, with comprehensive testing and debugging evidence."
+  },
+  "key_terms": [
+    {
+      "term": "advanced computer program",
+      "meaning": "A program that uses variables storing at least two data types, sequence, selection and iteration, input, output, and two or more advanced programming techniques."
+    },
+    {
+      "term": "advanced programming techniques",
+      "meaning": "Techniques such as modifying data stored in collections, storing multidimensional data in collections, creating methods/functions/procedures with parameters and/or return values, responding to GUI events, using non-trivial string manipulation, or using additional non-core libraries."
+    },
+    {
+      "term": "professional judgement",
+      "meaning": "The assessor makes a holistic judgement from the full body of evidence rather than calculating a grade from a score or percentage."
+    },
+    {
+      "term": "boundary cases",
+      "meaning": "Inputs or conditions on, near, or just outside important limits in the program."
+    },
+    {
+      "term": "invalid or unexpected inputs",
+      "meaning": "Inputs or conditions the program should handle safely, even though they are not normal expected use."
+    },
+    {
+      "term": "flexible",
+      "meaning": "The program can be changed or extended without widespread rewriting, usually through good structure, sensible variables/constants, functions, and reduced repetition."
+    },
+    {
+      "term": "robust",
+      "meaning": "The program handles expected, boundary, invalid, or unexpected cases without breaking or producing unsafe/unhelpful results."
+    }
+  ],
+  "omis": [
+    {
+      "id": "performs_specified_task",
+      "description": "Program demonstrably performs the specified task from the assessment brief.",
+      "level": "A",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Run logs showing successful execution of the specified task",
+          "Screenshots demonstrating program output matching requirements",
+          "Screencast evidencing required task behaviour",
+          "Teacher observation confirming the submitted program performs the required task"
+        ],
+        "negative_signals": [
+          "Stating intent without direct evidence",
+          "Code that fails to run or execute the task",
+          "Evidence that shows only isolated code fragments rather than the working program",
+          "A program that performs a different task from the assessment brief"
+        ],
+        "common_confusion": "Demonstration must be direct and observable. Verbal claims or planning notes are not enough."
+      },
+      "success_examples": [
+        "code was able to be run",
+        "screencasts confirmed function of the program"
+      ],
+      "source_ref": "AS PDF and moderator commentary"
+    },
+    {
+      "id": "advanced_program_core_requirements",
+      "description": "Program meets the core requirements of an advanced computer program: at least two data types, sequence, selection, iteration, input, output, and two or more advanced programming techniques.",
+      "level": "A",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Variables store at least two data types, such as numeric, text, or Boolean",
+          "Program uses sequence, selection, and iteration control structures",
+          "Program takes input from a user, sensor, file, API, or other external source",
+          "Program produces output",
+          "Program includes two or more recognised advanced programming techniques"
+        ],
+        "negative_signals": [
+          "Only one data type is clearly used",
+          "No meaningful selection or iteration is present",
+          "Program has no user, sensor, file, API, or external input",
+          "Output is absent or not connected to the task",
+          "Advanced techniques are claimed but not visible in the submitted code"
+        ],
+        "common_confusion": "This is not an optional checklist. The program must first be an advanced computer program before higher judgements are considered."
+      },
+      "success_examples": [
+        "uses text and numeric variables",
+        "uses if/else logic and loops",
+        "takes user input and produces task-related output"
+      ],
+      "source_ref": "AS PDF"
+    },
+    {
+      "id": "uses_two_or_more_advanced_techniques",
+      "description": "Implements at least two advanced programming techniques during development.",
+      "level": "A",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Code modifies data stored in collections, such as lists, arrays, or dictionaries",
+          "Code stores multidimensional data in collections",
+          "Code creates methods, functions, or procedures that use parameters and/or return values",
+          "Code responds to events generated by a graphical user interface",
+          "Code uses non-trivial string manipulation",
+          "Code uses additional non-core libraries in a task-relevant way"
+        ],
+        "negative_signals": [
+          "Only one advanced programming technique is evidenced",
+          "Techniques are named in planning but not implemented in code",
+          "Imported libraries are present but not used meaningfully",
+          "Functions exist but do not use parameters or return values where claimed",
+          "Collections are present but not modified or used in a meaningful way"
+        ],
+        "common_confusion": "The techniques must be evidenced in the code. Claims, plans, or comments alone do not count."
+      },
+      "success_examples": [
+        "uses a list or dictionary and updates its stored data",
+        "uses functions with parameters and return values",
+        "uses non-trivial string processing to support the task"
+      ],
+      "source_ref": "AS PDF"
+    },
+    {
+      "id": "code_layout_readable",
+      "description": "Code is clearly laid out with consistent indentation, logical sections, and readable spacing.",
+      "level": "A",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Consistent indentation across code files",
+          "Logical grouping of code into sections",
+          "Appropriate whitespace for readability",
+          "Functions, setup code, main program flow, and supporting logic are easy to locate"
+        ],
+        "negative_signals": [
+          "Inconsistent or missing indentation",
+          "Poorly organised code sections",
+          "Large blocks of tangled code with no clear layout",
+          "Formatting makes it difficult to follow the program flow"
+        ],
+        "common_confusion": "A single header comment does not compensate for poorly laid out code."
+      },
+      "success_examples": [],
+      "source_ref": "AS PDF"
+    },
+    {
+      "id": "comments_present_documenting_code",
+      "description": "Code includes comments that help document the program.",
+      "level": "A",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Comments identify the purpose of important sections",
+          "Comments help a reader understand what key parts of the program are doing",
+          "Comments are placed near the relevant code",
+          "Comments support readability without needing to explain every line"
+        ],
+        "negative_signals": [
+          "No comments in important sections",
+          "Only decorative or title comments",
+          "Comments merely repeat obvious syntax",
+          "Comments are misleading or no longer match the code"
+        ],
+        "common_confusion": "At Achieved, comments need to document the program. The Merit step-up is that names and comments describe code function and behaviour more appropriately."
+      },
+      "success_examples": [
+        "documenting the code with comments"
+      ],
+      "source_ref": "AS PDF and moderator commentary"
+    },
+    {
+      "id": "testing_evidence_organised",
+      "description": "Testing evidence is organised enough to show what was tested, what was expected, what happened, and whether follow-up debugging occurred.",
+      "level": "A",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Table mapping inputs to expected and actual outputs",
+          "Structured test logs with input-output pairs",
+          "Screenshots or screencasts linked to specific tests",
+          "Evidence showing failed or unexpected results were investigated or corrected"
+        ],
+        "negative_signals": [
+          "Unstructured verbal claims of functionality",
+          "No mapping between inputs and outputs",
+          "Disorganised test evidence",
+          "Testing evidence is not linked to the submitted program",
+          "Known problems are shown but not debugged or addressed"
+        ],
+        "common_confusion": "Testing evidence does not need to be elaborate, but it must be clear enough for an assessor to see what was tested and what happened."
+      },
+      "success_examples": [
+        "shows each input of the program being tested",
+        "whether expected outputs were generated or not",
+        "shows an issue found during testing and the change made in response"
+      ],
+      "source_ref": "Moderator commentary and AS PDF"
+    },
+    {
+      "id": "testing_expected_cases",
+      "description": "Testing and debugging show that the program works on a sample of expected cases.",
+      "level": "A",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Test cases show expected and actual outputs for normal inputs",
+          "Testing covers the main intended uses of the program",
+          "Evidence shows the program was debugged when testing revealed an issue",
+          "Final test evidence shows the program working for expected cases"
+        ],
+        "negative_signals": [
+          "Statements like 'it works' without test data",
+          "No expected input/output test evidence",
+          "No evidence that testing informed debugging or correction",
+          "Only one narrow test is shown for a program with several required behaviours"
+        ],
+        "common_confusion": "The student should not need to invent a fake bug. But if testing revealed issues, there should be evidence that those issues were debugged or resolved."
+      },
+      "success_examples": [
+        "normal menu choices are tested",
+        "valid expected input produces the expected output",
+        "a failed test is followed by a code fix or explanation of correction"
+      ],
+      "source_ref": "AS PDF and moderator commentary"
+    },
+    {
+      "id": "appropriate_names_and_comments",
+      "description": "Uses appropriate names and comments that describe code function and behaviour.",
+      "level": "M",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Variable names reflect their role, such as 'score' instead of 'x'",
+          "Function or method names describe what they do",
+          "Comments explain function, behaviour, or reasoning where useful",
+          "Names and comments make the program easier to understand without over-commenting"
+        ],
+        "negative_signals": [
+          "Generic names like 'x1', 'thing', 'stuff', or 'tmp' used throughout",
+          "Vague or non-descriptive comments",
+          "Comments restate simple syntax rather than behaviour",
+          "Names are misleading or inconsistent with their purpose"
+        ],
+        "common_confusion": "Merit requires more than the presence of comments. Names and comments should help explain code function and behaviour."
+      },
+      "success_examples": [
+        "names describe code function and behaviour",
+        "comments explain why a section exists or how it behaves"
+      ],
+      "source_ref": "AS PDF"
+    },
+    {
+      "id": "follows_language_conventions",
+      "description": "Follows common conventions for the chosen programming language throughout.",
+      "level": "M",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Consistent naming conventions for the chosen language",
+          "Use of language-specific structures and idioms",
+          "Uniform style throughout the codebase",
+          "Code avoids unnecessary workarounds where normal language features would be clearer"
+        ],
+        "negative_signals": [
+          "Mixed or inconsistent naming styles",
+          "Ad-hoc approaches without a clear reason",
+          "Avoidable deviations from common language conventions",
+          "Inconsistent file, function, or variable naming patterns"
+        ],
+        "common_confusion": "The convention should match the chosen language. For example, Python and JavaScript do not usually use the same naming style."
+      },
+      "success_examples": [
+        "common conventions for the chosen programming language"
+      ],
+      "source_ref": "AS PDF"
+    },
+    {
+      "id": "boundary_testing_performed",
+      "description": "Testing and debugging include boundary cases demonstrating behaviour on or around important limits.",
+      "level": "M",
+      "weight": 2,
+      "evidence_guide": {
+        "positive_signals": [
+          "Test cases at exact boundary values",
+          "Tests just below and just above important boundaries",
+          "Expected versus actual results for boundary tests",
+          "Evidence that boundary-related issues were debugged or resolved"
+        ],
+        "negative_signals": [
+          "Mentioning boundaries without concrete tests",
+          "No test evidence for boundaries",
+          "Boundary tests have no expected or actual results",
+          "Boundary failures are shown but not followed up"
+        ],
+        "common_confusion": "Boundary testing must be concrete. A sentence saying 'I tested boundaries' is not enough."
+      },
+      "success_examples": [
+        "tests minimum and maximum valid values",
+        "tests just outside the accepted range",
+        "tests empty or maximum-length text where relevant"
+      ],
+      "source_ref": "AS PDF and moderator commentary"
+    },
+    {
+      "id": "well_structured_logical_response",
+      "description": "Program is a well-structured, logical response to the specified task.",
+      "level": "E",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Program structure matches the task requirements",
+          "Functions or sections have clear responsibilities",
+          "Main program flow is easy to follow",
+          "Related logic is grouped sensibly",
+          "Code avoids unnecessary tangles or repeated blocks"
+        ],
+        "negative_signals": [
+          "Tangled or spaghetti code",
+          "Large duplicated code sections",
+          "Ad-hoc or illogical design",
+          "Program works only because of fragile ordering or repeated patches",
+          "Task requirements are scattered across unrelated code sections"
+        ],
+        "common_confusion": "Functionality alone is not enough for Excellence. The program also needs to be a logical, well-structured response to the task."
+      },
+      "success_examples": [
+        "clear main loop or main control flow",
+        "functions are used for distinct responsibilities",
+        "code organisation reflects the task"
+      ],
+      "source_ref": "AS PDF"
+    },
+    {
+      "id": "flexible_program_structure",
+      "description": "Program is flexible enough to be changed or extended without widespread rewriting.",
+      "level": "E",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Functions or procedures reduce repeated code",
+          "Constants, variables, or derived values are used instead of scattered literal values",
+          "Collections are processed using their length or contents rather than fixed magic numbers",
+          "Changes to key values, options, or rules can be made in one clear place",
+          "Variable scope is sensible and does not rely unnecessarily on globals"
+        ],
+        "negative_signals": [
+          "Small changes require editing many unrelated sections",
+          "Repeated copy-pasted code blocks",
+          "Hard-coded values scattered throughout the program",
+          "Fixed limits are used where derived values would be safer",
+          "Global variables create fragile dependencies"
+        ],
+        "common_confusion": "Flexibility does not mean the program needs to be enterprise-level or over-engineered. It means the code is not brittle for the task it was designed to solve."
+      },
+      "success_examples": [
+        "menu options stored in a collection rather than repeated through the code",
+        "a maximum value is stored once as a constant",
+        "a function handles repeated validation logic"
+      ],
+      "source_ref": "AS PDF and assessment schedule guidance"
+    },
+    {
+      "id": "comprehensive_testing_invalid_unexpected",
+      "description": "Comprehensive testing includes expected, boundary, invalid, and unexpected inputs or conditions, with evidence of debugging where needed.",
+      "level": "E",
+      "weight": 2,
+      "evidence_guide": {
+        "positive_signals": [
+          "Test cases for invalid inputs with clear handling",
+          "Tests for unexpected inputs or user actions",
+          "Testing covers the main behaviours of the program rather than one narrow path",
+          "Evidence shows debugging or correction after failed tests",
+          "Test evidence supports claims about program reliability"
+        ],
+        "negative_signals": [
+          "Testing only typical inputs",
+          "No invalid or unexpected input tests",
+          "No evidence that failed tests were debugged",
+          "Comprehensive testing is claimed but not shown",
+          "Testing does not cover important parts of the specified task"
+        ],
+        "common_confusion": "Comprehensive does not mean testing every possible input. It means the testing is broad enough to support a refined judgement for this task."
+      },
+      "success_examples": [
+        "invalid text entered where a number is expected",
+        "empty input tested where relevant",
+        "out-of-range values tested",
+        "unexpected menu choices tested"
+      ],
+      "source_ref": "AS PDF and moderator commentary"
+    },
+    {
+      "id": "robustness_evidenced_by_testing",
+      "description": "Testing evidence supports that the program is robust under expected, boundary, invalid, or unexpected conditions.",
+      "level": "E",
+      "weight": 1,
+      "evidence_guide": {
+        "positive_signals": [
+          "Program checks input validity where appropriate",
+          "Program handles invalid input without crashing",
+          "Program gives useful feedback or recovers from unexpected input",
+          "Testing evidence explicitly supports robustness claims",
+          "Boundary and invalid cases are handled consistently"
+        ],
+        "negative_signals": [
+          "Stating robustness without test evidence",
+          "Program crashes or behaves unpredictably for common invalid inputs",
+          "No corroborating test results",
+          "Invalid input handling is inconsistent",
+          "The program relies on the user always entering perfect data"
+        ],
+        "common_confusion": "Robustness should be evidenced. A claim that the program is robust is not enough."
+      },
+      "success_examples": [
+        "input validation prevents out-of-range values",
+        "unexpected menu choice is handled safely",
+        "invalid input produces a useful message rather than a crash"
+      ],
+      "source_ref": "AS PDF and moderator commentary"
+    }
+  ],
+  "aggregation_rules": {
+    "method": "professional_judgement_holistic",
+    "not_a_points_model": true,
+    "weight_interpretation": "Weights indicate evidence significance only. They must not be used to calculate a grade mechanically.",
+    "judgement_principle": "Final grades are based on professional judgement from a holistic examination of the evidence against the standard.",
+    "gate_sequence": [
+      "A",
+      "M",
+      "E"
+    ],
+    "evidence_strength_scale": [
+      "absent",
+      "weak",
+      "partial",
+      "convincing",
+      "strong"
+    ],
+    "level_gates": {
+      "A": {
+        "judgement": "Achieved requires convincing evidence that the student has developed an advanced computer program that performs the specified task, uses the required core programming features, uses two or more advanced techniques, is clearly set out and commented, and has been tested and debugged on expected cases.",
+        "core_indicators": [
+          "performs_specified_task",
+          "advanced_program_core_requirements",
+          "uses_two_or_more_advanced_techniques",
+          "code_layout_readable",
+          "comments_present_documenting_code",
+          "testing_evidence_organised",
+          "testing_expected_cases"
+        ]
+      },
+      "M": {
+        "judgement": "Merit requires Achieved to be met, plus convincing evidence that the program is informed through appropriate names and comments, common language conventions, and testing/debugging on expected and boundary cases.",
+        "core_indicators": [
+          "appropriate_names_and_comments",
+          "follows_language_conventions",
+          "boundary_testing_performed"
+        ]
+      },
+      "E": {
+        "judgement": "Excellence requires Achieved and Merit to be met, plus convincing evidence that the program is refined. This means it is a well-structured, logical response to the task, is flexible and robust for the task context, and is comprehensively tested and debugged.",
+        "core_indicators": [
+          "well_structured_logical_response",
+          "flexible_program_structure",
+          "comprehensive_testing_invalid_unexpected",
+          "robustness_evidenced_by_testing"
+        ],
+        "excellence_caution": "Do not make Excellence depend on professional software-engineering polish. Judge flexibility, robustness, structure, and comprehensive testing in relation to the student task and Level 2 standard."
+      }
+    },
+    "sub_band_logic": {
+      "Not Achieved": {
+        "N1": {
+          "description": "Very limited evidence. The program may not run, may not perform the specified task, or may lack several core requirements of an advanced computer program.",
+          "typical_profile": [
+            "little working code",
+            "no clear evidence of task performance",
+            "advanced techniques absent or only claimed",
+            "testing evidence missing or extremely limited"
+          ]
+        },
+        "N2": {
+          "description": "Some Achieved evidence is present, but one or more important Achieved requirements are missing, weak, or not convincingly demonstrated.",
+          "typical_profile": [
+            "program partly works",
+            "some advanced program features are present",
+            "testing or debugging evidence is weak",
+            "two advanced techniques are not clearly evidenced"
+          ]
+        }
+      },
+      "Achieved": {
+        "A3": {
+          "description": "Achieved is just met. Evidence is adequate but may be thin, uneven, or mostly limited to the required Achieved features.",
+          "typical_profile": [
+            "program performs the specified task",
+            "core advanced program requirements are present",
+            "two advanced techniques are evidenced",
+            "expected-case testing is present",
+            "Merit evidence is limited"
+          ]
+        },
+        "A4": {
+          "description": "Achieved is clearly met and there is some Merit evidence, but not enough for an overall Merit judgement.",
+          "typical_profile": [
+            "clear Achieved evidence",
+            "some appropriate names/comments or conventions",
+            "some boundary testing may be present",
+            "Merit evidence is incomplete or inconsistent"
+          ]
+        }
+      },
+      "Merit": {
+        "M5": {
+          "description": "Merit is met. The program is informed, with appropriate names/comments, common conventions, and boundary testing, but Excellence evidence is limited or inconsistent.",
+          "typical_profile": [
+            "Achieved evidence is secure",
+            "Merit indicators are convincing overall",
+            "some structure or robustness is visible",
+            "comprehensive testing is not yet convincing"
+          ]
+        },
+        "M6": {
+          "description": "Merit is strongly met and there is some Excellence evidence, but not enough for an overall Excellence judgement.",
+          "typical_profile": [
+            "strong Merit evidence",
+            "program shows some refined structure",
+            "some invalid or unexpected testing is present",
+            "flexibility or robustness is not yet consistently evidenced"
+          ]
+        }
+      },
+      "Excellence": {
+        "E7": {
+          "description": "Excellence is met overall. The program is refined, with convincing evidence of structure, flexibility, robustness, and comprehensive testing, though one aspect may be less developed.",
+          "typical_profile": [
+            "Achieved and Merit are secure",
+            "program structure is logical",
+            "testing includes expected, boundary, invalid, or unexpected cases",
+            "robustness is supported by evidence",
+            "flexibility is appropriate for the task"
+          ]
+        },
+        "E8": {
+          "description": "Excellence is strongly and consistently met. The evidence gives a clear, coherent picture of a refined program.",
+          "typical_profile": [
+            "all lower-level evidence is secure",
+            "program is clearly structured around the task",
+            "flexibility is visible without over-engineering",
+            "robustness is tested and demonstrated",
+            "testing/debugging evidence is comprehensive and well connected to the submitted program"
+          ]
+        }
+      }
+    },
+    "fallback_grade": "N1",
+    "output_expectations_for_custom_gpt": {
+      "do": [
+        "identify the strongest supported grade band",
+        "state the evidence that supports that judgement",
+        "state the missing or weak evidence that prevents a higher grade",
+        "separate evidence from teacher judgement",
+        "use cautious language such as likely, appears, or evidence suggests"
+      ],
+      "do_not": [
+        "calculate a grade from percentages",
+        "award a final grade as if the GPT is the assessor",
+        "invent evidence not supplied by the student or teacher",
+        "treat one weak Excellence feature as automatic Excellence",
+        "treat flexibility as requiring professional-scale software architecture"
+      ],
+      "recommended_response_shape": {
+        "likely_grade_band": "N1/N2/A3/A4/M5/M6/E7/E8",
+        "confidence": "low/moderate/high",
+        "evidence_supporting_judgement": [],
+        "evidence_missing_or_weak": [],
+        "next_evidence_to_collect": [],
+        "teacher_judgement_note": "Final grade remains an assessor professional judgement based on the full body of evidence."
+      }
+    }
+  },
+  "governance": {
+    "last_validated": "2026-05-10",
+    "validated_against": [
+      "AS91896 Version 2 Achievement Standard PDF",
+      "NZQA AS91896 annotated exemplars page",
+      "moderator commentary patterns supplied in original resource"
+    ],
+    "change_log": [
+      {
+        "date": "2026-05-10",
+        "change": "Updated metadata from Version 1 to Version 2."
+      },
+      {
+        "date": "2026-05-10",
+        "change": "Replaced percentage/fraction aggregation with professional judgement holistic grading while retaining N1-E8 bands."
+      },
+      {
+        "date": "2026-05-10",
+        "change": "Added missing Achieved core requirements for an advanced computer program."
+      },
+      {
+        "date": "2026-05-10",
+        "change": "Replaced broad advanced technique examples with official examples from AS91896."
+      },
+      {
+        "date": "2026-05-10",
+        "change": "Adjusted Achieved comments wording to avoid collapsing Achieved and Merit."
+      },
+      {
+        "date": "2026-05-10",
+        "change": "Added a separate Excellence flexibility indicator with a Level 2-appropriate caution."
+      },
+      {
+        "date": "2026-05-10",
+        "change": "Retained debugging expectations but reworded them to avoid requiring manufactured bug evidence."
+      }
+    ]
+  }
+}
